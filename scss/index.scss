@@ -1,0 +1,59 @@
+@import 'base/_reset.scss';
+$background:#DB8876;
+$primary : #901C1C;
+
+div.banner{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    
+
+    header {
+        
+        display: flex;
+        flex-direction: column;
+        
+        align-items: flex-end;
+        .contenu {
+            background:$background;
+            margin-top: 5px;
+            padding:10px;
+            border-radius:5px;
+            margin-bottom:20px;
+            font-weight: bold;
+            margin-right:120px;
+        }
+        div.top-line {
+            display: flex;
+           
+            align-items: center;
+            nav{
+                background: rgb(255, 97, 97);
+                display: flex;
+                // width: 38%;
+                
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    li{
+                        list-style: none;
+                        border:1px solid black;
+                        border-radius:15px;
+                        margin:10px 2px;
+                        padding:4px 7px;
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+            .header {
+                color:$primary;
+                font-size:2rem;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    
+        
+    }
+}
+
