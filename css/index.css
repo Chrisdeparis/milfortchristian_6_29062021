@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Mali:700|Source+Sans+Pro");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,6 +53,17 @@ table {
   border-spacing: 0;
 }
 
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: 0.1em;
+  margin: 0;
+  white-space: pre-line;
+}
+
+body {
+  margin: 0 auto;
+}
+
 div.banner {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -78,8 +90,11 @@ div.banner header div.top-line {
   align-items: center;
 }
 
+div.banner header div.top-line a .logo img {
+  width: 200px;
+}
+
 div.banner header div.top-line nav {
-  background: #ff6161;
   display: flex;
 }
 
@@ -103,4 +118,57 @@ div.banner header div.top-line .header {
   text-align: center;
   display: flex;
   justify-content: center;
+}
+
+div.title {
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+div.title h1 {
+  margin-bottom: 42px;
+  font-size: 1.8rem;
+  color: #901C1C;
+}
+
+div.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background: #c1f573;
+}
+
+div.main div.user {
+  text-align: center;
+}
+
+div.main div.user div.circle {
+  display: block;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+div.main div.user div.circle .crop {
+  height: 200px;
+  width: 200px;
+  background: transparent;
+  border-radius: 50%;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+div.main div.user div.circle div {
+  margin-top: 40px;
+}
+
+div.main div.user div.circle img {
+  position: relative;
+  bottom: 35px;
+}
+
+div.main div.user img {
+  width: 200px;
 }

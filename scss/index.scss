@@ -2,16 +2,26 @@
 $background:#DB8876;
 $primary : #901C1C;
 
+  
+@import url('https://fonts.googleapis.com/css?family=Mali:700|Source+Sans+Pro');
+
+body {
+  font-family: "Source Sans Pro", sans-serif ;
+  letter-spacing: 0.1em;
+  margin: 0;
+  white-space: pre-line;
+}
+
+body{
+    
+    margin:0 auto;
+}
 div.banner{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    
-
     header {
-        
         display: flex;
         flex-direction: column;
-        
         align-items: flex-end;
         .contenu {
             background:$background;
@@ -24,13 +34,18 @@ div.banner{
         }
         div.top-line {
             display: flex;
-           
             align-items: center;
+            a{
+                .logo{
+                    img {
+                        // width: 73%;
+                        width: 200px;
+                    }
+                }
+            }
             nav{
-                background: rgb(255, 97, 97);
+                // background: rgb(255, 97, 97);
                 display: flex;
-                // width: 38%;
-                
                 ul {
                     display: flex;
                     justify-content: space-between;
@@ -54,6 +69,57 @@ div.banner{
         }
     
         
+    }
+}
+div.title {
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    h1 {
+        margin-bottom: 42px;
+        font-size:1.8rem;
+        color:$primary;
+    }
+}
+div.main {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background:rgb(193, 245, 115);
+    div.user {
+        text-align: center;
+        div.circle{
+            display: block;
+            // width: 200px;
+            // height: 40px;
+            text-align: center;
+            align-content: center;
+            align-items: center;
+            border-radius: 50%;
+            .crop {
+                
+                height: 200px;
+                width: 200px;
+                background: transparent;
+                border-radius: 50%;
+                margin: 40px auto;
+                overflow: hidden;
+                
+                
+            }
+            div {
+                margin-top: 40px;
+            }
+            img {
+                
+                position: relative;
+                bottom: 35px;
+                
+            }
+        }
+        img {
+            width: 200px;
+        }
     }
 }
 
