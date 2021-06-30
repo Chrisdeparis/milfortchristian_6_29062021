@@ -79,8 +79,8 @@ table {
   }
   div.banner header div.top-line nav#nav ul {
     justify-content: space-between;
-    width: 350px;
     text-align: center;
+    width: 336px;
   }
   div.banner header div.top-line nav#nav ul li {
     list-style: none;
@@ -103,7 +103,8 @@ table {
     align-items: flex-end;
     grid-area: title;
     position: relative;
-    right: 100px;
+    right: 140px;
+    width: 170px;
   }
   div.title#title h1 {
     margin-bottom: 8px;
@@ -192,13 +193,6 @@ table {
   }
 }
 
-body {
-  font-family: "Source Sans Pro", sans-serif;
-  margin: 0 auto;
-  overflow-x: hidden;
-  width: 99%;
-}
-
 @media only screen and (min-width: 768px) {
   div.banner header {
     display: flex;
@@ -284,7 +278,7 @@ body {
     border-radius: 50%;
     margin: 40px auto 20px;
     overflow: hidden;
-    box-shadow: 0 0 0 3px #E8E6E8;
+    box-shadow: 0 0 0 3px #e8e6e8;
   }
   div.main div.user div.circle div {
     margin-top: 40px;
@@ -326,4 +320,11 @@ body {
     color: #901C1C;
     font-weight: bold;
   }
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 99%;
 }

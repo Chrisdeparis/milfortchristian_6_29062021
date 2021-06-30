@@ -36,8 +36,9 @@
                     ul {
                         
                         justify-content: space-between;
-                        width: 350px;
+                        
                         text-align: center;
+                        width: 336px;
                         li{
                             list-style: none;
                             border:1px solid black;
@@ -67,7 +68,9 @@
         align-items: flex-end;
         grid-area:title;
         position: relative;
-        right: 100px;
+        right: 140px;
+        width: 170px;
+
         h1 {
             margin-bottom: 8px;
             font-size: 1.1rem;
