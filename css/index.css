@@ -55,9 +55,6 @@ table {
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-  letter-spacing: 0.1em;
-  margin: 0;
-  white-space: pre-line;
 }
 
 body {
@@ -91,7 +88,7 @@ div.banner header div.top-line {
 }
 
 div.banner header div.top-line a .logo img {
-  width: 200px;
+  width: 250px;
 }
 
 div.banner header div.top-line nav {
@@ -127,7 +124,7 @@ div.title {
 }
 
 div.title h1 {
-  margin-bottom: 42px;
+  margin-bottom: 8px;
   font-size: 1.8rem;
   color: #901C1C;
 }

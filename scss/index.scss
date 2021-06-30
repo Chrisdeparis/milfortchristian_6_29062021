@@ -7,9 +7,9 @@ $primary : #901C1C;
 
 body {
   font-family: "Source Sans Pro", sans-serif ;
-  letter-spacing: 0.1em;
-  margin: 0;
-  white-space: pre-line;
+//   letter-spacing: 0.1em;
+//   margin: 0;
+//   white-space: pre-line;
 }
 
 body{
@@ -39,7 +39,7 @@ div.banner{
                 .logo{
                     img {
                         // width: 73%;
-                        width: 200px;
+                        width: 250px;
                     }
                 }
             }
@@ -76,7 +76,7 @@ div.title {
     display: flex;
     align-items: flex-end;
     h1 {
-        margin-bottom: 42px;
+        margin-bottom: 8px;
         font-size:1.8rem;
         color:$primary;
     }
