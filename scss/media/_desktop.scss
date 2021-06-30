@@ -42,6 +42,9 @@
               padding: 4px 7px;
               font-size: 0.8rem;
               font-weight: bold;
+              a{
+                color:$primary;
+              }
             }
           }
         }
@@ -128,11 +131,13 @@
         li {
           margin: 0 5px;
           font-size: 0.8rem;
-          border: 1px solid $grey;
+          border: 1px solid $tagBorder;
           border-radius: 9px;
           padding: 2px 4px;
-          color: $primary;
           font-weight: bold;
+          a{
+            color: $primary;
+          }
         }
       }
     }

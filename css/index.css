@@ -93,6 +93,9 @@ a {
     font-size: 0.8rem;
     font-weight: bold;
   }
+  div.banner header div.top-line nav#nav ul li a {
+    color: #901C1C;
+  }
   div.banner header div.top-line .header {
     color: #901C1C;
     font-size: 2rem;
@@ -176,6 +179,9 @@ a {
     color: #901C1C;
     font-weight: bold;
   }
+  div.main div.user ul.tags li a {
+    color: #901C1C;
+  }
   body.div.banner {
     display: grid;
   }
@@ -235,6 +241,9 @@ a {
     padding: 4px 7px;
     font-size: 0.8rem;
     font-weight: bold;
+  }
+  div.banner header div.top-line nav#nav ul li a {
+    color: #901C1C;
   }
   div.banner header div.top-line .header {
     color: #901C1C;
@@ -315,11 +324,13 @@ a {
   div.main div.user ul.tags li {
     margin: 0 5px;
     font-size: 0.8rem;
-    border: 1px solid #525252;
+    border: 1px solid #C4C4C4;
     border-radius: 9px;
     padding: 2px 4px;
-    color: #901C1C;
     font-weight: bold;
+  }
+  div.main div.user ul.tags li a {
+    color: #901C1C;
   }
 }
 
