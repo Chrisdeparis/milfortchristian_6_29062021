@@ -59,14 +59,132 @@ table {
 
 @media only screen and (max-width: 767px) {
   div.banner header {
+    display: flex;
+    flex-direction: column;
+  }
+  div.banner header .contenu {
+    background: #DB8876;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  div.banner header div.top-line {
+    display: flex;
+    align-items: center;
+    display: grid;
+    grid-template-columns: [logo] 1fr [nav] 1fr [title] 1fr;
+  }
+  div.banner header div.top-line a .logo img {
+    width: 250px;
+  }
+  div.banner header div.top-line nav {
+    display: flex;
+  }
+  div.banner header div.top-line nav ul {
+    justify-content: space-between;
     width: 100%;
+  }
+  div.banner header div.top-line nav ul li {
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 10px 2px 1px;
+    padding: 4px 7px;
+    font-size: 0.7rem;
+  }
+  div.banner header div.top-line .header {
+    color: #901C1C;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  div.title {
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+  }
+  div.title h1 {
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+    color: #901C1C;
+  }
+  div.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 40px;
+  }
+  div.main div.user {
+    text-align: center;
+  }
+  div.main div.user div.circle {
     display: block;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  div.main div.user div.circle .crop {
+    height: 200px;
+    width: 200px;
+    background: transparent;
+    border-radius: 50%;
+    margin: 40px auto 20px;
+    overflow: hidden;
+    box-shadow: 0 0 0 3px #E8E6E8;
+  }
+  div.main div.user div.circle div {
+    margin-top: 40px;
+  }
+  div.main div.user div.circle img {
+    position: relative;
+    bottom: 35px;
+  }
+  div.main div.user img {
+    width: 200px;
+  }
+  div.main div.user .name {
+    color: #D3573C;
+    font-size: 2.4em;
+    margin-bottom: 5px;
+  }
+  div.main div.user .city {
+    color: #901C1C;
+    margin-bottom: 5px;
+  }
+  div.main div.user .tagline {
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+  }
+  div.main div.user .price {
+    color: #525252;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+  }
+  div.main div.user ul.tags {
+    display: inline-flex;
+  }
+  div.main div.user ul.tags li {
+    margin: 0 5px;
+    font-size: 0.8rem;
+    border: 1px solid #525252;
+    border-radius: 9px;
+    padding: 2px 4px;
+    color: #901C1C;
+    font-weight: bold;
   }
   body div.banner header div.top-line {
     display: block;
   }
   body div.main {
     display: block;
+  }
+  body .banner header div.top-line nav ul li {
+    display: inline-block;
   }
 }
 
@@ -76,145 +194,125 @@ body {
   overflow-x: hidden;
 }
 
-div.banner header {
-  display: flex;
-  flex-direction: column;
-}
-
-div.banner header .contenu {
-  background: #DB8876;
-  margin: 0 auto;
-  margin-top: 5px;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-div.banner header div.top-line {
-  display: flex;
-  align-items: center;
-  display: grid;
-  grid-template-columns: [logo] 1fr [nav] 1fr [title] 1fr;
-}
-
-div.banner header div.top-line a .logo img {
-  width: 250px;
-}
-
-div.banner header div.top-line nav {
-  display: flex;
-}
-
-div.banner header div.top-line nav ul {
-  display: inline-flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-div.banner header div.top-line nav ul li {
-  list-style: none;
-  border: 1px solid black;
-  border-radius: 15px;
-  margin: 10px 2px;
-  padding: 4px 7px;
-  font-size: 0.7rem;
-}
-
-div.banner header div.top-line .header {
-  color: #901C1C;
-  font-size: 2rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
-
-div.title {
-  justify-content: center;
-  display: flex;
-  align-items: flex-end;
-}
-
-div.title h1 {
-  margin-bottom: 8px;
-  font-size: 1.8rem;
-  color: #901C1C;
-}
-
-div.main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  margin-bottom: 40px;
-}
-
-div.main div.user {
-  text-align: center;
-}
-
-div.main div.user div.circle {
-  display: block;
-  text-align: center;
-  align-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-
-div.main div.user div.circle .crop {
-  height: 200px;
-  width: 200px;
-  background: transparent;
-  border-radius: 50%;
-  margin: 40px auto 20px;
-  overflow: hidden;
-  box-shadow: 0 0 0 3px #E8E6E8;
-}
-
-div.main div.user div.circle div {
-  margin-top: 40px;
-}
-
-div.main div.user div.circle img {
-  position: relative;
-  bottom: 35px;
-}
-
-div.main div.user img {
-  width: 200px;
-}
-
-div.main div.user .name {
-  color: #D3573C;
-  font-size: 2.4em;
-  margin-bottom: 5px;
-}
-
-div.main div.user .city {
-  color: #901C1C;
-  margin-bottom: 5px;
-}
-
-div.main div.user .tagline {
-  font-size: 0.7rem;
-  margin-bottom: 5px;
-}
-
-div.main div.user .price {
-  color: #525252;
-  font-size: 0.7rem;
-  margin-bottom: 5px;
-}
-
-div.main div.user ul.tags {
-  display: inline-flex;
-}
-
-div.main div.user ul.tags li {
-  margin: 0 5px;
-  font-size: 0.8rem;
-  border: 1px solid #525252;
-  border-radius: 9px;
-  padding: 2px 4px;
-  color: #901C1C;
-  font-weight: bold;
+@media only screen and (min-width: 768px) {
+  div.banner header {
+    display: flex;
+    flex-direction: column;
+  }
+  div.banner header .contenu {
+    background: #DB8876;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  div.banner header div.top-line {
+    display: flex;
+    align-items: center;
+    display: grid;
+    grid-template-columns: [logo] 1fr [nav] 1fr [title] 1fr;
+  }
+  div.banner header div.top-line a .logo img {
+    width: 250px;
+  }
+  div.banner header div.top-line nav {
+    display: flex;
+  }
+  div.banner header div.top-line nav ul {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  div.banner header div.top-line nav ul li {
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 10px 2px 1px;
+    padding: 4px 7px;
+    font-size: 0.7rem;
+  }
+  div.banner header div.top-line .header {
+    color: #901C1C;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  div.title {
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+  }
+  div.title h1 {
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+    color: #901C1C;
+  }
+  div.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 40px;
+  }
+  div.main div.user {
+    text-align: center;
+  }
+  div.main div.user div.circle {
+    display: block;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  div.main div.user div.circle .crop {
+    height: 200px;
+    width: 200px;
+    background: transparent;
+    border-radius: 50%;
+    margin: 40px auto 20px;
+    overflow: hidden;
+    box-shadow: 0 0 0 3px #E8E6E8;
+  }
+  div.main div.user div.circle div {
+    margin-top: 40px;
+  }
+  div.main div.user div.circle img {
+    position: relative;
+    bottom: 35px;
+  }
+  div.main div.user img {
+    width: 200px;
+  }
+  div.main div.user .name {
+    color: #D3573C;
+    font-size: 2.4em;
+    margin-bottom: 5px;
+  }
+  div.main div.user .city {
+    color: #901C1C;
+    margin-bottom: 5px;
+  }
+  div.main div.user .tagline {
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+  }
+  div.main div.user .price {
+    color: #525252;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+  }
+  div.main div.user ul.tags {
+    display: inline-flex;
+  }
+  div.main div.user ul.tags li {
+    margin: 0 5px;
+    font-size: 0.8rem;
+    border: 1px solid #525252;
+    border-radius: 9px;
+    padding: 2px 4px;
+    color: #901C1C;
+    font-weight: bold;
+  }
 }

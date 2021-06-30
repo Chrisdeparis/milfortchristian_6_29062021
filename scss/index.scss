@@ -1,11 +1,10 @@
+
+@import 'abstracts/_variables.scss';
 @import 'base/_reset.scss';
 @import 'media/_mobile.scss';
 
 
-$background:#DB8876;
-$primary : #901C1C;
-$primary-text: #D3573C;
-$grey : #525252;
+
 
   
 @import url('https://fonts.googleapis.com/css?family=Mali:700|Source+Sans+Pro');
@@ -18,7 +17,7 @@ body {
 //   margin: 0;
 //   white-space: pre-line;
 }
-
+@media only screen and (min-width: 768px)  {
 div.banner{
     
     header {
@@ -59,9 +58,10 @@ div.banner{
                         list-style: none;
                         border:1px solid black;
                         border-radius:15px;
-                        margin:10px 2px;
+                        margin:10px 2px 1px;
                         padding:4px 7px;
                         font-size: 0.7rem;
+                        
                     }
                 }
             }
@@ -161,4 +161,4 @@ div.main {
         }
     }
 }
-
+}
