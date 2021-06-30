@@ -70,17 +70,18 @@ table {
   }
   div.banner header div.top-line a#logo {
     grid-area: logo;
-    width: 200px;
+    width: 50%;
   }
   div.banner header div.top-line a#logo .logo img {
-    width: 250px;
-    position: relative;
-    right: 30px;
+    width: 200px;
+  }
+  div.banner header div.top-line nav#nav {
+    width: 100%;
   }
   div.banner header div.top-line nav#nav ul {
     justify-content: space-between;
     text-align: center;
-    width: 336px;
+    width: 100%;
   }
   div.banner header div.top-line nav#nav ul li {
     list-style: none;
@@ -102,9 +103,6 @@ table {
     display: flex;
     align-items: flex-end;
     grid-area: title;
-    position: relative;
-    right: 140px;
-    width: 170px;
   }
   div.title#title h1 {
     margin-bottom: 8px;

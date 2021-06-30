@@ -21,24 +21,21 @@
                 
                 a#logo{
                     grid-area:logo;
-                    width: 200px;
+                    width:50%;
                     .logo{
                         img {
-                            // width: 73%;
-                            width: 250px;
-                            position: relative;
-                            right:30px;
+                            width:200px;
                         }
                     }
                 }
                 nav#nav{
-                    
+                    width:100%;
                     ul {
                         
                         justify-content: space-between;
                         
                         text-align: center;
-                        width: 336px;
+                        width: 100%;
                         li{
                             list-style: none;
                             border:1px solid black;
@@ -67,9 +64,6 @@
         display: flex;
         align-items: flex-end;
         grid-area:title;
-        position: relative;
-        right: 140px;
-        width: 170px;
 
         h1 {
             margin-bottom: 8px;
