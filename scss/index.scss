@@ -1,6 +1,8 @@
 @import 'base/_reset.scss';
 $background:#DB8876;
 $primary : #901C1C;
+$primary-text: #D3573C;
+$grey : #525252;
 
   
 @import url('https://fonts.googleapis.com/css?family=Mali:700|Source+Sans+Pro');
@@ -85,7 +87,8 @@ div.main {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    background:rgb(193, 245, 115);
+    margin-bottom:40px;
+    // background:rgb(193, 245, 115);
     div.user {
         text-align: center;
         div.circle{
@@ -96,14 +99,16 @@ div.main {
             align-content: center;
             align-items: center;
             border-radius: 50%;
+           
             .crop {
                 
                 height: 200px;
                 width: 200px;
                 background: transparent;
                 border-radius: 50%;
-                margin: 40px auto;
+                margin: 40px auto 20px;
                 overflow: hidden;
+                box-shadow: 0 0 0 3px #E8E6E8;
                 
                 
             }
@@ -119,6 +124,36 @@ div.main {
         }
         img {
             width: 200px;
+        }
+        .name {
+            color:$primary-text;
+            font-size: 2.4em;
+            margin-bottom: 5px;
+        }
+        .city {
+            color:$primary;
+            margin-bottom: 5px;
+        }
+        .tagline {
+            font-size: 0.7rem;
+            margin-bottom: 5px;
+        }
+        .price {
+            color:$grey;
+            font-size:0.7rem;
+            margin-bottom: 5px;
+        }
+        ul.tags {
+            display: inline-flex;
+            li{
+                margin:0 5px;
+                font-size: 0.8rem;
+                border:1px solid $grey;
+                border-radius:9px;
+                padding:2px 4px;
+                color:$primary;
+                font-weight: bold;
+            }
         }
     }
 }
