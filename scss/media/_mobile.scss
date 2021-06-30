@@ -29,8 +29,7 @@
                     }
                 }
                 nav#nav{
-                    grid-area:nav;
-                    display: flex;
+                    
                     ul {
                         
                         justify-content: space-between;
@@ -147,11 +146,14 @@
     body.div.banner {
         display:grid;
         grid-template-areas: "logo title";
+        grid-template-columns: (2, 1fr);
     }
     body div.banner header div.top-line {
         display: grid;
         grid-template-areas: "logo title";
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, minmax(75px, auto));
+        // grid-gap: 2rem;
        
     }
     

@@ -74,10 +74,6 @@ table {
   div.banner header div.top-line a#logo .logo img {
     width: 250px;
   }
-  div.banner header div.top-line nav#nav {
-    grid-area: nav;
-    display: flex;
-  }
   div.banner header div.top-line nav#nav ul {
     justify-content: space-between;
     width: 100%;
@@ -177,11 +173,13 @@ table {
   body.div.banner {
     display: grid;
     grid-template-areas: "logo title";
+    grid-template-columns: 2, 1fr;
   }
   body div.banner header div.top-line {
     display: grid;
     grid-template-areas: "logo title";
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(75px, auto));
   }
   body div.main {
     display: block;
