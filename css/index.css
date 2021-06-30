@@ -61,11 +61,6 @@ body {
   margin: 0 auto;
 }
 
-div.banner {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
 div.banner header {
   display: flex;
   flex-direction: column;
@@ -74,17 +69,19 @@ div.banner header {
 
 div.banner header .contenu {
   background: #DB8876;
+  margin: 0 auto;
   margin-top: 5px;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px;
   font-weight: bold;
-  margin-right: 120px;
 }
 
 div.banner header div.top-line {
   display: flex;
   align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 div.banner header div.top-line a .logo img {
