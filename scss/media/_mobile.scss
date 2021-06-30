@@ -1,3 +1,14 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+    div.banner header {
+        width:100%;
+        display:block;
+        
     
+    }
+    body div.banner header div.top-line {
+        display: block;
+    }
+    body div.main {
+        display: block;
+    }
 }

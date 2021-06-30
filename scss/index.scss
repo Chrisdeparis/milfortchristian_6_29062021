@@ -1,4 +1,7 @@
 @import 'base/_reset.scss';
+@import 'media/_mobile.scss';
+
+
 $background:#DB8876;
 $primary : #901C1C;
 $primary-text: #D3573C;
@@ -9,21 +12,19 @@ $grey : #525252;
 
 body {
   font-family: "Source Sans Pro", sans-serif ;
+  margin:0 auto;
+  overflow-x: hidden;
 //   letter-spacing: 0.1em;
 //   margin: 0;
 //   white-space: pre-line;
 }
 
-body{
-    
-    margin:0 auto;
-}
 div.banner{
     
     header {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        // align-items: flex-end;
         .contenu {
             background:$background;
             margin: 0 auto;
@@ -38,7 +39,7 @@ div.banner{
             display: flex;
             align-items: center;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: [logo]1fr [nav]1fr [title]1fr;
             a{
                 .logo{
                     img {
@@ -51,8 +52,9 @@ div.banner{
                 // background: rgb(255, 97, 97);
                 display: flex;
                 ul {
-                    display: flex;
+                    display: inline-flex;
                     justify-content: space-between;
+                    width: 100%;
                     li{
                         list-style: none;
                         border:1px solid black;

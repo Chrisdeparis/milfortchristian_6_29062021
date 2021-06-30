@@ -30,6 +30,10 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1;
 }
@@ -53,18 +57,28 @@ table {
   border-spacing: 0;
 }
 
-body {
-  font-family: "Source Sans Pro", sans-serif;
+@media only screen and (max-width: 767px) {
+  div.banner header {
+    width: 100%;
+    display: block;
+  }
+  body div.banner header div.top-line {
+    display: block;
+  }
+  body div.main {
+    display: block;
+  }
 }
 
 body {
+  font-family: "Source Sans Pro", sans-serif;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 div.banner header {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
 
 div.banner header .contenu {
@@ -81,7 +95,7 @@ div.banner header div.top-line {
   display: flex;
   align-items: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: [logo] 1fr [nav] 1fr [title] 1fr;
 }
 
 div.banner header div.top-line a .logo img {
@@ -93,8 +107,9 @@ div.banner header div.top-line nav {
 }
 
 div.banner header div.top-line nav ul {
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 div.banner header div.top-line nav ul li {
