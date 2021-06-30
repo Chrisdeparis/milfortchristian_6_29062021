@@ -21,6 +21,7 @@
                 
                 a#logo{
                     grid-area:logo;
+                    width: 200px;
                     .logo{
                         img {
                             // width: 73%;
@@ -35,7 +36,7 @@
                     ul {
                         
                         justify-content: space-between;
-                        width: 100%;
+                        width: 350px;
                         text-align: center;
                         li{
                             list-style: none;
@@ -67,7 +68,7 @@
         grid-area:title;
         h1 {
             margin-bottom: 8px;
-            font-size:1.8rem;
+            font-size: 1.1rem;
             color:$primary;
         }
     }
