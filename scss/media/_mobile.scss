@@ -149,7 +149,9 @@
         grid-template-areas: "logo title";
     }
     body div.banner header div.top-line {
-        // display:grid;
+        display: grid;
+        grid-template-areas: "logo title";
+        grid-template-columns: 1fr 1fr;
        
     }
     
