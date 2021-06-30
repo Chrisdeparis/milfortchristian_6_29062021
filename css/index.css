@@ -102,6 +102,8 @@ table {
     display: flex;
     align-items: flex-end;
     grid-area: title;
+    position: relative;
+    right: 100px;
   }
   div.title#title h1 {
     margin-bottom: 8px;

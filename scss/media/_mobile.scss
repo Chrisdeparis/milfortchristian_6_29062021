@@ -66,6 +66,8 @@
         display: flex;
         align-items: flex-end;
         grid-area:title;
+        position: relative;
+        right: 100px;
         h1 {
             margin-bottom: 8px;
             font-size: 1.1rem;
