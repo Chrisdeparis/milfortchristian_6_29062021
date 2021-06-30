@@ -24,17 +24,18 @@
                     .logo{
                         img {
                             // width: 73%;
-                            width: 250px;
+                            width: 100%;
                         }
                     }
                 }
                 nav{
-                    // background: rgb(255, 97, 97);
+                    
                     display: flex;
                     ul {
-                        // display: inline-flex;
+                        
                         justify-content: space-between;
                         width: 100%;
+                        text-align: center;
                         li{
                             list-style: none;
                             border:1px solid black;
