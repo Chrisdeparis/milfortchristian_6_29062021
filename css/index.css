@@ -71,10 +71,11 @@ table {
     width: 200px;
   }
   div.banner header div.top-line nav#nav {
-    width: calc(199%);
+    width: calc(183%);
   }
   div.banner header div.top-line nav#nav ul {
     justify-content: space-between;
+    padding: 0;
     text-align: center;
     width: 100%;
   }
