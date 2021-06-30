@@ -36,11 +36,12 @@ div.banner{
            
         }
         div.top-line {
-            display: flex;
+            
             align-items: center;
             display: grid;
-            grid-template-columns: [logo]1fr [nav]1fr [title]1fr;
-            a{
+            grid-template-areas: "logo nav title";
+            a#logo{
+                grid-area: logo;
                 .logo{
                     img {
                         // width: 73%;
@@ -48,9 +49,10 @@ div.banner{
                     }
                 }
             }
-            nav{
+            nav#nav{
                 // background: rgb(255, 97, 97);
                 display: flex;
+                grid-area: nav;
                 ul {
                     display: inline-flex;
                     justify-content: space-between;
@@ -78,10 +80,11 @@ div.banner{
         
     }
 }
-div.title {
+div.title#title {
     justify-content: center;
     display: flex;
     align-items: flex-end;
+    grid-area:title;
     h1 {
         margin-bottom: 8px;
         font-size:1.8rem;

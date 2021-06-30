@@ -2,9 +2,9 @@
     div.banner{
     
         header {
-            display: flex;
-            flex-direction: column;
-            // align-items: flex-end;
+            // display: flex;
+            // flex-direction: column;
+            // // align-items: flex-end;
             .contenu {
                 background:$background;
                 margin: 0 auto;
@@ -13,23 +13,23 @@
                 border-radius:5px;
                 margin-bottom:20px;
                 font-weight: bold;
+                display: none;
                
             }
             div.top-line {
-                display: flex;
-                align-items: center;
-                display: grid;
-                grid-template-columns: [logo]1fr [nav]1fr [title]1fr;
-                a{
+                
+                
+                a#logo{
+                    grid-area:logo;
                     .logo{
                         img {
                             // width: 73%;
-                            width: 100%;
+                            width: 250px;
                         }
                     }
                 }
-                nav{
-                    
+                nav#nav{
+                    grid-area:nav;
                     display: flex;
                     ul {
                         
@@ -59,10 +59,11 @@
             
         }
     }
-    div.title {
+    div.title#title {
         justify-content: center;
         display: flex;
         align-items: flex-end;
+        grid-area:title;
         h1 {
             margin-bottom: 8px;
             font-size:1.8rem;
@@ -143,10 +144,15 @@
             }
         }
     }
-    
-    body div.banner header div.top-line {
-        display: block;
+    body.div.banner {
+        display:grid;
+        grid-template-areas: "logo title";
     }
+    body div.banner header div.top-line {
+        // display:grid;
+       
+    }
+    
     body div.main {
         display: block;
     }

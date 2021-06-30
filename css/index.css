@@ -58,10 +58,6 @@ table {
 }
 
 @media only screen and (max-width: 767px) {
-  div.banner header {
-    display: flex;
-    flex-direction: column;
-  }
   div.banner header .contenu {
     background: #DB8876;
     margin: 0 auto;
@@ -70,25 +66,24 @@ table {
     border-radius: 5px;
     margin-bottom: 20px;
     font-weight: bold;
+    display: none;
   }
-  div.banner header div.top-line {
+  div.banner header div.top-line a#logo {
+    grid-area: logo;
+  }
+  div.banner header div.top-line a#logo .logo img {
+    width: 250px;
+  }
+  div.banner header div.top-line nav#nav {
+    grid-area: nav;
     display: flex;
-    align-items: center;
-    display: grid;
-    grid-template-columns: [logo] 1fr [nav] 1fr [title] 1fr;
   }
-  div.banner header div.top-line a .logo img {
-    width: 100%;
-  }
-  div.banner header div.top-line nav {
-    display: flex;
-  }
-  div.banner header div.top-line nav ul {
+  div.banner header div.top-line nav#nav ul {
     justify-content: space-between;
     width: 100%;
     text-align: center;
   }
-  div.banner header div.top-line nav ul li {
+  div.banner header div.top-line nav#nav ul li {
     list-style: none;
     border: 1px solid black;
     border-radius: 15px;
@@ -103,12 +98,13 @@ table {
     display: flex;
     justify-content: center;
   }
-  div.title {
+  div.title#title {
     justify-content: center;
     display: flex;
     align-items: flex-end;
+    grid-area: title;
   }
-  div.title h1 {
+  div.title#title h1 {
     margin-bottom: 8px;
     font-size: 1.8rem;
     color: #901C1C;
@@ -178,8 +174,9 @@ table {
     color: #901C1C;
     font-weight: bold;
   }
-  body div.banner header div.top-line {
-    display: block;
+  body.div.banner {
+    display: grid;
+    grid-template-areas: "logo title";
   }
   body div.main {
     display: block;
@@ -211,23 +208,26 @@ body {
     font-weight: bold;
   }
   div.banner header div.top-line {
-    display: flex;
     align-items: center;
     display: grid;
-    grid-template-columns: [logo] 1fr [nav] 1fr [title] 1fr;
+    grid-template-areas: "logo nav title";
   }
-  div.banner header div.top-line a .logo img {
+  div.banner header div.top-line a#logo {
+    grid-area: logo;
+  }
+  div.banner header div.top-line a#logo .logo img {
     width: 250px;
   }
-  div.banner header div.top-line nav {
+  div.banner header div.top-line nav#nav {
     display: flex;
+    grid-area: nav;
   }
-  div.banner header div.top-line nav ul {
+  div.banner header div.top-line nav#nav ul {
     display: inline-flex;
     justify-content: space-between;
     width: 100%;
   }
-  div.banner header div.top-line nav ul li {
+  div.banner header div.top-line nav#nav ul li {
     list-style: none;
     border: 1px solid black;
     border-radius: 15px;
@@ -242,12 +242,13 @@ body {
     display: flex;
     justify-content: center;
   }
-  div.title {
+  div.title#title {
     justify-content: center;
     display: flex;
     align-items: flex-end;
+    grid-area: title;
   }
-  div.title h1 {
+  div.title#title h1 {
     margin-bottom: 8px;
     font-size: 1.8rem;
     color: #901C1C;
