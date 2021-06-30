@@ -25,11 +25,6 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -76,7 +71,7 @@ table {
     width: 200px;
   }
   div.banner header div.top-line nav#nav {
-    width: calc(200% + -29px);
+    width: calc(199%);
   }
   div.banner header div.top-line nav#nav ul {
     justify-content: space-between;
