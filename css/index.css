@@ -232,7 +232,8 @@ a {
     border-radius: 15px;
     margin: 10px 2px 1px;
     padding: 4px 7px;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: bold;
   }
   div.banner header div.top-line .header {
     color: #901C1C;
