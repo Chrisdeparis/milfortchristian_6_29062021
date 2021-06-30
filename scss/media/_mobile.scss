@@ -25,6 +25,8 @@
                         img {
                             // width: 73%;
                             width: 250px;
+                            position: relative;
+                            right:30px;
                         }
                     }
                 }
@@ -145,15 +147,15 @@
     }
     body.div.banner {
         display:grid;
-        grid-template-areas: "logo title";
-        grid-template-columns: (2, 1fr);
+        // grid-template-columns: (2, 1fr);
     }
     body div.banner header div.top-line {
+        margin-top: 40px;
         display: grid;
         grid-template-areas: "logo title";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(2, minmax(75px, auto));
-        // grid-gap: 2rem;
+        
+        
        
     }
     

@@ -89,6 +89,8 @@ div.title#title {
         margin-bottom: 8px;
         font-size:1.8rem;
         color:$primary;
+        position: relative;
+        top: 8px;
     }
 }
 div.main {

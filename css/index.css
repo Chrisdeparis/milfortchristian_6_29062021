@@ -73,6 +73,8 @@ table {
   }
   div.banner header div.top-line a#logo .logo img {
     width: 250px;
+    position: relative;
+    right: 30px;
   }
   div.banner header div.top-line nav#nav ul {
     justify-content: space-between;
@@ -172,14 +174,12 @@ table {
   }
   body.div.banner {
     display: grid;
-    grid-template-areas: "logo title";
-    grid-template-columns: 2, 1fr;
   }
   body div.banner header div.top-line {
+    margin-top: 40px;
     display: grid;
     grid-template-areas: "logo title";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, minmax(75px, auto));
   }
   body div.main {
     display: block;
@@ -255,6 +255,8 @@ body {
     margin-bottom: 8px;
     font-size: 1.8rem;
     color: #901C1C;
+    position: relative;
+    top: 8px;
   }
   div.main {
     display: grid;
