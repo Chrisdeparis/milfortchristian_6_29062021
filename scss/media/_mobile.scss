@@ -29,7 +29,7 @@
                     }
                 }
                 nav#nav{
-                    width:100%;
+                    width:calc(200% + -29px);
                     ul {
                         
                         justify-content: space-between;
@@ -152,7 +152,7 @@
     body div.banner header div.top-line {
         margin-top: 40px;
         display: grid;
-        grid-template-areas: "logo title";
+        grid-template-areas: "logo title" "nav .";
         grid-template-columns: 1fr 1fr;
         
         
