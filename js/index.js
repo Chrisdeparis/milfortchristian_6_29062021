@@ -70,8 +70,7 @@ const fetchData = () => {
                 <ul class="tags">
                     ${user.tags.map((tag, i) => `
                     <li>
-                    
-                        #${tag}
+                        <a href="#">#${tag}</a>
                     </li>
                 `.trim()).join('')}
                 </ul>
