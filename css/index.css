@@ -149,6 +149,7 @@ a {
   div.main div.user img {
     width: 131px;
     height: 131px;
+    object-fit: cover;
   }
   div.main div.user .name {
     color: #D3573C;
@@ -301,6 +302,7 @@ a {
   div.main div#app div.user img {
     width: 131px;
     height: 131px;
+    object-fit: cover;
   }
   div.main div#app div.user .name {
     color: #D3573C;
