@@ -1,45 +1,6 @@
-// create a photographer
-const createAPhotographer = (
-  name,
-  id,
-  city,
-  country,
-  tags,
-  tagline,
-  price,
-  portrait
-) => {
-  const hello = () => {
-    console.log(`Hello ${name}`);
-  };
 
-  return {
-    name,
-    id,
-    city,
-    country,
-    tags,
-    tagline,
-    price,
-    portrait,
-    hello,
-  };
-};
-
-const photograph1 = createAPhotographer(
-  "Mimi Keel",
-  243,
-  "London",
-  "UK",
-  ["portrait", "events", "travel", "animals"],
-  "Voir le beau dans le quotidien",
-  400,
-  "MimiKeel.jpg"
-);
-
-console.log(photograph1);
-const reassignMethod = photograph1.hello;
-console.log(reassignMethod());
+//Liste de tous les photographes avec leur nom, leur slogan, leur localisation,
+//leur prix/heure, leurs tags et une image miniature de leur choix.
 
 const fetchData = () => {
   //fetch API all the photographers
@@ -88,6 +49,9 @@ const fetchData = () => {
 };
 
 fetchData();
+const filterTag = () => {
+
+}
 
 
 
