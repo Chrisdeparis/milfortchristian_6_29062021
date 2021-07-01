@@ -72,74 +72,77 @@
     }
   }
   div.main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin-bottom: 40px;
-    // background:rgb(193, 245, 115);
-    div.user {
-      text-align: center;
-      div.circle {
-        display: block;
-        // width: 200px;
-        // height: 40px;
+    div#app {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      margin-bottom: 40px;
+      div.user {
         text-align: center;
-        align-content: center;
-        align-items: center;
-        border-radius: 50%;
-
-        .crop {
-          height: 200px;
-          width: 200px;
-          background: transparent;
+        div.circle {
+          display: block;
+          // width: 200px;
+          // height: 40px;
+          text-align: center;
+          align-content: center;
+          align-items: center;
           border-radius: 50%;
-          margin: 40px auto 20px;
-          overflow: hidden;
-          box-shadow: 0 0 0 3px #e8e6e8;
-        }
-        div {
-          margin-top: 40px;
+  
+          .crop {
+            height: 200px;
+            width: 200px;
+            background: transparent;
+            border-radius: 50%;
+            margin: 40px auto 20px;
+            overflow: hidden;
+            box-shadow: 0 0 0 3px #e8e6e8;
+          }
+          div {
+            margin-top: 40px;
+          }
+          img {
+            position: relative;
+            bottom: 35px;
+          }
         }
         img {
-          position: relative;
-          bottom: 35px;
+          width: 200px;
         }
-      }
-      img {
-        width: 200px;
-      }
-      .name {
-        color: $primary-text;
-        font-size: 2.4em;
-        margin-bottom: 5px;
-      }
-      .city {
-        color: $primary;
-        margin-bottom: 5px;
-      }
-      .tagline {
-        font-size: 0.7rem;
-        margin-bottom: 5px;
-      }
-      .price {
-        color: $grey;
-        font-size: 0.7rem;
-        margin-bottom: 5px;
-      }
-      ul.tags {
-        display: inline-flex;
-        li {
-          margin: 0 5px;
-          font-size: 0.8rem;
-          border: 1px solid $tagBorder;
-          border-radius: 9px;
-          padding: 2px 4px;
-          font-weight: bold;
-          a{
-            color: $primary;
+        .name {
+          color: $primary-text;
+          font-size: 2.4em;
+          margin-bottom: 5px;
+        }
+        .city {
+          color: $primary;
+          margin-bottom: 5px;
+        }
+        .tagline {
+          font-size: 0.7rem;
+          margin-bottom: 5px;
+        }
+        .price {
+          color: $grey;
+          font-size: 0.7rem;
+          margin-bottom: 5px;
+        }
+        ul.tags {
+          display: inline-flex;
+          li {
+            margin: 0 5px;
+            font-size: 0.8rem;
+            border: 1px solid $tagBorder;
+            border-radius: 9px;
+            padding: 2px 4px;
+            font-weight: bold;
+            a{
+              color: $primary;
+            }
           }
         }
       }
+
     }
+    
   }
 }

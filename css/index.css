@@ -265,23 +265,23 @@ a {
     position: relative;
     top: 8px;
   }
-  div.main {
+  div.main div#app {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin-bottom: 40px;
   }
-  div.main div.user {
+  div.main div#app div.user {
     text-align: center;
   }
-  div.main div.user div.circle {
+  div.main div#app div.user div.circle {
     display: block;
     text-align: center;
     align-content: center;
     align-items: center;
     border-radius: 50%;
   }
-  div.main div.user div.circle .crop {
+  div.main div#app div.user div.circle .crop {
     height: 200px;
     width: 200px;
     background: transparent;
@@ -290,38 +290,38 @@ a {
     overflow: hidden;
     box-shadow: 0 0 0 3px #e8e6e8;
   }
-  div.main div.user div.circle div {
+  div.main div#app div.user div.circle div {
     margin-top: 40px;
   }
-  div.main div.user div.circle img {
+  div.main div#app div.user div.circle img {
     position: relative;
     bottom: 35px;
   }
-  div.main div.user img {
+  div.main div#app div.user img {
     width: 200px;
   }
-  div.main div.user .name {
+  div.main div#app div.user .name {
     color: #D3573C;
     font-size: 2.4em;
     margin-bottom: 5px;
   }
-  div.main div.user .city {
+  div.main div#app div.user .city {
     color: #901C1C;
     margin-bottom: 5px;
   }
-  div.main div.user .tagline {
+  div.main div#app div.user .tagline {
     font-size: 0.7rem;
     margin-bottom: 5px;
   }
-  div.main div.user .price {
+  div.main div#app div.user .price {
     color: #525252;
     font-size: 0.7rem;
     margin-bottom: 5px;
   }
-  div.main div.user ul.tags {
+  div.main div#app div.user ul.tags {
     display: inline-flex;
   }
-  div.main div.user ul.tags li {
+  div.main div#app div.user ul.tags li {
     margin: 0 5px;
     font-size: 0.8rem;
     border: 1px solid #C4C4C4;
@@ -329,7 +329,7 @@ a {
     padding: 2px 4px;
     font-weight: bold;
   }
-  div.main div.user ul.tags li a {
+  div.main div#app div.user ul.tags li a {
     color: #901C1C;
   }
 }
