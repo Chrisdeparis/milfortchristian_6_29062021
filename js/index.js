@@ -1,7 +1,6 @@
 
 //Liste de tous les photographes avec leur nom, leur slogan, leur localisation,
 //leur prix/heure, leurs tags et une image miniature de leur choix.
-
 const fetchData = () => {
   //fetch API all the photographers
   fetch("db/FishEyeData.json")
@@ -49,9 +48,17 @@ const fetchData = () => {
 };
 
 fetchData();
-const filterTag = () => {
 
+// En cliquant sur une étiquette (tag) dans la barre de navigation, la liste des
+// photographes est filtrée pour n'afficher que ceux qui correspondent à cette
+// étiquette.
+
+
+const filterTag = () => {
+    console.log('clic filtre ok');
 }
+
+filterTag();
 
 
 
