@@ -68,7 +68,30 @@ const fetchData = () => {
                 <p class="tagline">${user.tagline}</p>
                 <p class="price">${user.price} €/jour</p>
                 <ul class="tags">
-                
+                    <li>
+                    ${(function tag() {
+                    // Do your loop here
+                    // Return the result as a string
+                        let numberTags = user.tags.length;
+                        const tags = user.tags;
+                        let i =0;
+                        for(i=0; i<numberTags; i++){
+                            
+                            for(j=0; j<numberTags; j++) {
+                                console.log(tags);
+                                const words = tags.toString().split(',', numberTags);
+                                console.log(tags[j]);
+                                
+                                return tags.toString().split(',', numberTags);
+                            }
+                            
+                            
+                            
+                        }
+                    
+                        
+                    })()} 
+                    </li>
                 </ul>
             </div>
           
