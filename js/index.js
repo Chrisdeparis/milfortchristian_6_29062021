@@ -68,14 +68,17 @@ const fetchData = () => {
                 <p class="tagline">${user.tagline}</p>
                 <p class="price">${user.price} €/jour</p>
                 <ul class="tags">
-                    ${user.tags.map((tag, i) => `
+                    ${user.tags
+                      .map((tag) =>
+                        `
                     <li>
-                        <a href="#">#${tag}</a>
+                        <a href="${tag}">#${tag}</a>
                     </li>
-                `.trim()).join('')}
+                `.trim()
+                      )
+                      .join("")}
                 </ul>
             </div>
-          
             `;
         })
         .join("");
@@ -86,28 +89,6 @@ const fetchData = () => {
 
 fetchData();
 
-// get A photographer
-// const photograph = getAPhotographer(
-//     fetch('db/FishEyeData.json')
-//     .then(res => res.json())
-//     .then(data => console.log(data.photographers[0])));
 
-// console.log(photograph);
 
-//
 
-{/* <li>
-    ${(function tag() {
-    // Do your loop here
-    // Return the result as a string
-        let numberTags = user.tags.length;
-        const tags = user.tags;
-        let i =0;
-        for(i=0; i<=numberTags; i++){
-            
-            console.log(tags);
-            return tags;
-            
-        }
-    })()}
-</li> */}
