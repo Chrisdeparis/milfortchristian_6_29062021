@@ -131,8 +131,8 @@ a {
     border-radius: 50%;
   }
   div.main div.user div.circle .crop {
-    height: 200px;
-    width: 200px;
+    height: 131px;
+    width: 131px;
     background: transparent;
     border-radius: 50%;
     margin: 40px auto 20px;
@@ -144,10 +144,11 @@ a {
   }
   div.main div.user div.circle img {
     position: relative;
-    bottom: 35px;
+    bottom: 0px;
   }
   div.main div.user img {
-    width: 200px;
+    width: 131px;
+    height: 131px;
   }
   div.main div.user .name {
     color: #D3573C;
@@ -282,8 +283,8 @@ a {
     border-radius: 50%;
   }
   div.main div#app div.user div.circle .crop {
-    height: 200px;
-    width: 200px;
+    height: 131px;
+    width: 131px;
     background: transparent;
     border-radius: 50%;
     margin: 40px auto 20px;
@@ -295,10 +296,11 @@ a {
   }
   div.main div#app div.user div.circle img {
     position: relative;
-    bottom: 35px;
+    bottom: 0px;
   }
   div.main div#app div.user img {
-    width: 200px;
+    width: 131px;
+    height: 131px;
   }
   div.main div#app div.user .name {
     color: #D3573C;
