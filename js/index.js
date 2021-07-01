@@ -68,10 +68,7 @@ const fetchData = () => {
                 <p class="tagline">${user.tagline}</p>
                 <p class="price">${user.price} €/jour</p>
                 <ul class="tags">
-                <li><a href="#">#portrait</a></li>
-                <li><a href="#">#events</a></li>
-                <li><a href="#">#travel</a></li>
-                <li><a href="#">#animals</a></li>
+                
                 </ul>
             </div>
           
