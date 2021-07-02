@@ -53,9 +53,12 @@ fetchData();
 // photographes est filtrée pour n'afficher que ceux qui correspondent à cette
 // étiquette.
 
-
+const filteredUsers = tags.filter((tag) => {
+    return tag;
+});
 const filterTag = () => {
     console.log('clic filtre ok');
+    
 }
 
 filterTag();
