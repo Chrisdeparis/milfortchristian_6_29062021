@@ -75,7 +75,7 @@ a {
     width: 200px;
   }
   div.banner header div.top-line nav#nav {
-    width: calc(183%);
+    width: calc(200%);
   }
   div.banner header div.top-line nav#nav ul {
     justify-content: space-between;
@@ -87,7 +87,7 @@ a {
     list-style: none;
     border: 1px solid #C4C4C4;
     border-radius: 15px;
-    margin: 10px 2px 1px;
+    margin: 10px 9px;
     padding: 4px 7px;
     font-size: 0.8rem;
     font-weight: bold;

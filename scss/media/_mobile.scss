@@ -28,7 +28,7 @@
                     }
                 }
                 nav#nav{
-                    width: calc(183%);
+                    width: calc(200 %);
                     ul {
                         
                         justify-content: space-between;
@@ -39,8 +39,8 @@
                             list-style: none;
                             border:1px solid $tagBorder;
                             border-radius:15px;
-                            margin:10px 2px 1px;
-                            padding:4px 7px;
+                            margin: 10px 10px;
+                            padding: 4px 6px;
                             font-size: 0.8rem;
                             font-weight: bold;
                             a{

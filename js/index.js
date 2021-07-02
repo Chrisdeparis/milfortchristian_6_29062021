@@ -15,7 +15,7 @@ const fetchData = () => {
       const html = data.photographers
         .map((user) => {
           return `        
-            <div class="user portrait">
+            <div class="user">
                 <a href="#">
                 <div class="circle">
                     <div class="crop">
@@ -58,7 +58,7 @@ const btns = document.querySelectorAll('.btn');
 const listUsers = document.querySelectorAll('.user');
 const btn = document.querySelector('.btn');
 const tags = document.querySelector('.tags')
-const storeProducts = document.querySelectorAll('.store-product');
+
 
 console.log(listUsers);
 for (i = 0; i < btns.length; i++) {
@@ -68,21 +68,23 @@ for (i = 0; i < btns.length; i++) {
         
         const filter = e.target.dataset.filter;
         console.log(filter);
-        
-        listUsers.forEach((user)=> {
-            if (filter === 'all'){
-              console.log('filter === all')
-                user.style.display = 'block'
-                console.log(user);
-            } else {
-                if (user.children.classList.contains(filter)){
-                    user.style.display = 'block'
-                } else {
-                    user.style.display = 'none'
-                }
-            }
-        });
         console.log(listUsers);
+        listUsers.forEach((user)=> {
+          console.log(user);
+            // if (filter === 'all'){
+            //   console.log('filter === all')
+            //     user.style.display = 'block'
+            //     console.log(user);
+            // } else {
+            //     if (user.children.classList.contains(filter)){
+            //         user.style.display = 'block'
+            //     } else {
+            //         user.style.display = 'none'
+            //     }
+            // }
+        });
+        
+        
         
     });
 };
