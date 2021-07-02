@@ -15,7 +15,7 @@ const fetchData = () => {
       const html = data.photographers
         .map((user) => {
           return `        
-            <div class="user">
+            <div class="user portrait">
                 <a href="#">
                 <div class="circle">
                     <div class="crop">
@@ -47,7 +47,7 @@ const fetchData = () => {
     });
 };
 
-
+fetchData();
 
 // En cliquant sur une étiquette (tag) dans la barre de navigation, la liste des
 // photographes est filtrée pour n'afficher que ceux qui correspondent à cette
@@ -58,8 +58,9 @@ const btns = document.querySelectorAll('.btn');
 const listUsers = document.querySelectorAll('.user');
 const btn = document.querySelector('.btn');
 const tags = document.querySelector('.tags')
+const storeProducts = document.querySelectorAll('.store-product');
 
-
+console.log(listUsers);
 for (i = 0; i < btns.length; i++) {
 
     btns[i].addEventListener('click', (e) => {
@@ -74,7 +75,7 @@ for (i = 0; i < btns.length; i++) {
                 user.style.display = 'block'
                 console.log(user);
             } else {
-                if (user.children.contains(filter)){
+                if (user.children.classList.contains(filter)){
                     user.style.display = 'block'
                 } else {
                     user.style.display = 'none'
@@ -82,6 +83,7 @@ for (i = 0; i < btns.length; i++) {
             }
         });
         console.log(listUsers);
+        
     });
 };
 const userName = document.querySelectorAll(".circle h2.name");
@@ -100,6 +102,3 @@ function filterUsers(e) {
       }
   })
 }
-
-
-fetchData();
