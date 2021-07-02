@@ -32,7 +32,7 @@ const fetchData = () => {
                       .map((tag) =>
                         `
                     <li>
-                        <a href="${tag}">#${tag}</a>
+                        <a href="#" class="${tag}">#${tag}</a>
                     </li>
                 `.trim()
                       )
@@ -47,22 +47,59 @@ const fetchData = () => {
     });
 };
 
-fetchData();
+
 
 // En cliquant sur une étiquette (tag) dans la barre de navigation, la liste des
 // photographes est filtrée pour n'afficher que ceux qui correspondent à cette
 // étiquette.
 
-const filteredUsers = tags.filter((tag) => {
-    return tag;
-});
-const filterTag = () => {
-    console.log('clic filtre ok');
-    
+
+const btns = document.querySelectorAll('.btn');
+const listUsers = document.querySelectorAll('.user');
+const btn = document.querySelector('.btn');
+const tags = document.querySelector('.tags')
+
+
+for (i = 0; i < btns.length; i++) {
+
+    btns[i].addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const filter = e.target.dataset.filter;
+        console.log(filter);
+        
+        listUsers.forEach((user)=> {
+            if (filter === 'all'){
+              console.log('filter === all')
+                user.style.display = 'block'
+                console.log(user);
+            } else {
+                if (user.children.contains(filter)){
+                    user.style.display = 'block'
+                } else {
+                    user.style.display = 'none'
+                }
+            }
+        });
+        console.log(listUsers);
+    });
+};
+const userName = document.querySelectorAll(".circle h2.name");
+
+btn.addEventListener("onclick", filterUsers);
+
+function filterUsers(e) {
+  const text = e.target.value.toLowerCase();
+  console.log(userName[0]);
+  userName.forEach(function(user) {
+      const item = user.firstChild.textContent;
+      if (item.toLowerCase().indexOf(text) != -1) {
+          user.parentElement.parentElement.style.display = "block"
+      } else {
+          user.parentElement.parentElement.style.display = "none"
+      }
+  })
 }
 
-filterTag();
 
-
-
-
+fetchData();

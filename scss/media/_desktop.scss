@@ -19,6 +19,7 @@
         grid-template-areas: "logo nav title";
         a#logo {
           grid-area: logo;
+          width:210px;
           .logo {
             img {
               // width: 73%;
@@ -44,8 +45,11 @@
               font-weight: bold;
               a{
                 color:$primary;
+                
               }
+              
             }
+            
           }
         }
         .header {

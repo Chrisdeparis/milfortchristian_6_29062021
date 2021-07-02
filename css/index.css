@@ -221,6 +221,7 @@ a {
   }
   div.banner header div.top-line a#logo {
     grid-area: logo;
+    width: 210px;
   }
   div.banner header div.top-line a#logo .logo img {
     width: 250px;
