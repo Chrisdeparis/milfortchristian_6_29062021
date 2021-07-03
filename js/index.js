@@ -15,14 +15,14 @@ const fetchData = () => {
         .map((user) => {
           return `        
             <div class="user ">
-                <a href="#">
-                <div class="circle">
+                
+                <div class="circle thumb">
                     <div class="crop">
                     <img src="img/${user.portrait}" alt="" />
                     </div>
                     <h2 class="name">${user.name}</h2>
                 </div>
-                </a>
+               
                 <p class="city">${user.city}</p>
                 <p class="tagline">${user.tagline}</p>
                 <p class="price">${user.price} €/jour</p>
@@ -45,6 +45,8 @@ const fetchData = () => {
       document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
     });
 };
+
+
 fetchData();
 
 // En cliquant sur une étiquette (tag) dans la barre de navigation, la liste des
@@ -53,10 +55,12 @@ fetchData();
 
 const filterTag = () => {
   const btns = document.querySelectorAll(".btn");
-  const btn = document.querySelector(".btn");
+  
   let i;
   for (i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", (e) => {
+      
+
       const listUsers = document.querySelectorAll(".user");
       const tags = document.querySelector(".tags");
       const filter = e.target.dataset.filter;
@@ -92,8 +96,16 @@ filterTag();
 
 // Lorsque l'utilisateur clique sur la vignette d'un photographe, il est amené à sa
 // page.
+
+
+
 const photographerPageShow = () => {
-
-  const thumbnails = document.querySelectorAll(".circle");
-
+  const thumbnails = document.querySelectorAll('.circle.thumb');
+ 
+  let k;
+  console.log(thumbnails);
+  
+  
 }
+
+photographerPageShow();

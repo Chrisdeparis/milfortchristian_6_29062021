@@ -28,7 +28,7 @@
                     }
                 }
                 nav#nav{
-                    width: calc(200 %);
+                    width: calc(200%);
                     ul {
                         
                         justify-content: space-between;
@@ -90,6 +90,7 @@
                 align-content: center;
                 align-items: center;
                 border-radius: 50%;
+                cursor:pointer;
                
                 .crop {
                     
