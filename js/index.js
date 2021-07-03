@@ -1,4 +1,3 @@
-
 //Liste de tous les photographes avec leur nom, leur slogan, leur localisation,
 //leur prix/heure, leurs tags et une image miniature de leur choix.
 const fetchData = () => {
@@ -15,7 +14,7 @@ const fetchData = () => {
       const html = data.photographers
         .map((user) => {
           return `        
-            <div class="user">
+            <div class="user ">
                 <a href="#">
                 <div class="circle">
                     <div class="crop">
@@ -46,61 +45,70 @@ const fetchData = () => {
       document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
     });
 };
-
 fetchData();
 
 // En cliquant sur une étiquette (tag) dans la barre de navigation, la liste des
 // photographes est filtrée pour n'afficher que ceux qui correspondent à cette
 // étiquette.
 
+const filterTag = () => {
+  const btns = document.querySelectorAll(".btn");
+  const btn = document.querySelector(".btn");
 
-const btns = document.querySelectorAll('.btn');
-const listUsers = document.querySelectorAll('.user');
-const btn = document.querySelector('.btn');
-const tags = document.querySelector('.tags')
-
-
-console.log(listUsers);
-for (i = 0; i < btns.length; i++) {
-
-    btns[i].addEventListener('click', (e) => {
+  function tagClass() {
+    for (i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", (e) => {
+        const listUsers = document.querySelectorAll(".user");
+        const tags = document.querySelector(".tags");
+        const tagPortrait = document.getElementsByClassName("portrait");
         e.preventDefault();
-        
+  
         const filter = e.target.dataset.filter;
         console.log(filter);
         console.log(listUsers);
-        listUsers.forEach((user)=> {
+  
+        listUsers.forEach((user) => {
           console.log(user);
-            // if (filter === 'all'){
-            //   console.log('filter === all')
-            //     user.style.display = 'block'
-            //     console.log(user);
-            // } else {
-            //     if (user.children.classList.contains(filter)){
-            //         user.style.display = 'block'
-            //     } else {
-            //         user.style.display = 'none'
-            //     }
-            // }
+  
+          if (filter === "all") {
+            console.log("filter === all");
+            user.style.display = "block";
+            console.log(user);
+          } else {
+            console.log(filter);
+            console.log(tagPortrait);
+            if (tagPortrait.getAttribute('class') === 'portrait') {
+              console.log("filter click");
+              user.style.display = "block";
+            } else {
+              console.log("else");
+              user.style.display = "none";
+            }
+          }
         });
-        
-        
-        
-    });
-};
-const userName = document.querySelectorAll(".circle h2.name");
+        // console.log(user);
+      });
+    }
 
-btn.addEventListener("onclick", filterUsers);
+  }
+  tagClass();
+  
+  const userName = document.querySelectorAll(".circle h2.name");
 
-function filterUsers(e) {
-  const text = e.target.value.toLowerCase();
-  console.log(userName[0]);
-  userName.forEach(function(user) {
+  btn.addEventListener("onclick", filterUsers);
+
+  function filterUsers(e) {
+    const text = e.target.value.toLowerCase();
+    console.log(userName[0]);
+    userName.forEach(function (user) {
       const item = user.firstChild.textContent;
       if (item.toLowerCase().indexOf(text) != -1) {
-          user.parentElement.parentElement.style.display = "block"
+        user.parentElement.parentElement.style.display = "block";
       } else {
-          user.parentElement.parentElement.style.display = "none"
+        user.parentElement.parentElement.style.display = "none";
       }
-  })
-}
+    });
+  }
+};
+
+filterTag();
