@@ -55,43 +55,48 @@ const filterTag = () => {
   const btns = document.querySelectorAll(".btn");
   const btn = document.querySelector(".btn");
 
-  function tagClass() {
-    for (i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", (e) => {
-        const listUsers = document.querySelectorAll(".user");
-        const tags = document.querySelector(".tags");
-        const tagPortrait = document.getElementsByClassName("portrait");
-        e.preventDefault();
   
-        const filter = e.target.dataset.filter;
-        console.log(filter);
-        console.log(listUsers);
-  
-        listUsers.forEach((user) => {
-          console.log(user);
-  
-          if (filter === "all") {
-            console.log("filter === all");
-            user.style.display = "block";
-            console.log(user);
-          } else {
-            console.log(filter);
-            console.log(tagPortrait);
-            if (tagPortrait.getAttribute('class') === 'portrait') {
-              console.log("filter click");
-              user.style.display = "block";
-            } else {
-              console.log("else");
-              user.style.display = "none";
-            }
-          }
-        });
-        // console.log(user);
-      });
-    }
+  for (i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", (e) => {
+      const listUsers = document.querySelectorAll(".user");
+      const tags = document.querySelector(".tags");
+      const filter = e.target.dataset.filter;
+      const tagName = document.getElementsByClassName(filter);
+      e.preventDefault();
 
+      
+      console.log(filter);
+      console.log(listUsers);
+
+      listUsers.forEach((user) => {
+        console.log(user);
+
+        if (filter === "all") {
+          console.log("filter === all");
+          user.style.display = "block";
+          console.log(user);
+        } else {
+          console.log(filter);
+          console.log(tagName);
+          user.style.display = "none";
+          if (tagName) {
+            console.log("filter click = "+filter);
+            let j;
+            for(  j=0; j<tagName.length; j++) {
+              
+              console.log(tagName[j].parentElement.parentElement.parentElement);
+              tagName[j].parentElement.parentElement.parentElement.style.display = "block";
+            } 
+            
+          }
+          
+        }
+      });
+      // console.log(user);
+    });
   }
-  tagClass();
+
+  
   
   const userName = document.querySelectorAll(".circle h2.name");
 
