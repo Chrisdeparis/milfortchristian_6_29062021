@@ -54,8 +54,7 @@ fetchData();
 const filterTag = () => {
   const btns = document.querySelectorAll(".btn");
   const btn = document.querySelector(".btn");
-
-  
+  let i;
   for (i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", (e) => {
       const listUsers = document.querySelectorAll(".user");
@@ -67,7 +66,6 @@ const filterTag = () => {
       console.log(listUsers);
       listUsers.forEach((user) => {
         console.log(user);
-
         if (filter === "all") {
           console.log("filter === all");
           user.style.display = "block";
@@ -91,3 +89,11 @@ const filterTag = () => {
 };
 
 filterTag();
+
+// Lorsque l'utilisateur clique sur la vignette d'un photographe, il est amené à sa
+// page.
+const photographerPageShow = () => {
+
+  const thumbnails = document.querySelectorAll(".circle");
+
+}
