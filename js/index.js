@@ -63,11 +63,8 @@ const filterTag = () => {
       const filter = e.target.dataset.filter;
       const tagName = document.getElementsByClassName(filter);
       e.preventDefault();
-
-      
       console.log(filter);
       console.log(listUsers);
-
       listUsers.forEach((user) => {
         console.log(user);
 
@@ -83,35 +80,12 @@ const filterTag = () => {
             console.log("filter click = "+filter);
             let j;
             for(  j=0; j<tagName.length; j++) {
-              
               console.log(tagName[j].parentElement.parentElement.parentElement);
               tagName[j].parentElement.parentElement.parentElement.style.display = "block";
-            } 
-            
+            }  
           }
-          
         }
       });
-      // console.log(user);
-    });
-  }
-
-  
-  
-  const userName = document.querySelectorAll(".circle h2.name");
-
-  btn.addEventListener("onclick", filterUsers);
-
-  function filterUsers(e) {
-    const text = e.target.value.toLowerCase();
-    console.log(userName[0]);
-    userName.forEach(function (user) {
-      const item = user.firstChild.textContent;
-      if (item.toLowerCase().indexOf(text) != -1) {
-        user.parentElement.parentElement.style.display = "block";
-      } else {
-        user.parentElement.parentElement.style.display = "none";
-      }
     });
   }
 };
