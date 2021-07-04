@@ -1,10 +1,10 @@
 // Lorsque l'utilisateur clique sur la vignette d'un photographe, il est amené à sa
-  // page.
+// page.
   const photographerPage = () => {
-    const thumbnails = document.querySelectorAll('circle.thumb');
+    // const thumbnails = document.querySelectorAll('circle.thumb');
    
     
-    console.log(thumbnails);
+    // console.log(thumbnails);
     
     
   }

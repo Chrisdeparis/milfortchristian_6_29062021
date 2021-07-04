@@ -3,8 +3,7 @@
 // étiquette.
 
 const filterTag = () => {
-    const btns = document.querySelectorAll(".btn");
-    const listUsers = document.querySelectorAll(".user");
+  const btns = document.querySelectorAll(".btn");
     let i;
     for (i = 0; i < btns.length; i++) {
       btns[i].addEventListener("click", (e) => {
@@ -13,9 +12,12 @@ const filterTag = () => {
         // const tags = document.querySelector(".tags");
         const filter = e.target.dataset.filter;
         const tagName = document.getElementsByClassName(filter);
+        const listUsers = document.querySelectorAll(".user");
+
         e.preventDefault();
         console.log(filter);
         console.log(listUsers);
+
         listUsers.forEach((user) => {
           console.log(user);
           if (filter === "all") {

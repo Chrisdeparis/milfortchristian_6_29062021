@@ -1,5 +1,3 @@
-
-
 //Liste de tous les photographes avec leur nom, leur slogan, leur localisation,
 //leur prix/heure, leurs tags et une image miniature de leur choix.
 const fetchData = () => {
@@ -50,6 +48,6 @@ const fetchData = () => {
     });
 };
 
-// fetchData();
+fetchData();
 
 export default fetchData;

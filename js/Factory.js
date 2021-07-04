@@ -8,8 +8,8 @@ export default class Photographer {
         this.tags = tags;
         this.portrait = portrait;
     }
-    getId = () => {
-        return this.id;
+    getInfo = () => {
+        return { id: this.id, name: this.name, city: this.city, tagline: this.tagline, price: this.price, tags: this.tags, portrait: this.portrait};
     }
     getName = () => {
         return this.name;
