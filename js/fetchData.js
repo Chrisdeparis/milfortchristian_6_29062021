@@ -3,6 +3,7 @@
 //Liste de tous les photographes avec leur nom, leur slogan, leur localisation,
 //leur prix/heure, leurs tags et une image miniature de leur choix.
 const fetchData = () => {
+  
   //fetch API all the photographers
   fetch("db/FishEyeData.json")
     .then((res) => {

@@ -4,13 +4,12 @@
 
 const filterTag = () => {
     const btns = document.querySelectorAll(".btn");
-    
+    const listUsers = document.querySelectorAll(".user");
     let i;
     for (i = 0; i < btns.length; i++) {
       btns[i].addEventListener("click", (e) => {
-        
   
-        const listUsers = document.querySelectorAll(".user");
+        
         // const tags = document.querySelector(".tags");
         const filter = e.target.dataset.filter;
         const tagName = document.getElementsByClassName(filter);
