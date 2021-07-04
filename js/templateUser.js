@@ -1,6 +1,3 @@
-import Photographer from "./Factory.js";
-import fetchData from "./fetchData.js";
-
 const templateUser = (data) => {
   const html = data.photographers
     .map((user) => {
