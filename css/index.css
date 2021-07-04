@@ -267,26 +267,29 @@ a {
     gap: 0px 0px;
     grid-template-areas: ". . .";
   }
-  div.banner header div.photographer .name {
+  div.banner header div.photographer div.info {
+    text-align: left;
+  }
+  div.banner header div.photographer div.info .name {
     position: relative;
     right: 5px;
     color: #D3573C;
     font-size: 3.6em;
     margin-bottom: 5px;
   }
-  div.banner header div.photographer .city {
+  div.banner header div.photographer div.info .city {
     font-size: 1.5em;
     color: #901C1C;
   }
-  div.banner header div.photographer .tagline {
+  div.banner header div.photographer div.info .tagline {
     margin-top: 15px;
     color: #525252;
   }
-  div.banner header div.photographer ul.tags {
+  div.banner header div.photographer div.info ul.tags {
     display: inline-flex;
     margin-top: 20px;
   }
-  div.banner header div.photographer ul.tags li {
+  div.banner header div.photographer div.info ul.tags li {
     margin: 0 5px;
     font-size: 0.8rem;
     border: 1px solid #C4C4C4;
@@ -294,8 +297,46 @@ a {
     padding: 2px 4px;
     font-weight: bold;
   }
-  div.banner header div.photographer ul.tags li a {
+  div.banner header div.photographer div.info ul.tags li a {
     color: #901C1C;
+  }
+  div.banner header div.photographer div .contact {
+    margin-top: 0;
+    background: #901C1C;
+    color: #fff;
+    padding: 20px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    width: fit-content;
+  }
+  div.banner header div.photographer div.user div.circle.thumb {
+    display: block;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  div.banner header div.photographer div.user div.circle.thumb .crop {
+    height: 131px;
+    width: 131px;
+    background: transparent;
+    border-radius: 50%;
+    margin: 40px auto 20px;
+    overflow: hidden;
+    box-shadow: 0 0 0 3px #e8e6e8;
+  }
+  div.banner header div.photographer div.user div.circle.thumb div {
+    margin-top: 40px;
+  }
+  div.banner header div.photographer div.user div.circle.thumb img {
+    position: relative;
+    bottom: 0px;
+    width: 131px;
+    height: 131px;
   }
   div.title#title {
     justify-content: center;
