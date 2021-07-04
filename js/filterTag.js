@@ -1,8 +1,12 @@
 // En cliquant sur une étiquette (tag) dans la barre de navigation, la liste des
 // photographes est filtrée pour n'afficher que ceux qui correspondent à cette
 // étiquette.
+import templateUser from "./templateUser.js";
+import Photographer from "./Factory.js";
+import fetchData from "./fetchData.js";
 
-const filterTag = () => {
+
+const filterTag = (data, user) => {
   const btns = document.querySelectorAll(".btn");
     let i;
     for (i = 0; i < btns.length; i++) {

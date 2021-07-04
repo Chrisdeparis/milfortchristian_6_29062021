@@ -1,6 +1,8 @@
 // Lorsque l'utilisateur clique sur la vignette d'un photographe, il est amené à sa
 // page.
-  const photographerPage = () => {
+import Photographer from './Factory.js';
+
+  const photographerPage = (data, user) => {
     // const thumbnails = document.querySelectorAll('circle.thumb');
    
     
