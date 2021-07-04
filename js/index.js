@@ -49,6 +49,20 @@ const fetchData = () => {
 
 fetchData();
 
+
+// Lorsque l'utilisateur clique sur la vignette d'un photographe, il est amené à sa
+  // page.
+  const photographerPageShow = () => {
+    const thumbnails = document.querySelectorAll('circle.thumb');
+   
+    let k;
+    console.log(thumbnails);
+    
+    
+  }
+  
+  photographerPageShow();
+
 // En cliquant sur une étiquette (tag) dans la barre de navigation, la liste des
 // photographes est filtrée pour n'afficher que ceux qui correspondent à cette
 // étiquette.
@@ -90,22 +104,13 @@ const filterTag = () => {
       });
     });
   }
+  
 };
 
 filterTag();
 
-// Lorsque l'utilisateur clique sur la vignette d'un photographe, il est amené à sa
-// page.
 
 
 
-const photographerPageShow = () => {
-  const thumbnails = document.querySelectorAll('.circle.thumb');
- 
-  let k;
-  console.log(thumbnails);
-  
-  
-}
 
-photographerPageShow();
+
