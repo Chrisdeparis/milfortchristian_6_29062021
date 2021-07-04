@@ -17,6 +17,7 @@
         align-items: center;
         display: grid;
         grid-template-areas: "logo nav title";
+       
         a#logo {
           grid-area: logo;
           width:210px;
@@ -60,8 +61,53 @@
           justify-content: center;
         }
       }
+      div.photographer {
+        background: $photographBg;
+        width: 89%;
+        margin: 20px auto; 
+        border-radius:2px;
+        padding: 40px 20px;
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          ". . ."; 
+        .name {
+          position: relative;
+          right: 5px;
+          color: $primary-text;
+          font-size: 3.6em;
+          margin-bottom: 5px;
+          
+        }
+        .city {
+          font-size:1.5em;
+          color: $primary;
+        }
+        .tagline {
+          margin-top: 15px;
+          color:$grey;
+        }
+        ul.tags {
+          display: inline-flex;
+          margin-top:20px;
+          li {
+            margin: 0 5px;
+            font-size: 0.8rem;
+            border: 1px solid $tagBorder;
+            border-radius: 9px;
+            padding: 2px 4px;
+            font-weight: bold;
+            a{
+              color: $primary;
+            }
+          }
+        }
+      }
     }
   }
+  
   div.title#title {
     justify-content: center;
     display: flex;
@@ -135,6 +181,7 @@
         }
         ul.tags {
           display: inline-flex;
+          
           li {
             margin: 0 5px;
             font-size: 0.8rem;

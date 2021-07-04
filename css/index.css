@@ -255,6 +255,48 @@ a {
     display: flex;
     justify-content: center;
   }
+  div.banner header div.photographer {
+    background: #FAFAFA;
+    width: 89%;
+    margin: 20px auto;
+    border-radius: 2px;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". . .";
+  }
+  div.banner header div.photographer .name {
+    position: relative;
+    right: 5px;
+    color: #D3573C;
+    font-size: 3.6em;
+    margin-bottom: 5px;
+  }
+  div.banner header div.photographer .city {
+    font-size: 1.5em;
+    color: #901C1C;
+  }
+  div.banner header div.photographer .tagline {
+    margin-top: 15px;
+    color: #525252;
+  }
+  div.banner header div.photographer ul.tags {
+    display: inline-flex;
+    margin-top: 20px;
+  }
+  div.banner header div.photographer ul.tags li {
+    margin: 0 5px;
+    font-size: 0.8rem;
+    border: 1px solid #C4C4C4;
+    border-radius: 9px;
+    padding: 2px 4px;
+    font-weight: bold;
+  }
+  div.banner header div.photographer ul.tags li a {
+    color: #901C1C;
+  }
   div.title#title {
     justify-content: center;
     display: flex;
