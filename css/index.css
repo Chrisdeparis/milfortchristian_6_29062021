@@ -3,7 +3,7 @@
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css?family=Mali:700|Source+Sans+Pro");
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -228,6 +228,8 @@ a {
   }
   div.banner header div.top-line a#logo .logo img {
     width: 250px;
+    position: relative;
+    right: 41px;
   }
   div.banner header div.top-line nav#nav {
     display: flex;
@@ -259,10 +261,10 @@ a {
   }
   div.banner header div.photographer {
     background: #FAFAFA;
-    width: 89%;
+    width: 100%;
     margin: 20px auto;
     border-radius: 2px;
-    padding: 40px 20px 10px;
+    padding: 20px 20px 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -351,13 +353,13 @@ a {
   }
   div.sort-by {
     height: 23px;
-    margin-left: 55px;
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 2.3rem;
     display: flex;
+    margin-bottom: 50px;
   }
   div.sort-by p {
     margin-right: 20px;
@@ -474,6 +476,90 @@ a {
   div.main div#app div.user ul.tags li a {
     color: #901C1C;
   }
+  div.main div.sticky-cta {
+    position: fixed;
+    width: 376px;
+    height: 69px;
+    bottom: 0;
+    right: 36px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #DB8876;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+  div.main div.sticky-cta div {
+    display: flex;
+  }
+  div.main div.sticky-cta p {
+    width: 87px;
+    height: 31px;
+    font-size: 2.4rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  div.main div.sticky-cta img.cta-heart {
+    width: 20px;
+    position: relative;
+    bottom: 2px;
+    margin-left: 5px;
+  }
+  div.main div.sticky-cta p.cta-price {
+    width: 133px;
+  }
+  div.main div#photos-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 90px;
+    column-gap: 114px;
+    row-gap: 50px;
+  }
+  div.main div#photos-section div {
+    justify-content: center;
+  }
+  div.main div#photos-section div img.thumb-img {
+    width: 350px;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  div.main div#photos-section div div.thumb-info {
+    display: flex;
+    width: 350px;
+    font-size: 2.4rem;
+    margin-top: 5px;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+  }
+  div.main div#photos-section div div.thumb-info p {
+    color: #901C1C;
+  }
+  div.main div#photos-section div div.thumb-info div {
+    display: -webkit-box;
+  }
+  div.main div#photos-section div div.thumb-info div div.likes p {
+    display: flex;
+    width: 22px;
+    height: 31px;
+    border-radius: 50%;
+    align-items: center;
+    font-size: 2.4rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 18.75px;
+    background: #fff;
+    margin-right: 10px;
+  }
+  div.main div#photos-section div div.thumb-info div img.heart {
+    width: 20px;
+    position: relative;
+    top: 6px;
+    z-index: -1;
+  }
 }
 
 html {
@@ -484,5 +570,5 @@ body {
   font-family: 'DM Sans', sans-serif;
   margin: 0 auto;
   overflow-x: hidden;
-  width: 99%;
+  max-width: 1240px;
 }

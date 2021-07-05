@@ -26,6 +26,8 @@
             img {
               // width: 73%;
               width: 250px;
+              position: relative;
+              right: 41px;
             }
           }
         }
@@ -64,10 +66,10 @@
       }
       div.photographer {
         background: $photographBg;
-        width: 89%;
+        width: 100%;
         margin: 20px auto; 
         border-radius:2px;
-        padding: 40px 20px 10px;
+        padding: 20px 20px 10px;
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr; 
         grid-template-rows: 1fr; 
@@ -173,15 +175,14 @@
 
   div.sort-by {
     
-    height: 23px;
-    margin-left:55px;   
-    
+    height: 23px;    
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 2.3rem;
     display: flex;
+    margin-bottom: 50px;
     p{
       margin-right:20px;
     }
@@ -306,6 +307,100 @@
         }
       }
 
+    }
+    div.sticky-cta {
+      position: fixed;
+      width:376px;
+      height: 69px;
+      bottom:0;
+      right:36px;
+      border-top-left-radius:5px;
+      border-top-right-radius: 5px;
+      background:$pink;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:0px 20px;
+      div{
+        display: flex;
+      }
+      p{
+        width:87px;
+        height: 31px;
+        font-size: 2.4rem;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+      img.cta-heart {
+        width:20px;
+        position: relative;
+        bottom: 2px;
+        margin-left: 5px;
+      }
+      p.cta-price {
+         width:133px;
+
+      }
+    }
+    div#photos-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      margin-bottom: 90px;
+      // width: 93%;
+      
+      column-gap: 114px;
+      row-gap: 50px;
+      div{
+        
+        justify-content: center;
+        
+        img.thumb-img{
+          width: 350px;
+          height: 300px;
+          border-radius:5px;
+          object-fit: cover;
+        }
+        div.thumb-info {
+          display: flex;
+          width: 350px;
+          font-size:2.4rem;
+          margin-top: 5px;
+          justify-content: space-between;
+          text-align: left;
+          align-items: center;
+          p{
+            color: $primary;
+          }
+          div {
+            display: -webkit-box;
+            div.likes{
+              p{
+                display: flex;
+                width: 22px;
+                height: 31px;
+                // border:3px solid #95FFF9;
+                border-radius:50%;
+                align-items: center;
+                font-size:2.4rem;
+                font-family: 'Roboto', sans-serif;
+                line-height: 18.75px;
+                background:$white;
+                margin-right: 10px;
+              }
+            }
+            img.heart{
+              width: 20px;
+              position: relative;
+              top:6px;
+              z-index:-1;
+              
+            }
+          }
+          
+        }
+      }
     }
     
   }

@@ -9,7 +9,7 @@
 
   
 @import url('https://fonts.googleapis.com/css?family=Mali:700|Source+Sans+Pro');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&display=swap');
 
 html {
   font-size:62.5%;
@@ -18,7 +18,7 @@ body {
   font-family: 'DM Sans', sans-serif;
   margin:0 auto;
   overflow-x: hidden;
-  width:99%;
+  max-width:1240px;
 //   letter-spacing: 0.1em;
 //   margin: 0;
 //   white-space: pre-line;
