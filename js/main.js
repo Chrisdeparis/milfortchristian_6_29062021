@@ -126,7 +126,7 @@ const filterTag = (data, user) => {
 
 filterTag();
 
-
+//Router with hashchange event
 class IndexView {
   constructor(){
     window.addEventListener("hashchange", e => this.onRouteChange(e));
