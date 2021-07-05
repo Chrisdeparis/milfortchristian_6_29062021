@@ -233,6 +233,7 @@
   }
   div.main {
     div#app {
+      background: $white;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
@@ -313,7 +314,7 @@
       width:376px;
       height: 69px;
       bottom:0;
-      right:36px;
+      right:3.6rem;
       border-top-left-radius:5px;
       border-top-right-radius: 5px;
       background:$pink;
@@ -321,10 +322,11 @@
       align-items: center;
       justify-content: space-between;
       padding:0px 20px;
+      cursor:pointer;
       div{
         display: flex;
       }
-      p{
+      p.cta-likes{
         width:87px;
         height: 31px;
         font-size: 2.4rem;
@@ -340,6 +342,7 @@
       }
       p.cta-price {
          width:133px;
+         font-size: 2.4rem;
 
       }
     }
@@ -347,7 +350,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      margin-bottom: 90px;
+      margin-bottom: 75px;
       // width: 93%;
       
       column-gap: 114px;

@@ -1,11 +1,9 @@
 @media only screen and (max-width: 767px) {
-    div.banner{
-    
-        header {
-            // display: flex;
-            // flex-direction: column;
-            // // align-items: flex-end;
-            .contenu {
+    .banner { 
+        width: 335px;
+        margin:0 auto;
+        header { 
+            .contenu { 
                 background:$background;
                 margin: 0 auto;
                 margin-top: 5px;
@@ -13,28 +11,187 @@
                 border-radius:5px;
                 font-weight: bold;
                 display: none;
+            }
+    
+            .top-line { 
+    
+                #logo { 
+                    grid-area:logo;
+                    width:50%;
+                    .logo { 
+                        img { 
+                            width:200px;
+                            position: relative;
+                            right: 35px;
+                        }
+                    }
+                }
+            }
+    
+            .photographer { 
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                .info { 
+    
+                    .name { 
+                        
+                    }
+    
+                    .city { 
+                        margin-bottom: 5px;
+                    }
+    
+                    .tagline { 
+                        margin-bottom: 5px;
+                    }
+    
+                    .tags { 
+                        margin-top:5px;
+                        li { 
+    
+                            a { 
+    
+                            }
+                        }
+                    }
+                }
+    
+                div { 
+    
+                    .contact { 
+    
+                        p { 
+    
+                        }
+                    }
+                }
+    
+                .user { 
+    
+                    .circle { 
+    
+                        .crop { 
+    
+                            img { 
+    
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .sort-by { 
+        display: none;
+        p { 
+    
+        }
+    
+        .dropdown-open { 
+    
+            ul { 
+    
+                li { 
+    
+                    .chevron { 
+    
+                    }
+                }
+            }
+        }
+    }
+    
+    .main { 
+    
+        .sticky-cta { 
+            display: none;
+            div { 
+    
+                .cta-likes { 
+    
+                }
+    
+                .cta-heart { 
+    
+                }
+            }
+    
+            .cta-price { 
+    
+            }
+        }
+    
+        #photos-section { 
+            margin-top:30px;
+            div { 
+                margin:0 auto;
+                .thumb-img { 
+                    width:335px;
+                    height:190px;
+                    object-fit: cover;
+                    object-position: top;
+                    border-radius: 5px;
+                }
+    
+                .thumb-info { 
+                    display: flex;
+                    margin-bottom: 20px;
+                    p { 
+                        font-size:1.4rem;
+                        margin-top: 5px;
+                        width:89%;
+                    }
+    
+                    div.thumb-likes { 
+                        display: flex;
+                        .likes { 
+    
+                            p { 
+    
+                            }
+                        }
+    
+                        .heart { 
+                            margin-left: 5px;
+                            position: relative;
+                            top: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.banner{
+        
+        
+        header {
+            
+            .contenu {
+               
                
             }
             div.top-line {
                 
                 
                 a#logo{
-                    grid-area:logo;
-                    width:50%;
+                    
                     .logo{
                         img {
-                            width:200px;
+                            
                         }
                     }
                 }
                 nav#nav{
-                    width: calc(200%);
+                    
                     ul {
-                        
+                        width: calc(167%);
                         justify-content: space-between;
                         padding:0;
                         text-align: center;
-                        width: 100%;
+                        
                         li{
                             list-style: none;
                             border:1px solid $tagBorder;
@@ -62,6 +219,36 @@
             
         }
     }
+    div.circle {
+        display: block;
+        // width: 200px;
+        // height: 40px;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor:pointer;
+        .crop {
+          height: 131px;
+          width: 131px;
+          background: transparent;
+          border-radius: 50%;
+          margin: 40px auto 20px;
+          overflow: hidden;
+          box-shadow: 0 0 0 3px #e8e6e8;
+          img {
+            height: 131px;
+            width: 131px;
+          }
+        }
+        div {
+          margin-top: 40px;
+        }
+        img {
+          position: relative;
+          bottom: 0px;
+        }
+      }
     div.title#title {
         justify-content: center;
         display: flex;
@@ -139,6 +326,7 @@
             }
             ul.tags {
                 display: inline-flex;
+                
                 li{
                     margin:0 5px;
                     font-size: 0.8rem;
@@ -151,6 +339,67 @@
                         color:$primary;
                     }
                 }
+            }
+        }
+    }
+    div.photographer {
+        div.info {
+            .name{
+                width:202px;
+                font-size:3.6rem;
+                color:$primary-text;
+            }
+            .city{
+                width: 138px;
+                color:$primary;
+                font-size:1.3rem;
+            }
+            .tagline {
+                color:$grey;
+                font-size:1.3rem;
+            }
+            ul.tags{
+                display: flex;
+                display: inline-flex;
+                li{
+                    margin:0 5px;
+                    font-size: 0.8rem;
+                    border:1px solid $tagBorder;
+                    border-radius:9px;
+                    padding:2px 4px;
+                    color:$primary;
+                    font-weight: bold;
+                    a{
+                        color:$primary;
+                    }
+                }
+                
+            }
+        }
+        div {
+            
+            div.contact {
+                left:133px;
+                position:fixed;
+                bottom:20px;
+                background:$primary;
+                color:$white;
+                width: 133px;
+                font-size: 1.8rem;
+                padding:10px 20px;
+                border-radius:5px;
+                
+            }
+        }
+    }
+    div#photos-section {
+        display:grid;
+        grid-template-columns: 1fr;
+        div{
+            img.thumb-img {
+                width:100px;
+                height:100px;
+            
             }
         }
     }
