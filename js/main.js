@@ -26,7 +26,7 @@ const fetchData = () => {
             console.log(dash);
           return `        
             <div class="user ">
-                <a href="/${dash}.html">
+                <a href="/#${dash}">
                 <div class="circle thumb">
                     <div class="crop">
                     <img src="img/${user.portrait}" alt="" />
@@ -127,34 +127,26 @@ const filterTag = (data, user) => {
 filterTag();
 
 
-window.onload = () => {
-    console.log('DOM loaded');
-
-    
-
+class IndexView {
+  constructor(){
+    window.addEventListener("hashchange", e => this.onRouteChange(e));
+    this.slot = document.querySelector('#slot');
   }
+  onRouteChange(e) {
+    const hashLocation = window.location.hash.substring(1);
+    console.log(hashLocation);    
+    this.loadContent(hashLocation);
+  }
+  loadContent(uri) {
+    const contentUri = `${uri}.html`;
+    fetch(contentUri)
+      .then(res => res.text())
+      .then(content => this.updateSlot(content));
+  }
+  updateSlot(content) {
+    this.slot.innerHTML = content;
+  }
+}
 
-  //Router constructor
-  const Router = function (name, routes)  {
-    return {
-      name: name,
-      routes: routes
-    }
-  };
-  
-  
-  
-  const myFirstRouter = new Router('myFirstRouter', [
-    {
-      path: '/',
-      name: 'Root'
-    },
-    {
-      path: '/Mimi-Keel',
-      name: 'Mimi Keel'
-    },
-  ]);
-  // console.log(Router);
-  console.log(myFirstRouter);
-  const currentPath = window.location.pathname;
-  console.log(currentPath);
+
+new IndexView();
