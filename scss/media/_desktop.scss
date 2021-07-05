@@ -11,6 +11,7 @@
         padding: 10px;
         border-radius: 5px;
         font-weight: bold;
+        font-size: 1.5rem;
         visibility: hidden;
       }
       div.top-line {
@@ -66,7 +67,7 @@
         width: 89%;
         margin: 20px auto; 
         border-radius:2px;
-        padding: 40px 20px 0px;
+        padding: 40px 20px 10px;
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr; 
         grid-template-rows: 1fr; 
@@ -79,8 +80,9 @@
             position: relative;
             right: 5px;
             color: $primary-text;
-            font-size: 5.4em;
+            font-size: 5rem;
             margin-bottom: 5px;
+            font-family: 'DM Sans', sans-serif;
             
           }
           .city {
@@ -98,7 +100,7 @@
             margin-top:20px;
             li {
               margin: 0 5px;
-              font-size: 1.4rem;
+              font-size: 1.6rem;
               border: 1px solid $tagBorder;
               border-radius: 9px;
               padding: 2px 4px;
@@ -111,6 +113,7 @@
         }
         div {
           .contact {
+            
             margin-top:0;
             background:$primary;
             color:$white;
@@ -125,6 +128,9 @@
             text-align: center;
             font-size:1.5rem;
             line-height:10px;
+            font-family: 'DM Sans', sans-serif;
+            font-style: normal;
+            
           }
         }
         div.user {
@@ -162,6 +168,52 @@
         }
         
       }
+    }
+  }
+
+  div.sort-by {
+    
+    height: 23px;
+    margin-left:55px;   
+    
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    display: flex;
+    p{
+      margin-right:20px;
+    }
+    div.dropdown-open {
+      // height: 170px;
+      width: 170px;
+      background:$primary;
+      border-radius: 5px;
+      color:$white;
+      cursor:pointer;
+      position:relative;
+      bottom:10px;
+      
+      ul{
+        border-radius: 5px;
+        background:$primary;
+        padding:10px;
+        li{
+          padding:10px;
+          border-bottom:1px solid $white;
+          font-family: 'DM Sans', sans-serif;
+          img.chevron {
+            width:1.6rem;
+            color:$white;
+            margin-left:20px;
+          }
+        }
+        li:last-child {
+          border:0;
+        }
+      }
+
     }
   }
   
@@ -219,8 +271,9 @@
         }
         .name {
           color: $primary-text;
-          font-size: 5.4em;
+          font-size: 4.5em;
           margin-bottom: 5px;
+          font-family: 'DM Sans', sans-serif;
         }
         .city {
           color: $primary;

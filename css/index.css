@@ -3,6 +3,7 @@
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css?family=Mali:700|Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -213,6 +214,7 @@ a {
     padding: 10px;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 1.5rem;
     visibility: hidden;
   }
   div.banner header div.top-line {
@@ -260,7 +262,7 @@ a {
     width: 89%;
     margin: 20px auto;
     border-radius: 2px;
-    padding: 40px 20px 0px;
+    padding: 40px 20px 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -274,8 +276,9 @@ a {
     position: relative;
     right: 5px;
     color: #D3573C;
-    font-size: 5.4em;
+    font-size: 5rem;
     margin-bottom: 5px;
+    font-family: 'DM Sans', sans-serif;
   }
   div.banner header div.photographer div.info .city {
     margin-top: 10px;
@@ -293,7 +296,7 @@ a {
   }
   div.banner header div.photographer div.info ul.tags li {
     margin: 0 5px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     border: 1px solid #C4C4C4;
     border-radius: 9px;
     padding: 2px 4px;
@@ -317,6 +320,8 @@ a {
     text-align: center;
     font-size: 1.5rem;
     line-height: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
   }
   div.banner header div.photographer div.user div.circle.thumb {
     display: block;
@@ -343,6 +348,46 @@ a {
     bottom: 0px;
     width: 131px;
     height: 131px;
+  }
+  div.sort-by {
+    height: 23px;
+    margin-left: 55px;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    display: flex;
+  }
+  div.sort-by p {
+    margin-right: 20px;
+  }
+  div.sort-by div.dropdown-open {
+    width: 170px;
+    background: #901C1C;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    bottom: 10px;
+  }
+  div.sort-by div.dropdown-open ul {
+    border-radius: 5px;
+    background: #901C1C;
+    padding: 10px;
+  }
+  div.sort-by div.dropdown-open ul li {
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    font-family: 'DM Sans', sans-serif;
+  }
+  div.sort-by div.dropdown-open ul li img.chevron {
+    width: 1.6rem;
+    color: #fff;
+    margin-left: 20px;
+  }
+  div.sort-by div.dropdown-open ul li:last-child {
+    border: 0;
   }
   div.title#title {
     justify-content: center;
@@ -397,8 +442,9 @@ a {
   }
   div.main div#app div.user .name {
     color: #D3573C;
-    font-size: 5.4em;
+    font-size: 4.5em;
     margin-bottom: 5px;
+    font-family: 'DM Sans', sans-serif;
   }
   div.main div#app div.user .city {
     color: #901C1C;
@@ -435,7 +481,7 @@ html {
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   margin: 0 auto;
   overflow-x: hidden;
   width: 99%;
