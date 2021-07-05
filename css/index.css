@@ -86,14 +86,25 @@ a {
     justify-content: space-between;
     align-items: center;
   }
+  .banner header .photographer .info .name {
+    font-size: 3.6rem;
+  }
   .banner header .photographer .info .city {
     margin-bottom: 5px;
+    font-size: 1.3rem;
   }
   .banner header .photographer .info .tagline {
     margin-bottom: 5px;
+    font-size: 1.3rem;
   }
   .banner header .photographer .info .tags {
     margin-top: 5px;
+  }
+  .banner header .photographer .info .tags li a {
+    font-size: 1.3rem;
+  }
+  .banner header .photographer .info .tags li:last-child {
+    display: none;
   }
   .sort-by {
     display: none;
@@ -116,11 +127,11 @@ a {
   }
   .main #photos-section div .thumb-info {
     display: flex;
-    margin-bottom: 20px;
   }
   .main #photos-section div .thumb-info p {
     font-size: 1.4rem;
-    margin-top: 5px;
+    margin-top: 14px;
+    margin-bottom: 14px;
     width: 89%;
   }
   .main #photos-section div .thumb-info div.thumb-likes {
@@ -129,7 +140,7 @@ a {
   .main #photos-section div .thumb-info div.thumb-likes .heart {
     margin-left: 5px;
     position: relative;
-    top: 2px;
+    top: -1px;
   }
   div.banner header div.top-line nav#nav ul {
     width: calc(167%);
