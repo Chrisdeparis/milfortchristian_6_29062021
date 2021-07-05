@@ -26,7 +26,7 @@ const fetchData = () => {
             console.log(dash);
           return `        
             <div class="user ">
-                <a href="/${dash}.html">
+                <a href="milfortchristian_6_29062021/${dash}.html">
                 <div class="circle thumb">
                     <div class="crop">
                     <img src="img/${user.portrait}" alt="" />
