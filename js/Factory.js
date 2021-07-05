@@ -33,3 +33,10 @@ export default class Photographer {
   }
 
 console.log(Photographer);
+
+class Router {
+    constructor(name, routes) {
+        this.name = name;
+        this.routes = routes;
+    }
+}

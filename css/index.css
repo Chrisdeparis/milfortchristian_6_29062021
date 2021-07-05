@@ -242,7 +242,7 @@ a {
     border-radius: 15px;
     margin: 10px 2px 1px;
     padding: 4px 7px;
-    font-size: 0.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
   }
   div.banner header div.top-line nav#nav ul li a {
@@ -260,7 +260,7 @@ a {
     width: 89%;
     margin: 20px auto;
     border-radius: 2px;
-    padding: 40px 20px;
+    padding: 40px 20px 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -274,16 +274,18 @@ a {
     position: relative;
     right: 5px;
     color: #D3573C;
-    font-size: 3.6em;
+    font-size: 5.4em;
     margin-bottom: 5px;
   }
   div.banner header div.photographer div.info .city {
-    font-size: 1.5em;
+    margin-top: 10px;
+    font-size: 2.5rem;
     color: #901C1C;
   }
   div.banner header div.photographer div.info .tagline {
     margin-top: 15px;
     color: #525252;
+    font-size: 1.7rem;
   }
   div.banner header div.photographer div.info ul.tags {
     display: inline-flex;
@@ -291,7 +293,7 @@ a {
   }
   div.banner header div.photographer div.info ul.tags li {
     margin: 0 5px;
-    font-size: 0.8rem;
+    font-size: 1.4rem;
     border: 1px solid #C4C4C4;
     border-radius: 9px;
     padding: 2px 4px;
@@ -310,7 +312,11 @@ a {
     outline: none;
     box-shadow: none;
     cursor: pointer;
-    width: fit-content;
+    width: 140px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 10px;
   }
   div.banner header div.photographer div.user div.circle.thumb {
     display: block;
@@ -346,7 +352,7 @@ a {
   }
   div.title#title h1 {
     margin-bottom: 8px;
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     color: #901C1C;
     position: relative;
     top: 8px;
@@ -391,20 +397,21 @@ a {
   }
   div.main div#app div.user .name {
     color: #D3573C;
-    font-size: 2.4em;
+    font-size: 5.4em;
     margin-bottom: 5px;
   }
   div.main div#app div.user .city {
     color: #901C1C;
     margin-bottom: 5px;
+    font-size: 2rem;
   }
   div.main div#app div.user .tagline {
-    font-size: 0.7rem;
+    font-size: 1.7rem;
     margin-bottom: 5px;
   }
   div.main div#app div.user .price {
     color: #525252;
-    font-size: 0.7rem;
+    font-size: 1.4rem;
     margin-bottom: 5px;
   }
   div.main div#app div.user ul.tags {
@@ -412,7 +419,7 @@ a {
   }
   div.main div#app div.user ul.tags li {
     margin: 0 5px;
-    font-size: 0.8rem;
+    font-size: 1.6rem;
     border: 1px solid #C4C4C4;
     border-radius: 9px;
     padding: 2px 4px;
@@ -421,6 +428,10 @@ a {
   div.main div#app div.user ul.tags li a {
     color: #901C1C;
   }
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {

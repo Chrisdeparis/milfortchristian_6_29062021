@@ -42,7 +42,7 @@
               border-radius: 15px;
               margin: 10px 2px 1px;
               padding: 4px 7px;
-              font-size: 0.8rem;
+              font-size: 1.6rem;
               font-weight: bold;
               a{
                 color:$primary;
@@ -66,7 +66,7 @@
         width: 89%;
         margin: 20px auto; 
         border-radius:2px;
-        padding: 40px 20px;
+        padding: 40px 20px 0px;
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr; 
         grid-template-rows: 1fr; 
@@ -79,24 +79,26 @@
             position: relative;
             right: 5px;
             color: $primary-text;
-            font-size: 3.6em;
+            font-size: 5.4em;
             margin-bottom: 5px;
             
           }
           .city {
-            font-size:1.5em;
+            margin-top: 10px;
+            font-size: 2.5rem;
             color: $primary;
           }
           .tagline {
             margin-top: 15px;
             color:$grey;
+            font-size:1.7rem;
           }
           ul.tags {
             display: inline-flex;
             margin-top:20px;
             li {
               margin: 0 5px;
-              font-size: 0.8rem;
+              font-size: 1.4rem;
               border: 1px solid $tagBorder;
               border-radius: 9px;
               padding: 2px 4px;
@@ -118,7 +120,11 @@
             outline: none;
             box-shadow: none;
             cursor:pointer;
-            width:fit-content;
+            width:140px;
+            letter-spacing: 2px;
+            text-align: center;
+            font-size:1.5rem;
+            line-height:10px;
           }
         }
         div.user {
@@ -166,7 +172,7 @@
     grid-area: title;
     h1 {
       margin-bottom: 8px;
-      font-size: 1.8rem;
+      font-size: 2.8rem;
       color: $primary;
       position: relative;
       top: 8px;
@@ -213,20 +219,21 @@
         }
         .name {
           color: $primary-text;
-          font-size: 2.4em;
+          font-size: 5.4em;
           margin-bottom: 5px;
         }
         .city {
           color: $primary;
           margin-bottom: 5px;
+          font-size:2rem;
         }
         .tagline {
-          font-size: 0.7rem;
+          font-size: 1.7rem;
           margin-bottom: 5px;
         }
         .price {
           color: $grey;
-          font-size: 0.7rem;
+          font-size: 1.4rem;
           margin-bottom: 5px;
         }
         ul.tags {
@@ -234,7 +241,7 @@
           
           li {
             margin: 0 5px;
-            font-size: 0.8rem;
+            font-size: 1.6rem;
             border: 1px solid $tagBorder;
             border-radius: 9px;
             padding: 2px 4px;
