@@ -403,6 +403,8 @@ a {
     width: 289px;
     height: 248px;
     border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
   }
   .modal-content div.lightBox div.mid img.chevron-right {
     width: 13px;
@@ -796,7 +798,7 @@ a {
     top: 6px;
     z-index: -1;
   }
-  /* The Modal (background) */
+  /* The Modal LightBox(background) */
   .modal {
     display: none;
     /* Hidden by default */
@@ -818,7 +820,6 @@ a {
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    padding: 20px;
   }
   .modal-content div.lightBox {
     width: 125.3rem;
@@ -863,6 +864,51 @@ a {
     float: right;
     position: relative;
     top: 37px;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* The Modal (background) */
+  .modal-contact {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: black;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+  /* Modal Content/Box */
+  .modal-content-contact {
+    background-color: #fefefe;
+    margin: 62px auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    height: 900px;
+    width: 669px;
+    /* Could be more or less, depending on screen size */
+  }
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
   }
   .close:hover,
   .close:focus {
