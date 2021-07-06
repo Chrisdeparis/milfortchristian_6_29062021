@@ -447,7 +447,8 @@
         display: flex;
         justify-content: space-between;
         img.chevron-left {
-          width: 48px;;
+          width: 48px;
+          cursor:pointer;
         }
         img.big-img {
           width: 1050px;
@@ -456,12 +457,15 @@
         }
         img.chevron-right {
           width:48px;
+          cursor:pointer;
         }
       }
       div.bottom{
         p.lightBox{
           font-size:2.4rem;
           color:$primary;
+          margin-top: 14px;
+          margin-left: 100px;
         }
       }
       

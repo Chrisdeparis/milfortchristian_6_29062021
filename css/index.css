@@ -755,6 +755,7 @@ a {
   }
   .modal-content div.lightBox div.mid img.chevron-left {
     width: 48px;
+    cursor: pointer;
   }
   .modal-content div.lightBox div.mid img.big-img {
     width: 1050px;
@@ -763,10 +764,13 @@ a {
   }
   .modal-content div.lightBox div.mid img.chevron-right {
     width: 48px;
+    cursor: pointer;
   }
   .modal-content div.lightBox div.bottom p.lightBox {
     font-size: 2.4rem;
     color: #901C1C;
+    margin-top: 14px;
+    margin-left: 100px;
   }
   /* The Close Button */
   .close {
