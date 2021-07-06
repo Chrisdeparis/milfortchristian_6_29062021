@@ -319,7 +319,6 @@ a {
     color: #901C1C;
   }
   div.photographer div div.contact {
-    left: 133px;
     position: fixed;
     bottom: 20px;
     background: #901C1C;
@@ -328,6 +327,10 @@ a {
     font-size: 1.8rem;
     padding: 10px 20px;
     border-radius: 5px;
+    margin: 5% auto;
+    /* Will not center vertically and won't work in IE6/7. */
+    left: 0;
+    right: 0;
   }
   div#photos-section {
     display: grid;

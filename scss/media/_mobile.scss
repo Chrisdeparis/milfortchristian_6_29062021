@@ -64,6 +64,7 @@
                 div { 
     
                     .contact { 
+                        
     
                         p { 
     
@@ -394,7 +395,6 @@
         div {
             
             div.contact {
-                left:133px;
                 position:fixed;
                 bottom:20px;
                 background:$primary;
@@ -403,6 +403,10 @@
                 font-size: 1.8rem;
                 padding:10px 20px;
                 border-radius:5px;
+                margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+                left: 0;
+                right: 0;
+
                 
             }
         }
