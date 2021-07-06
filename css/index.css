@@ -904,11 +904,15 @@ a {
     /* Could be more or less, depending on screen size */
   }
   /* The Close Button */
-  .close {
+  .close-contact {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
+  }
+  .close-contact img {
+    width: 42px;
   }
   .close:hover,
   .close:focus {
@@ -923,6 +927,13 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+  }
+  div.banner header div.top-line {
+    display: flex;
+    flex-direction: column;
+  }
+  div.title#title h1 {
+    margin-top: 10px;
   }
 }
 

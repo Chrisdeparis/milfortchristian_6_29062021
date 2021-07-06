@@ -192,7 +192,7 @@ class IndexView {
         var btn = document.querySelector(".contact");
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementsByClassName("close-contact")[0];
 
         // When the user clicks on the button, open the modal
         btn.onclick = function() {
