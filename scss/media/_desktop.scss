@@ -421,27 +421,66 @@
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: white;
+    background-color: white;
   }
 
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    // margin: 62px auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    // border: 1px solid #888;
+    // width: 80%; /* Could be more or less, depending on screen size */
+    // display:flex;
+    div.lightBox {
+      width:125.3rem;
+      height: 98.4rem;
+      display: flex;
+      justify-content: space-between;
+      margin:0 auto;
+      flex-direction:column;
+      div.top{
+
+      }
+      div.mid{
+        display: flex;
+        justify-content: space-between;
+        img.chevron-left {
+          width: 48px;;
+        }
+        img.big-img {
+          width: 1050px;
+          height: 900px;
+          border-radius: 5px;
+        }
+        img.chevron-right {
+          width:48px;
+        }
+      }
+      div.bottom{
+        p.lightBox{
+          font-size:2.4rem;
+          color:$primary;
+        }
+      }
+      
+    }
+    
   }
 
   /* The Close Button */
   .close {
     color:$primary;
-    float: right;
+    display: flex;
+    justify-self: flex-end;
     font-size: 28px;
     font-weight: bold;
     width: 4.2rem;
     height: 4.2rem;
+    float: right;
+    position: relative;
+    top: 37px;
   }
 
   .close:hover,
