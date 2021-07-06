@@ -46,6 +46,8 @@
 
           .tags {
             margin-top: 5px;
+            position: relative;
+            right: 6px;
             li {
               a {
                 font-size: 1.3rem;
@@ -352,6 +354,7 @@
     }
     div {
       div.contact {
+            cursor: pointer;
         position: fixed;
         bottom: 20px;
         background: $primary;
@@ -407,15 +410,17 @@
     background-color: white;
     background-color: white;
   }
-  #openLightBox.modal {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
+//   #openLightBox.modal {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//   }
 
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
+    display: flex;
+    height: 100vh;
     // margin: 62px auto; /* 15% from the top and centered */
     padding: 20px;
     // border: 1px solid #888;
@@ -425,10 +430,11 @@
       width: 335px;
     //   height: 98.4rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       margin: 0 auto;
       flex-direction: column;
       div.top {
+
       }
       div.mid {
         display: flex;
@@ -462,14 +468,16 @@
   .close {
     color: $primary;
     display: flex;
-    justify-self: flex-end;
+    
     font-size: 28px;
     font-weight: bold;
-    width: 11px;
-    height: 11px;
+    width: 22px;
+    height: 22px;
     float: right;
     position: relative;
-    top: 12px;
+    top: 20px;
+    cursor: pointer;
+    left: 8px;
   }
 
   .close:hover,

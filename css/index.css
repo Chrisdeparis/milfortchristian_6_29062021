@@ -97,6 +97,8 @@ a {
   }
   .banner header .photographer .info .tags {
     margin-top: 5px;
+    position: relative;
+    right: 6px;
   }
   .banner header .photographer .info .tags li a {
     font-size: 1.3rem;
@@ -319,6 +321,7 @@ a {
     color: #901C1C;
   }
   div.photographer div div.contact {
+    cursor: pointer;
     position: fixed;
     bottom: 20px;
     background: #901C1C;
@@ -374,20 +377,17 @@ a {
     background-color: white;
     background-color: white;
   }
-  #openLightBox.modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
+    display: flex;
+    height: 100vh;
     padding: 20px;
   }
   .modal-content div.lightBox {
     width: 335px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
     flex-direction: column;
   }
@@ -418,14 +418,15 @@ a {
   .close {
     color: #901C1C;
     display: flex;
-    justify-self: flex-end;
     font-size: 28px;
     font-weight: bold;
-    width: 11px;
-    height: 11px;
+    width: 22px;
+    height: 22px;
     float: right;
     position: relative;
-    top: 12px;
+    top: 20px;
+    cursor: pointer;
+    left: 8px;
   }
   .close:hover,
   .close:focus {
