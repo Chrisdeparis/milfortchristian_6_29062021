@@ -1,3 +1,5 @@
+
+
 @media only screen and (min-width: 768px) {
   section#slot {
     // height: 100vh;
@@ -532,5 +534,13 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width:1200px) {
+  div.main div#photos-section, div.main div#app {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 }
