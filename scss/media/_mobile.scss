@@ -21,8 +21,7 @@
                     .logo { 
                         img { 
                             width:200px;
-                            position: relative;
-                            right: 35px;
+                            
                         }
                     }
                 }
@@ -187,14 +186,14 @@
                     
                     .logo{
                         img {
-                            
+                            width:150px;
                         }
                     }
                 }
                 nav#nav{
-                    
+                    margin-top:20px;
                     ul {
-                        width: calc(167%);
+                        width: calc(211% + -1px);
                         justify-content: space-between;
                         padding:0;
                         text-align: center;
@@ -203,15 +202,23 @@
                             list-style: none;
                             border:1px solid $tagBorder;
                             border-radius:15px;
-                            margin: 10px 10px;
+                            margin: 3px;
                             padding: 4px 6px;
-                            font-size: 0.8rem;
+                            font-size: 1.2rem;
                             font-weight: bold;
                             a{
                                 color:$primary;
                             }
                             
                         }
+                    }
+                }
+                div.title#title {
+                    h1 {
+                        font-size:1.4rem;
+                        line-height: 18px;
+                        font-weight: 400;
+                        width: 119px;
                     }
                 }
                 .header {
@@ -315,20 +322,21 @@
             }
             .name {
                 color:$primary-text;
-                font-size: 2.4em;
+                font-size: 3.6rem;
                 margin-bottom: 5px;
             }
             .city {
                 color:$primary;
                 margin-bottom: 5px;
+                font-size:1.3rem;
             }
             .tagline {
-                font-size: 0.7rem;
+                font-size: 1rem;
                 margin-bottom: 5px;
             }
             .price {
                 color:$grey;
-                font-size:0.7rem;
+                font-size:0.9rem;
                 margin-bottom: 5px;
             }
             ul.tags {
@@ -336,7 +344,7 @@
                 
                 li{
                     margin:0 5px;
-                    font-size: 0.8rem;
+                    font-size: 1.2rem;
                     border:1px solid $tagBorder;
                     border-radius:9px;
                     padding:2px 4px;
