@@ -410,6 +410,7 @@
   #openLightBox.modal {
       display: flex;
       justify-content: center;
+      align-items: center;
   }
 
   /* Modal Content/Box */
@@ -433,7 +434,7 @@
         display: flex;
         justify-content: space-between;
         img.chevron-left {
-          width: 48px;
+          width: 13px;
           cursor: pointer;
         }
         img.big-img {
@@ -442,7 +443,7 @@
           border-radius: 5px;
         }
         img.chevron-right {
-          width: 48px;
+          width: 13px;
           cursor: pointer;
         }
       }
@@ -464,11 +465,11 @@
     justify-self: flex-end;
     font-size: 28px;
     font-weight: bold;
-    width: 4.2rem;
-    height: 4.2rem;
+    width: 11px;
+    height: 11px;
     float: right;
     position: relative;
-    top: 37px;
+    top: 12px;
   }
 
   .close:hover,
