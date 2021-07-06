@@ -750,10 +750,12 @@ a {
   }
   /* The Close Button */
   .close {
-    color: #aaa;
+    color: #901C1C;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    width: 4.2rem;
+    height: 4.2rem;
   }
   .close:hover,
   .close:focus {
