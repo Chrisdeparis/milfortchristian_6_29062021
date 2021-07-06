@@ -62,15 +62,18 @@ const fetchData = () => {
         const thumbnails = document.querySelectorAll('.thumb');
         console.log(thumbnails);
         for (let i = 0; i < thumbnails.length; i++) {
-         thumbnails[i].addEventListener("click", () => {
-             console.log("thumb Clicked N° " + i + ' ouvre la page');
-
+          thumbnails[i].addEventListener("click", () => {
+            console.log("thumb Clicked N° " + i + ' ouvre la page');
+            
 
          });
         }
-     };
+      };
      
-     photographerPage();
+      photographerPage();
+
+      
+
     });
 };
 
@@ -145,8 +148,44 @@ class IndexView {
   }
   updateSlot(content) {
     this.slot.innerHTML = content;
+
+    // Lorsque l'utilisateur clique sur un média, celui-ci doit s’ouvrir dans une
+    // lightbox :
+    const openLightBox = () => {
+      const thumbImg = document.querySelectorAll('.thumb-img');
+
+      for(let i=0; i<thumbImg.length; i++) {
+        // Get the modal
+        const modal = document.getElementById("openLightBox");
+
+        // Get the <span> element that closes the modal
+        const span = document.getElementsByClassName("close")[0];
+        // Get the thumb img that opens the modal
+        thumbImg[i].addEventListener('click', (e) => {
+            console.log('open lightbox n° '+i);
+            modal.style.display = 'block';
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            } 
+
+          });
+        }
+      }
+
+      openLightBox();
   }
 }
 
 
 new IndexView();
+
+
+
