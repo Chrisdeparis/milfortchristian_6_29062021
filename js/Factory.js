@@ -1,4 +1,4 @@
-export default class Photographer {
+class Photographer {
     constructor( id, name, city, tagline, price, tags, portrait ) {
         this.id = id;
         this.name = name;  
@@ -31,8 +31,8 @@ export default class Photographer {
     }
 
   }
-
-console.log(Photographer);
+const photograph1 = new Photographer();
+// console.log(photograph1);
 
 class Router {
     constructor(name, routes) {
@@ -40,3 +40,28 @@ class Router {
         this.routes = routes;
     }
 }
+
+// UI Class: Handle UI Tasks
+class Ui {
+    static displayPhotographers() {
+        const photographers = Store.getPhotographers();
+    }
+}
+
+
+// Store Class: Handles Storage
+class Store {
+    static getPhotographers() {
+        let photographers;
+        if (localStorage.getItem('photographers') === null) {
+            photographers = [];
+        } else {
+            photographers = JSON.parse(localStorage.getItem('photographers'));
+        }
+        console.log(photographers);
+        return photographers;
+
+    }
+}
+const store1 = new Store();
+console.log(store1);
