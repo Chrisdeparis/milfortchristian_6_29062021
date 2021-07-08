@@ -436,6 +436,115 @@ a {
     text-decoration: none;
     cursor: pointer;
   }
+  /* The Modal (background) */
+  .modal-contact {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: black;
+    /* Fallback color */
+    background-color: #DB8876;
+  }
+  /* Modal Content/Box */
+  .modal-content-contact {
+    background-color: #DB8876;
+    /* 15% from the top and centered */
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    height: 100vh;
+    width: 338px;
+    /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 0  17px;
+    margin: 0px auto;
+  }
+  .modal-content-contact div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modal-content-contact .close-contact img {
+    float: right;
+  }
+  .modal-content-contact .title {
+    width: 253px;
+    font-size: 3.6rem;
+    line-height: 46px;
+  }
+  .modal-content-contact .name {
+    width: 159px;
+    font-size: 3.6rem;
+    margin-bottom: 20px;
+    line-height: 46px;
+  }
+  .modal-content-contact .contact-form form {
+    width: 99%;
+  }
+  .modal-content-contact .contact-form form label {
+    width: 128px;
+    height: 47px;
+    font-size: 2.4rem;
+    color: #525252;
+  }
+  .modal-content-contact .contact-form form input {
+    width: 99%;
+    height: 52px;
+    border-radius: 5px;
+    outline: none;
+    margin: 10px 0;
+  }
+  .modal-content-contact .contact-form form textarea {
+    height: 170px;
+    width: 99%;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .modal-content-contact .contact-form form div.btn-form {
+    background: #901C1C;
+    width: 170px;
+    height: 35px;
+    color: white;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 auto;
+    line-height: 23.44px;
+  }
+  /* The Close Button */
+  .close-contact {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .close-contact img {
+    width: 18.67px;
+    color: white;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (min-width: 768px) {
