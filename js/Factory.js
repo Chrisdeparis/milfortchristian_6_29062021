@@ -65,3 +65,6 @@ class Store {
 }
 const store1 = new Store();
 console.log(store1);
+
+//if type  = video 
+//class video
