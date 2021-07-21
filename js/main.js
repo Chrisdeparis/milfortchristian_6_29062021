@@ -3,6 +3,7 @@
 // import filterTag from './filterTag.js';
 // import photographerPage from './photographerPage.js';
 // import templateUser from "./templateUser.js";
+import FishEyeData from './FishEyeData.json' assert { type: "json" };
 
 // Factory Pattern
 const textNode = document.querySelector("p");
@@ -15,32 +16,44 @@ document.getElementById("nav").onclick = (event)=>{
         
         // Ici tu  appelles la fonction qui crée la liste des photographes
         // eslint-disable-next-line no-inner-declarations
-        const json = './FishEyeData.json';
-        const data = JSON.parse(json);
-
-        fetch('./FishEyeData.json')
-        .then(function (response) {
-          console.log(response.json());
-          return response.json();
-        })
-        .then(function (data) {
-          appendData(data);
-        })
-        .catch(function (err) {
-          console.log(err);
-        });
-
+        console.log(FishEyeData);
+        
+        
         
 
-        function appendData(data) {
+
+        // GET Request.
+        fetch('http://localhost:5500/js/FishEyeData.json', {
+          "method": "GET",
+          "headers": {
+            "Content-Type": 'application/json'
+          }
+        })
+        // Handle success
+        .then(response => {
+          response.json().then(json => {
+             //Do stuff with json here
+             console.log('Do stuff with json');
+             appendData(FishEyeData);
+             console.log(json);
+
+          })
+        })  // convert to json
+        .then(json => console.log(json))    //print data to console
+        .catch(err => console.log('Request Failed', err)); // Catch errors
+        
+        
+
+        function appendData(FishEyeData) {
             const mainContainer = document.getElementById("app");
-            for (let i = 0; i < data.length; i++) {
+            for (let i = 0; i < FishEyeData.length; i++) {
                 const div = document.createElement("div");
-                div.innerHTML = 'Name: ' + data[i].name;
+                div.innerHTML = 'Name: ' + FishEyeData[i].name;
+                console.log(div);
                 mainContainer.appendChild(div);
             }
         }
-        console.log(json);
+        
         // function createPhotograph(tagName){
         //     // tu fais un filter sur le json entier qui retourne la jsonList
             
@@ -54,7 +67,7 @@ document.getElementById("nav").onclick = (event)=>{
         // function factory() {
         //   return 'factory';
         // }
-        console.log(data);
+        
         // console.log(jsonList);
         // createPhotograph();
        
