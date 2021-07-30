@@ -1,79 +1,75 @@
-// import Photographer from './Factory.js';
-// import fetchData from './fetchData.js';
-// import filterTag from './filterTag.js';
-// import photographerPage from './photographerPage.js';
-// import templateUser from "./templateUser.js";
-import FishEyeData from './FishEyeData.json' assert { type: "json" };
+
 
 // Factory Pattern
 const textNode = document.querySelector("p");
+
+// Data file
+const jsonData = fetch('http://127.0.0.1:5500/js/FishEyeData.json', {
+          "method": "GET",
+          "headers": {
+            "Content-Type": 'application/json',
+            "Access-Control-Allow-Origin": '*'
+          }
+        })
+        
+// On click nav
 document.getElementById("nav").onclick = (event)=>{
   console.log('clic nav');
     if(event.target !== event.currentTarget){
-      
-      
         const tagName = event.target.dataset.filter;
-        
         // Ici tu  appelles la fonction qui crée la liste des photographes
-        // eslint-disable-next-line no-inner-declarations
-        console.log(FishEyeData);
-        
-        
-        
-
-
+        // function createPhotograph(id,name, city, tagline, price, tags, portrait) {
+        //   return {
+        //     id,name, city, tagline, price, tags, portrait,
+        //     getInfo() {
+        //       return { id: this.id, name: this.name, city: this.city, tagline: this.tagline, price: this.price, tags: this.tags, portrait: this.portrait};
+        //     }
+        //   }
+        // }
+        // createPhotograph();
+        // console.log(createPhotograph);
+        // console.log(FishEyeData);
         // GET Request.
-        fetch('http://localhost:5500/js/FishEyeData.json', {
-          "method": "GET",
-          "headers": {
-            "Content-Type": 'application/json'
-          }
-        })
+        
+        
         // Handle success
-        .then(response => {
+        jsonData.then(response => {
           response.json().then(json => {
-             //Do stuff with json here
-             console.log('Do stuff with json');
-             appendData(FishEyeData);
-             console.log(json);
+            //Do stuff with json here
+            console.log('Do stuff with json');
+            // appendData(FishEyeData);
+            const tagName = event.target.dataset.filter;
+           
+            let photographers = json.photographers;
+            console.table(photographers);
+            
+            function selectTag(photographer) {
+              console.log(photographer);
+              console.log(event.target.dataset.filter);
+              return photographer.tags.includes(event.target.dataset.filter);
+            }
+            let jsonfilter = photographers.filter(selectTag);
+            console.table(jsonfilter); 
+
+            
+            
+            const user = photographers.forEach(item => {
+              const elementTag = item.tags.forEach(tag => {
+                console.log(tagName);
+                // tu fais un filter sur le json entier qui retourne la jsonList
+                
+                
+              });
+            });
+            console.table(photographers);
+             
 
           })
         })  // convert to json
         .then(json => console.log(json))    //print data to console
         .catch(err => console.log('Request Failed', err)); // Catch errors
-        
-        
-
-        function appendData(FishEyeData) {
-            const mainContainer = document.getElementById("app");
-            for (let i = 0; i < FishEyeData.length; i++) {
-                const div = document.createElement("div");
-                div.innerHTML = 'Name: ' + FishEyeData[i].name;
-                console.log(div);
-                mainContainer.appendChild(div);
-            }
-        }
-        
-        // function createPhotograph(tagName){
-        //     // tu fais un filter sur le json entier qui retourne la jsonList
-            
-        //     const jsonList = JSON.parse('../db/FishEyeData.json').filter(function (tagName) {
-        //       return ;
-        //     });
-        //     // tu appelles la factory
-        //     // Regarder documentfragment            
-        //     factory(type = "create photographs list", jsonList);
-        // }
-        // function factory() {
-        //   return 'factory';
-        // }
-        
-        // console.log(jsonList);
-        // createPhotograph();
-       
        
     }
- 
 }
 
 
