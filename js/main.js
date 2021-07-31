@@ -10,8 +10,51 @@ const jsonData = fetch('http://127.0.0.1:5500/js/FishEyeData.json', {
             "Content-Type": 'application/json',
             "Access-Control-Allow-Origin": '*'
           }
-        })
-        
+        }).then(response => {
+          response.json().then(json => {
+            console.log("affiche la section photographe");
+            // function html Photographers section
+console.log(json);
+const html = json.photographers
+            .map((user) => {
+                const str = user.name;
+                const dash = str.replace(" ","-");
+                console.log(dash);
+              return `        
+                <div class="user ">
+                    <a href="#${dash}">
+                    <div class="circle thumb">
+                        <div class="crop">
+                        <img src="img/${user.portrait}" alt="" />
+                        </div>
+                        <h2 class="name">${user.name}</h2>
+                    </div>
+                    </a>
+                    <p class="city">${user.city}</p>
+                    <p class="tagline">${user.tagline}</p>
+                    <p class="price">${user.price} €/jour</p>
+                    <ul class="tags">
+                        ${user.tags
+                          .map((tag) =>
+                            `
+                        <li>
+                            <a href="#" class="${tag}">#${tag}</a>
+                        </li>
+                    `.trim()
+                          )
+                          .join("")}
+                    </ul>
+                </div>
+                `;
+            })
+            .join("");
+    
+      document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
+
+          })});
+
+
+
 // On click nav
 document.getElementById("nav").onclick = (event)=>{
   console.log('clic nav');
@@ -49,22 +92,23 @@ document.getElementById("nav").onclick = (event)=>{
               return photographer.tags.includes(event.target.dataset.filter);
             }
             let jsonfilter = photographers.filter(selectTag);
+            console.log(tagName +' a '+jsonfilter.length+' photographes');
             console.table(jsonfilter); 
-
-            
             
             const user = photographers.forEach(item => {
               const elementTag = item.tags.forEach(tag => {
-                console.log(tagName);
+                // console.log(tagName);
                 // tu fais un filter sur le json entier qui retourne la jsonList
+                
                 
                 
               });
             });
-            console.table(photographers);
+            // console.table(photographers);
              
 
           })
+          
         })  // convert to json
         .then(json => console.log(json))    //print data to console
         .catch(err => console.log('Request Failed', err)); // Catch errors
