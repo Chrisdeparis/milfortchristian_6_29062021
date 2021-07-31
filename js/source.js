@@ -1,97 +1,30 @@
-let ipadress = "";  
-if(document.URL.startsWith("http://127.0.0.1:5500/")){  
-  ipadress = "http://127.0.0.1:5500/"
-
-} else if(document.URL.startsWith("https://www")){
-  ipadress = "prod"
-} else {
-  console.warn("NOOOOOOO!!!!!")
-}
-
-(function() {
-
-  const getJsonData = () => {
-    return fetch(ipadress+'/js/FishEyeData.json')
-        .then((response) => { 
-          return response.json().then((data) => {
-              // console.log(data);
-              return data;
-          }).catch((err) => {
-              console.log(err);
-          }) 
-        });
-  }
-  
-  
-  const getPhotographers = () => {
-    let jsonData;
-    getJsonData().then((data) => {
-      // showData(data);
-  
-      return data.photographers;
-    })
-    
-  }
-  // result =2;
-  function showData(data) {
-    console.log(data);
-    result = data;
-  }
-  console.log(getPhotographers());
-  let jsonData = getPhotographers();
-  
-  // function html Photographers section
-  console.log(jsonData);
-  const html = jsonData.photographers
-    .map((user) => {
-        const str = user.name;
-        const dash = str.replace(" ","-");
-        console.log(dash);
-      return `        
-        <div class="user ">
-            <a href="#${dash}">
-            <div class="circle thumb">
-                <div class="crop">
-                <img src="img/${user.portrait}" alt="" />
-                </div>
-                <h2 class="name">${user.name}</h2>
-            </div>
-            </a>
-            <p class="city">${user.city}</p>
-            <p class="tagline">${user.tagline}</p>
-            <p class="price">${user.price} €/jour</p>
-            <ul class="tags">
-                ${user.tags
-                  .map((tag) =>
-                    `
-                <li>
-                    <a href="#" class="${tag}">#${tag}</a>
-                </li>
-            `.trim()
-                  )
-                  .join("")}
-            </ul>
-        </div>
-        `;
-    })
-    .join("");
-
-document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
-
-
-  // specify the type of request
-  // request.open('Get', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/Bio.txt');
-  // On click nav
+// On click nav
 document.getElementById("nav").onclick = (event)=>{
   console.log('clic nav');
     if(event.target !== event.currentTarget){
         const tagName = event.target.dataset.filter;
-
+        // Ici tu  appelles la fonction qui crée la liste des photographes
+        // function createPhotograph(id,name, city, tagline, price, tags, portrait) {
+        //   return {
+        //     id,name, city, tagline, price, tags, portrait,
+        //     getInfo() {
+        //       return { id: this.id, name: this.name, city: this.city, tagline: this.tagline, price: this.price, tags: this.tags, portrait: this.portrait};
+        //     }
+        //   }
+        // }
+        // createPhotograph();
+        // console.log(createPhotograph);
+        // console.log(FishEyeData);
+        // GET Request.
+        
+        
         // Handle success
         //Do stuff with json here
         console.log('Do stuff with json');
+        // appendData(FishEyeData);
         
-        let photographers = jsonData.photographers;
+       
+        let photographers = json.photographers;
         console.table(photographers);
         
         function selectTag(photographer) {
@@ -102,22 +35,54 @@ document.getElementById("nav").onclick = (event)=>{
         let jsonfilter = photographers.filter(selectTag);
         console.log(tagName +' a '+jsonfilter.length+' photographes');
         console.table(jsonfilter); 
-        console.log("affiche la section photographe");
+        
+        const user = photographers.forEach(item => {
+          const elementTag = item.tags.forEach(tag => {
+            // console.log(tagName);
+            // tu fais un filter sur le json entier qui retourne la jsonList
+          })
+        })
+            console.log("affiche la section photographe");
       }
     }
 
-            
-  
-})();
-
-// Factory Pattern
-const textNode = document.querySelector("p");
-
-// Data file
-console.log(ipadress);
-
-
-
+            // function html Photographers section
+console.log(json);
+const html = json.photographers
+            .map((user) => {
+                const str = user.name;
+                const dash = str.replace(" ","-");
+                console.log(dash);
+              return `        
+                <div class="user ">
+                    <a href="#${dash}">
+                    <div class="circle thumb">
+                        <div class="crop">
+                        <img src="img/${user.portrait}" alt="" />
+                        </div>
+                        <h2 class="name">${user.name}</h2>
+                    </div>
+                    </a>
+                    <p class="city">${user.city}</p>
+                    <p class="tagline">${user.tagline}</p>
+                    <p class="price">${user.price} €/jour</p>
+                    <ul class="tags">
+                        ${user.tags
+                          .map((tag) =>
+                            `
+                        <li>
+                            <a href="#" class="${tag}">#${tag}</a>
+                        </li>
+                    `.trim()
+                          )
+                          .join("")}
+                    </ul>
+                </div>
+                `;
+            })
+            .join("");
+    
+      document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
 
           
 
