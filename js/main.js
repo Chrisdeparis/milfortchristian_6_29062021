@@ -1,131 +1,43 @@
-let ipadress = "";  
-if(document.URL.startsWith("http://127.0.0.1:5500/")){  
-  ipadress = "http://127.0.0.1:5500/"
+import {getJsonData, getPhotographers, showPhotographers} from './modules/getJsonData.js'
+// import {showPhotographers} from './modules/showPhotographers.js'
 
-} else if(document.URL.startsWith("https://www")){
-  ipadress = "prod"
-} else {
-  console.warn("NOOOOOOO!!!!!")
-}
-
-(function() {
-
-  const getJsonData = () => {
-    return fetch(ipadress+'/js/FishEyeData.json')
-        .then((response) => { 
-          return response.json().then((data) => {
-              // console.log(data);
-              return data;
-          }).catch((err) => {
-              console.log(err);
-          }) 
-        });
-  }
   
-  
-  const getPhotographers = () => {
-    let jsonData;
-    getJsonData().then((data) => {
-      // showData(data);
-  
-      return data.photographers;
-    })
-    
-  }
-  // result =2;
-  function showData(data) {
-    console.log(data);
-    result = data;
-  }
-  console.log(getPhotographers());
-  let jsonData = getPhotographers();
-  
-  // function html Photographers section
-  console.log(jsonData);
-  const html = jsonData.photographers
-    .map((user) => {
-        const str = user.name;
-        const dash = str.replace(" ","-");
-        console.log(dash);
-      return `        
-        <div class="user ">
-            <a href="#${dash}">
-            <div class="circle thumb">
-                <div class="crop">
-                <img src="img/${user.portrait}" alt="" />
-                </div>
-                <h2 class="name">${user.name}</h2>
-            </div>
-            </a>
-            <p class="city">${user.city}</p>
-            <p class="tagline">${user.tagline}</p>
-            <p class="price">${user.price} €/jour</p>
-            <ul class="tags">
-                ${user.tags
-                  .map((tag) =>
-                    `
-                <li>
-                    <a href="#" class="${tag}">#${tag}</a>
-                </li>
-            `.trim()
-                  )
-                  .join("")}
-            </ul>
-        </div>
-        `;
-    })
-    .join("");
-
-document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
+getJsonData();
+getPhotographers();
+showPhotographers();
 
 
-  // specify the type of request
-  // request.open('Get', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/Bio.txt');
-  // On click nav
-document.getElementById("nav").onclick = (event)=>{
-  console.log('clic nav');
-    if(event.target !== event.currentTarget){
-        const tagName = event.target.dataset.filter;
 
-        // Handle success
-        //Do stuff with json here
-        console.log('Do stuff with json');
-        
-        let photographers = jsonData.photographers;
-        console.table(photographers);
-        
-        function selectTag(photographer) {
-          console.log(photographer);
-          console.log(event.target.dataset.filter);
-          return photographer.tags.includes(event.target.dataset.filter);
-        }
-        let jsonfilter = photographers.filter(selectTag);
-        console.log(tagName +' a '+jsonfilter.length+' photographes');
-        console.table(jsonfilter); 
-        console.log("affiche la section photographe");
-      }
+
+// specify the type of request
+// request.open('Get', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/Bio.txt');
+// On click nav
+document.getElementById("nav").onclick = (event) => {
+  console.log("clic nav");
+  if (event.target !== event.currentTarget) {
+    const tagName = event.target.dataset.filter;
+
+    // Handle success
+    //Do stuff with json here
+    console.log("Do stuff with json");
+
+    let photographers = jsonData.photographers;
+    console.table(photographers);
+
+    function selectTag(photographer) {
+      console.log(photographer);
+      console.log(event.target.dataset.filter);
+      return photographer.tags.includes(event.target.dataset.filter);
     }
-
-            
-  
-})();
+    let jsonfilter = photographers.filter(selectTag);
+    console.log(tagName + " a " + jsonfilter.length + " photographes");
+    console.table(jsonfilter);
+    console.log("affiche la section photographe");
+  }
+};
 
 // Factory Pattern
 const textNode = document.querySelector("p");
-
-// Data file
-console.log(ipadress);
-
-
-
-
-          
-
-
-
-
-
-
 
 
 //Liste de tous les photographes avec leur nom, leur slogan, leur localisation,
@@ -147,7 +59,7 @@ console.log(ipadress);
 //             const str = user.name;
 //             const dash = str.replace(" ","-");
 //             console.log(dash);
-//           return `        
+//           return `
 //             <div class="user ">
 //                 <a href="#${dash}">
 //                 <div class="circle thumb">
@@ -187,15 +99,12 @@ console.log(ipadress);
 //         for (let i = 0; i < thumbnails.length; i++) {
 //           thumbnails[i].addEventListener("click", () => {
 //             console.log("thumb Clicked N° " + i + ' ouvre la page');
-            
 
 //          });
 //         }
 //       };
-     
-//       photographerPage();
 
-      
+//       photographerPage();
 
 //     });
 // };
@@ -207,25 +116,25 @@ console.log(ipadress);
 // étiquette.
 
 // const filterTag = (data, user) => {
-    
+
 //   const btns = document.querySelectorAll(".btn");
-  
+
 //   for (let i = 0; i < btns.length; i++) {
 //     btns[i].addEventListener("click", (e) => {
 
 //       const filter = e.target.dataset.filter;
 //       const tagName = document.getElementsByClassName(filter);
 //       const listUsers = document.querySelectorAll(".user");
-      
+
 //       e.preventDefault();
 //       console.log(filter);
 //       console.log(listUsers);
 
 //       listUsers.forEach((user) => {
-        
+
 //         console.log(user);
 //         if (filter === "all") {
-            
+
 //           console.log("filter === all");
 //           user.style.display = "block";
 //           console.log(user);
@@ -260,7 +169,7 @@ console.log(ipadress);
 //   }
 //   onRouteChange(e) {
 //     const hashLocation = window.location.hash.substring(1);
-//     console.log(hashLocation);    
+//     console.log(hashLocation);
 //     this.loadContent(hashLocation);
 //   }
 //   loadContent(uri) {
@@ -287,7 +196,7 @@ console.log(ipadress);
 //         thumbImg[i].addEventListener('click', (e) => {
 //             console.log('open lightbox n° '+i);
 //             modal.style.display = 'block';
-            
+
 //             // When the user clicks on <span> (x), close the modal
 //             span.onclick = function() {
 //               modal.style.display = "none";
@@ -297,7 +206,7 @@ console.log(ipadress);
 //               if (event.target == modal) {
 //                 modal.style.display = "none";
 //               }
-//             } 
+//             }
 
 //           });
 //         }
@@ -339,6 +248,5 @@ console.log(ipadress);
 //       openContactModal();
 //   }
 // }
-
 
 // new IndexView();
