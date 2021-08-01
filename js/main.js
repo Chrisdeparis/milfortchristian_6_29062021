@@ -1,5 +1,6 @@
-import {getJsonData, getPhotographers, showPhotographers} from './modules/getJsonData.js'
-// import {showPhotographers} from './modules/showPhotographers.js'
+import { getJsonData } from './modules/getJsonData.js'
+import { getPhotographers } from './modules/getPhotographers.js'
+import { showPhotographers } from './modules/showPhotographers.js'
 
   
 getJsonData();
