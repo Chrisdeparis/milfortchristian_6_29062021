@@ -2,41 +2,20 @@ import { fakeAPI } from './modules/fakeAPI.js'
 import { getJsonData } from './modules/getJsonData.js'
 import { getPhotographers } from './modules/getPhotographers.js'
 import { showPhotographers } from './modules/showPhotographers.js'
+import { filterNav } from './modules/filterNav.js'
 
 fakeAPI(); 
 getJsonData();
 getPhotographers();
 showPhotographers();
+filterNav();
 
 
 
 
 // specify the type of request
 // request.open('Get', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/Bio.txt');
-// On click nav
-document.getElementById("nav").onclick = (event) => {
-  console.log("clic nav");
-  if (event.target !== event.currentTarget) {
-    const tagName = event.target.dataset.filter;
 
-    // Handle success
-    //Do stuff with json here
-    console.log("Do stuff with json");
-
-    let photographers = jsonData.photographers;
-    console.table(photographers);
-
-    function selectTag(photographer) {
-      console.log(photographer);
-      console.log(event.target.dataset.filter);
-      return photographer.tags.includes(event.target.dataset.filter);
-    }
-    let jsonfilter = photographers.filter(selectTag);
-    console.log(tagName + " a " + jsonfilter.length + " photographes");
-    console.table(jsonfilter);
-    console.log("affiche la section photographe");
-  }
-};
 
 // Factory Pattern
 const textNode = document.querySelector("p");
