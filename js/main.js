@@ -1,8 +1,9 @@
+import { fakeAPI } from './modules/fakeAPI.js'
 import { getJsonData } from './modules/getJsonData.js'
 import { getPhotographers } from './modules/getPhotographers.js'
 import { showPhotographers } from './modules/showPhotographers.js'
 
-  
+fakeAPI(); 
 getJsonData();
 getPhotographers();
 showPhotographers();

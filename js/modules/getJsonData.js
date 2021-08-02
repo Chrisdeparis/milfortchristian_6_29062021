@@ -14,10 +14,6 @@ const getJsonData = () => {
   });
 };
 
-// share scope json
-if(1 == 1) {
-  json = getJsonData();
-}
 
 
 
