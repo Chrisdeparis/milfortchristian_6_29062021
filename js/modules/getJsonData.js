@@ -14,13 +14,4 @@ const getJsonData = () => {
   });
 };
 
-
-
-
-
-
-
-
-
-
 export { getJsonData };
