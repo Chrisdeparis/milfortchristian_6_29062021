@@ -1,7 +1,7 @@
 let json;
 // get Json Data
 const getJsonData = () => {
-    return fetch('../../db/FishEyeData.json').then((response) => {
+    return fetch('./db/FishEyeData.json').then((response) => {
     return response
       .json()
       .then((data) => {

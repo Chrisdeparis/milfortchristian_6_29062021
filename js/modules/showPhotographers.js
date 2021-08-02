@@ -11,8 +11,6 @@ const showPhotographers = () => {
   getPhotographers().then((data) => {
     const html = data
       .map((user) => {
-        console.log(user.name);
-        // return user.name;
         const str = user.name;
         const dash = str.replace(" ", "-");
         return `
