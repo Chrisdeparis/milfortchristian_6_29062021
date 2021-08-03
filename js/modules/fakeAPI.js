@@ -1,8 +1,9 @@
-let data; 
+import data from '../FishEyeData.js';
+
 
 const fakeAPI = () => {
-    return new Promise(res => {
-      setTimeout(() => res(data), 1);
+    return new Promise((resolve, reject) => {
+      setTimeout(() => resolve(data), 2000);
     });
   }
 

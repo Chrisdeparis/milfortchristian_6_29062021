@@ -1,17 +1,8 @@
-let json;
+import { fakeAPI } from './fakeAPI.js'
+
 // get Json Data
 const getJsonData = () => {
-    return fetch('./db/FishEyeData.json').then((response) => {
-    return response
-      .json()
-      .then((data) => {
-        json = data;
-        return data;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  });
+  return fakeAPI();
 };
 
 export { getJsonData };

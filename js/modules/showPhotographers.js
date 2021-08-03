@@ -1,5 +1,6 @@
 import { getJsonData } from "./getJsonData.js";
 import { getPhotographers } from "./getPhotographers.js";
+
 let json;
 let user;
 // share scope json
@@ -39,12 +40,9 @@ const showPhotographers = () => {
                 </ul>
             </div>
           `;
-
       })
       .join("");
-
       document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
-    
   });
 }
 

@@ -1,6 +1,11 @@
 import { getPhotographers } from './getPhotographers.js'
 import { getJsonData } from './getJsonData.js'
-import { showPhotographers } from './showPhotographers.js';
+
+let jsonData;
+
+if(1 ==1) {
+    jsonData = getJsonData();
+}
 
 const filterNav = () => {
   // On click nav
@@ -8,14 +13,15 @@ const filterNav = () => {
     console.log("clic nav");
     if (event.target !== event.currentTarget) {
       const tagName = event.target.dataset.filter;
-
+      
       // Handle success
       //Do stuff with json here
       console.log("Do stuff with json");
-      console.table(getPhotographers());
+      console.table(getJsonData());
       let jsonData = getJsonData();
-      console.log(jsonData);
-      let photographers = jsonData.photographers;
+        
+      console.table(jsonData);
+      let photographers =  jsonData.photographers;
       console.table(photographers);
 
       function selectTag(photographer) {
