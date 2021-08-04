@@ -2,10 +2,12 @@ import { getJsonData } from './getJsonData.js'
 
 // get Photographers
 const getPhotographers = () => {
-  return new Promise(res => {
+  return new Promise((resolve, reject) => {
     getJsonData().then(data => {
-      res(data.photographers);
-    });
+      resolve(data.photographers);
+      
+    })
+    .catch(error  => reject(error))
   });
 };
 

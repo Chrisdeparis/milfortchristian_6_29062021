@@ -42,9 +42,8 @@ const showPhotographers = () => {
           `;
       })
       .join("");
-      document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
+    document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
   });
-}
-
+};
 
 export { showPhotographers };
