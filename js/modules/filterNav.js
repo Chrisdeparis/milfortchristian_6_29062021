@@ -1,14 +1,14 @@
-import { getPhotographers } from './getPhotographers.js'
-import  { getJsonData } from './getJsonData.js'
+import { getPhotographers } from './getPhotographers.js';
+import  { getJsonData } from './getJsonData.js';
 import data from '../FishEyeData.js';
-let showfiltered;
 
 
+let showFiltered;
 const filterNav = () => {
   
   // On click nav
   document.getElementById("nav").onclick = (event) => {
-    console.log("clic nav");
+    // console.log("clic nav");
     if (event.target !== event.currentTarget) {
       const tagName = event.target.dataset.filter;
       
@@ -18,51 +18,62 @@ const filterNav = () => {
       let photographers =  data.photographers;
 
       function selectTag(photographer) {
-        console.log(photographer);
-        console.log(event.target.dataset.filter);
+        // console.log(photographer);
+        // console.log(event.target.dataset.filter);
         return photographer.tags.includes(event.target.dataset.filter);
       }
       let jsonfilter = photographers.filter(selectTag);
       console.log(jsonfilter);
       
-      const showfiltered = () => {  
-        getPhotographers().then((jsonfilter) => {
-          const html = jsonfilter
-            .map((user) => {
-              const str = user.name;
-              const dash = str.replace(" ", "-");
-              return `
-                  <div class="user ">
-                      <a href="#${dash}">
-                      <div class="circle thumb">
-                          <div class="crop">
-                          <img src="img/${user.portrait}" alt="" />
-                          </div>
-                          <h2 class="name">${user.name}</h2>
+      function displayPhotographers(jsonfilter){
+  
+        // jsonfilter est un tableau d'objets
+        
+        let photographerDetails = "";
+
+        console.table(jsonfilter);
+        jsonfilter.forEach((photographer)=>{
+          const str = photographer.name;
+          const dash = str.replace(" ", "-");
+              // Il construit son HTML
+              photographerDetails = `
+                <div class="user">
+                  <a href="#${dash}">
+                  <div class="circle thumb">
+                      <div class="crop">
+                      <img src="img/${photographer.portrait}" alt="" />
                       </div>
-                      </a>
-                      <p class="city">${user.city}</p>
-                      <p class="tagline">${user.tagline}</p>
-                      <p class="price">${user.price} €/jour</p>
-                      <ul class="tags">
-                          ${user.tags
-                            .map((tag) =>
-                              `
-                          <li>
-                              <a href="#" class="${tag}">#${tag}</a>
-                          </li>
-                      `.trim()
-                            )
-                            .join("")}
-                      </ul>
+                      <h2 class="name">${photographer.name}</h2>
                   </div>
-                `;
-            })
-            .join("");
-          document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
+                  </a>
+                  <p class="city">${photographer.city}</p>
+                  <p class="tagline">${photographer.tagline}</p>
+                  <p class="price">${photographer.price} €/jour</p>
+                  <ul class="tags">
+                      ${photographer.tags
+                        .map((tag) =>
+                          `
+                      <li>
+                          <a href="#" class="${tag}">#${tag}</a>
+                      </li>
+                  `.trim()
+                        )
+                        .join("")}
+                  </ul>
+                </div>
+              `;
+      
+              console.log(photographerDetails);
+
         });
+      
+        return photographerDetails;
+       
+       // photographerDetails est du HTML
+      
       }
-      console.log(showFiltered);
+      displayPhotographers(jsonfilter);
+      
     }
   }
 };

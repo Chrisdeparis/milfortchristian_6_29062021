@@ -9,6 +9,8 @@ filterNav();
 
 
 
+
+
 // specify the type of request
 // request.open('Get', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/Bio.txt');
 
