@@ -3,7 +3,7 @@ import { showPhotographers } from './modules/showPhotographers.js'
 import { filterNav } from './modules/filterNav.js'
 
 
-showPhotographers();
+// showPhotographers();
 filterNav();
 
 

@@ -8,6 +8,10 @@ const filterNav = () => {
   
   // On click nav
   document.getElementById("nav").onclick = (event) => {
+    event.preventDefault();
+    // clear the section
+    document.querySelector('#app').innerHTML = '';
+    
     // console.log("clic nav");
     if (event.target !== event.currentTarget) {
       const tagName = event.target.dataset.filter;
@@ -24,19 +28,20 @@ const filterNav = () => {
       }
       let jsonfilter = photographers.filter(selectTag);
       console.log(jsonfilter);
-      
+      let photographerDetails = "";
       function displayPhotographers(jsonfilter){
   
         // jsonfilter est un tableau d'objets
         
         let photographerDetails = "";
+        
 
         console.table(jsonfilter);
         jsonfilter.forEach((photographer)=>{
           const str = photographer.name;
           const dash = str.replace(" ", "-");
               // Il construit son HTML
-              photographerDetails = `
+              photographerDetails += `
                 <div class="user">
                   <a href="#${dash}">
                   <div class="circle thumb">
@@ -65,14 +70,17 @@ const filterNav = () => {
       
               console.log(photographerDetails);
 
-        });
+        })
+         
       
         return photographerDetails;
+        
        
        // photographerDetails est du HTML
       
       }
-      displayPhotographers(jsonfilter);
+      document.querySelector('#app').innerHTML += displayPhotographers(jsonfilter);
+      // displayPhotographers(jsonfilter);
       
     }
   }
