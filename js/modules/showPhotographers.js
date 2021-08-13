@@ -1,12 +1,9 @@
 import { getJsonData } from "./getJsonData.js";
 import { getPhotographers } from "./getPhotographers.js";
+import data from "../FishEyeData.js";
 
 let json;
 let user;
-// share scope json
-if (1 == 1) {
-  json = getJsonData();
-}
 
 const showPhotographers = () => {
   getPhotographers().then((data) => {

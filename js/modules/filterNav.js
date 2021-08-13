@@ -27,16 +27,14 @@ const filterNav = () => {
         return photographer.tags.includes(event.target.dataset.filter);
       }
       let jsonfilter = photographers.filter(selectTag);
-      console.log(jsonfilter);
+      
       let photographerDetails = "";
       function displayPhotographers(jsonfilter){
   
         // jsonfilter est un tableau d'objets
         
         let photographerDetails = "";
-        
 
-        console.table(jsonfilter);
         jsonfilter.forEach((photographer)=>{
           const str = photographer.name;
           const dash = str.replace(" ", "-");
@@ -67,15 +65,9 @@ const filterNav = () => {
                   </ul>
                 </div>
               `;
-      
-              console.log(photographerDetails);
-
         })
-         
-      
+
         return photographerDetails;
-        
-       
        // photographerDetails est du HTML
       
       }
