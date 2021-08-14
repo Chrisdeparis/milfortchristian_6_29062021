@@ -1,11 +1,11 @@
 
 import { showPhotographers } from './modules/showPhotographers.js'
 import { filterNav } from './modules/filterNav.js'
-
+import { photographerPage } from './modules/photographerPage.js'
 
 showPhotographers();
 filterNav();
-
+photographerPage();
 
 
 

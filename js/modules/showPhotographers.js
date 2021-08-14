@@ -6,14 +6,17 @@ let json;
 let user;
 
 const showPhotographers = () => {
+  
   getPhotographers().then((data) => {
     const html = data
       .map((user) => {
+        
+        
         const str = user.name;
         const dash = str.replace(" ", "-");
         return `
             <div class="user ">
-                <a href="#${dash}">
+                <a href="?${dash}">
                 <div class="circle thumb">
                     <div class="crop">
                     <img src="img/${user.portrait}" alt="" />

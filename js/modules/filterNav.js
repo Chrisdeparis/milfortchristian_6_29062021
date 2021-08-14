@@ -41,7 +41,7 @@ const filterNav = () => {
               // Il construit son HTML
               photographerDetails += `
                 <div class="user">
-                  <a href="#${dash}">
+                  <a href="?${dash}">
                   <div class="circle thumb">
                       <div class="crop">
                       <img src="img/${photographer.portrait}" alt="" />
