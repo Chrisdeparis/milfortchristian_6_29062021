@@ -11,20 +11,16 @@ const photographerPage = (data) => {
     // if click on user
     users.addEventListener('click', (event)=> {
         event.preventDefault();
-        console.log('clic sur user');
+        
         // determiner quel user a été cliqué
         if(event.target !== event.currentTarget){
-       
-            console.log("Click sur");
-            let children = users.children;
-            //retrouver le parent user
-            console.log(event.target.parentNode.closest('.user'));
-            //trouver le nom de l'user
-            
-            console.log("🚀  name", name)
-
-         
+            //retrouver le user DOM ELEMENT
+            let userId = event.target.parentNode.closest('.user');
+            // retrouver l'ID 
+            let idOfElement = userId.getAttribute('id');
+            console.log('clic sur user = '+idOfElement);  
        }
+       
     
        return false;
         // Afficher la page de profil de user
