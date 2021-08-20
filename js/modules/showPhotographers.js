@@ -1,6 +1,7 @@
 import { getJsonData } from "./getJsonData.js";
 import { getPhotographers } from "./getPhotographers.js";
 import data from "../FishEyeData.js";
+import { photographerPage } from "./photographerPage.js";
 
 let json;
 let user;
@@ -15,7 +16,7 @@ const showPhotographers = () => {
         const str = user.name;
         const dash = str.replace(" ", "-");
         return `
-            <div class="user ">
+            <div class="user " id=${user.id}>
                 <a href="?${dash}">
                 <div class="circle thumb">
                     <div class="crop">
@@ -43,6 +44,11 @@ const showPhotographers = () => {
       })
       .join("");
       document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
+
+
+      photographerPage();
+      
+      
   });
 };
 

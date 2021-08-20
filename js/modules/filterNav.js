@@ -40,7 +40,7 @@ const filterNav = () => {
           const dash = str.replace(" ", "-");
               // Il construit son HTML
               photographerDetails += `
-                <div class="user">
+                <div class="user" id=${photographer.id}>
                   <a href="?${dash}">
                   <div class="circle thumb">
                       <div class="crop">
