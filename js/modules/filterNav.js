@@ -1,6 +1,6 @@
 import { getPhotographers } from './getPhotographers.js';
 import  { getJsonData } from './getJsonData.js';
-import data from '../FishEyeData.js';
+import data from "../FishEyeData.js";
 
 
 let showFiltered;

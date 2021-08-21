@@ -15,10 +15,13 @@ const photographerPage = (data) => {
         // determiner quel user a été cliqué
         if(event.target !== event.currentTarget){
             //retrouver le user DOM ELEMENT
-            let userId = event.target.parentNode.closest('.user');
-            // retrouver l'ID 
-            let idOfElement = userId.getAttribute('id');
-            console.log('clic sur user = '+idOfElement);  
+            let userId = event.target.parentNode.closest('.user').getAttribute('id');
+            console.log('clic sur userId = '+userId);  
+            // ouvrir une nouvelle page
+            if(userId) {
+                console.log('aller sur la page de userId '+ userId);
+                
+            }
        }
        
     

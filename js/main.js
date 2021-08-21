@@ -1,9 +1,9 @@
 
-import { showPhotographers } from './modules/showPhotographers.js'
+// import { showPhotographers } from './modules/showPhotographers.js'
 import { filterNav } from './modules/filterNav.js'
-import { photographerPage } from './modules/photographerPage.js'
+// import { photographerPage } from './modules/photographerPage.js'
 
-showPhotographers();
+// showPhotographers();
 filterNav();
 
 
@@ -15,7 +15,7 @@ filterNav();
 
 
 // Factory Pattern
-const textNode = document.querySelector("p");
+// const textNode = document.querySelector("p");
 
 
 //Liste de tous les photographes avec leur nom, leur slogan, leur localisation,
