@@ -1,3 +1,6 @@
+
+const router = () => {
+
 // Application div
 const appDiv = "app";
 // Both set of different routes and template generation functions
@@ -28,7 +31,15 @@ template('template1', () => {
     myDiv.innerHTML = "";
     const link1 = createLink('view1', 'Go to view1', '#/view1');
     const link2 = createLink('view2', 'Go to view2', '#/view2');
+    const link3 = createLink('view3', 'Go to view3', '#/view3');
+    const link4 = createLink('view4', 'Go to view4', '#/view4');
+    const link5 = createLink('view5', 'Go to view5', '#/view5');
+    const link6 = createLink('view6', 'Go to view6', '#/view6');
     myDiv.appendChild(link1);
+    myDiv.appendChild(link3);
+    myDiv.appendChild(link4);
+    myDiv.appendChild(link5);
+    myDiv.appendChild(link6);
     return myDiv.appendChild(link2);
 });
 template('template-view1', () => {
@@ -43,10 +54,38 @@ template('template-view2', () => {
     const link2 = createDiv('view2', "<div><h1>This is View 2 </h1><a href='#/'>Go Back to Index</a></div>");
     return myDiv.appendChild(link2);
 });
+template('template-view3', () => {
+    let myDiv = document.getElementById(appDiv);
+    myDiv.innerHTML = "";
+    const link3 = createDiv('view3', "<div><h1>This is View 3 </h1><a href='#/'>Go Back to Index</a></div>");
+    return myDiv.appendChild(link3);
+});
+template('template-view4', () => {
+    let myDiv = document.getElementById(appDiv);
+    myDiv.innerHTML = "";
+    const link4 = createDiv('view4', "<div><h1>This is View 4 </h1><a href='#/'>Go Back to Index</a></div>");
+    return myDiv.appendChild(link4);
+});
+template('template-view5', () => {
+    let myDiv = document.getElementById(appDiv);
+    myDiv.innerHTML = "";
+    const link5 = createDiv('view5', "<div><h1>This is View 5 </h1><a href='#/'>Go Back to Index</a></div>");
+    return myDiv.appendChild(link5);
+});
+template('template-view6', () => {
+    let myDiv = document.getElementById(appDiv);
+    myDiv.innerHTML = "";
+    const link6 = createDiv('view6', "<div><h1>This is View 6 </h1><a href='#/'>Go Back to Index</a></div>");
+    return myDiv.appendChild(link6);
+});
 // Define the mappings route->template.
 route('/', 'template1');
 route('/view1', 'template-view1');
 route('/view2', 'template-view2');
+route('/view3', 'template-view3');
+route('/view4', 'template-view4');
+route('/view5', 'template-view5');
+route('/view6', 'template-view6');
 
 // Generate DOM tree from a string
 let createDiv = (id, xmlString) => {
@@ -82,3 +121,6 @@ let router = (evt) => {
 // For first load or when routes are changed in browser url box.
 window.addEventListener('load', router);
 window.addEventListener('hashchange', router);
+}
+
+export { router };

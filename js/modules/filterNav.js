@@ -1,19 +1,22 @@
 import { getPhotographers } from './getPhotographers.js';
 import  { getJsonData } from './getJsonData.js';
 import data from "../FishEyeData.js";
+import { router } from './router.js'
 
-
+router();
 let showFiltered;
 const filterNav = () => {
   
   // On click nav
   document.getElementById("nav").onclick = (event) => {
     event.preventDefault();
+    
     // clear the section
     document.querySelector('#app').innerHTML = '';
     
     // console.log("clic nav");
     if (event.target !== event.currentTarget) {
+      
       const tagName = event.target.dataset.filter;
       
       //Do stuff with json here
@@ -22,8 +25,8 @@ const filterNav = () => {
       let photographers =  data.photographers;
 
       function selectTag(photographer) {
-        // console.log(photographer);
-        // console.log(event.target.dataset.filter);
+        
+        
         return photographer.tags.includes(event.target.dataset.filter);
       }
       let jsonfilter = photographers.filter(selectTag);
