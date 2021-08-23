@@ -17,7 +17,7 @@ const showPhotographers = () => {
         const dash = str.replace(" ", "-");
         return `
             <div class="user " id=${user.id}>
-                <a href="?${dash}">
+                <a href="${user.id}">
                 <div class="circle thumb">
                     <div class="crop">
                     <img src="img/${user.portrait}" alt="" />

@@ -1,9 +1,9 @@
 import { getPhotographers } from './getPhotographers.js';
 import  { getJsonData } from './getJsonData.js';
 import data from "../FishEyeData.js";
-import { router } from './router.js'
+// import { router } from './router.js'
 
-router();
+
 let showFiltered;
 const filterNav = () => {
   
@@ -37,14 +37,15 @@ const filterNav = () => {
         // jsonfilter est un tableau d'objets
         
         let photographerDetails = "";
+        
+        jsonfilter.forEach((photographer)=>{ 
 
-        jsonfilter.forEach((photographer)=>{
           const str = photographer.name;
           const dash = str.replace(" ", "-");
               // Il construit son HTML
               photographerDetails += `
                 <div class="user" id=${photographer.id}>
-                  <a href="?${dash}">
+                  <a href="/views/photographer-page.html?${photographer.id}">
                   <div class="circle thumb">
                       <div class="crop">
                       <img src="img/${photographer.portrait}" alt="" />

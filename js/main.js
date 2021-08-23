@@ -1,6 +1,6 @@
 
 import { filterNav } from './modules/filterNav.js'
-
+// import { router } from './modules/router.js'
 
 
 filterNav();
