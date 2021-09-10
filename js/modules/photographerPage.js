@@ -4,6 +4,10 @@ import data from "../FishEyeData.js";
 // page.
 // get photographer id from
 const photographerPage = (data) => {
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+        console.log("DOM entièrement chargé et analysé");
+    });
     // methode propagation d'evenements du parent to child
     let users = document.querySelector('#app');
     console.log("🚀 ~ file: photographerPage.js ~ line 8 ~ photographerPage ~ users", users)
@@ -41,4 +45,4 @@ const photographerPage = (data) => {
     
 
 }
-export {photographerPage};
+export { photographerPage };

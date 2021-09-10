@@ -1,11 +1,15 @@
 import { getPhotographers } from './getPhotographers.js';
 import  { getJsonData } from './getJsonData.js';
 import data from "../FishEyeData.js";
+import { photographerPage } from './photographerPage.js';
 // import { router } from './router.js'
 
-
+let onclick;
 let showFiltered;
-const filterNav = () => {
+
+
+
+const filterNav = () => { 
   
   // On click nav
   document.getElementById("nav").onclick = (event) => {
@@ -45,7 +49,7 @@ const filterNav = () => {
               // Il construit son HTML
               photographerDetails += `
                 <div class="user" id=${photographer.id}>
-                  <a href="/views/photographer-page.html?${photographer.id}">
+                  <a href="/views/page.html?${photographer.id}">
                   <div class="circle thumb">
                       <div class="crop">
                       <img src="img/${photographer.portrait}" alt="" />
@@ -77,9 +81,14 @@ const filterNav = () => {
       }
       document.querySelector('#app').innerHTML += displayPhotographers(jsonfilter);
       // displayPhotographers(jsonfilter);
+      console.log('clic sur le filtre');
+      // photographerPage();
+
+      
       
     }
   }
+
 };
 
 export { filterNav };
