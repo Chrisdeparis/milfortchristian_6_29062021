@@ -1,9 +1,11 @@
 
 import { filterNav } from './modules/filterNav.js'
+import { photographerPage } from './modules/photographerPage.js'
 // import { router } from './modules/router.js'
 
 
 filterNav();
+photographerPage();
 
 
 

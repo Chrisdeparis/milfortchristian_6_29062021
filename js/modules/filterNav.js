@@ -7,7 +7,17 @@ import { photographerPage } from './photographerPage.js';
 let onclick;
 let showFiltered;
 
-
+// $(document).ready(function() {
+//   if (window.location.pathname == '/index.html') {
+//       $("#nav").click(function(){
+//         //do something
+//         console.log('clic on nav');
+//       })
+//   }else if(window.location.pathname == '/views/page.html'){
+//        $("#mytextfield").hover(function(){
+//          alert('message');
+//        })
+// }
 
 const filterNav = () => { 
   
@@ -29,8 +39,7 @@ const filterNav = () => {
       let photographers =  data.photographers;
 
       function selectTag(photographer) {
-        
-        
+      
         return photographer.tags.includes(event.target.dataset.filter);
       }
       let jsonfilter = photographers.filter(selectTag);
@@ -49,7 +58,7 @@ const filterNav = () => {
               // Il construit son HTML
               photographerDetails += `
                 <div class="user" id=${photographer.id}>
-                  <a href="/views/page.html?${photographer.id}">
+                  <a href="/views/page.html?id=${photographer.id}">
                   <div class="circle thumb">
                       <div class="crop">
                       <img src="img/${photographer.portrait}" alt="" />
@@ -82,7 +91,9 @@ const filterNav = () => {
       document.querySelector('#app').innerHTML += displayPhotographers(jsonfilter);
       // displayPhotographers(jsonfilter);
       console.log('clic sur le filtre');
-      // photographerPage();
+      photographerPage();
+
+      
 
       
       
