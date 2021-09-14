@@ -13,6 +13,7 @@ const photographer = () => {
     let url = new URL(url_string);
     const myparam = url.searchParams.get('id');
     console.log(myparam);
+
     
     data.photographers.filter((person) => {
         console.log(person.id == myparam);
@@ -24,10 +25,20 @@ const photographer = () => {
             let pathPortrait = person.portrait;
             console.log(pathPortrait);
             document.getElementById("portrait").innerHTML = "<img src='../img/"+pathPortrait+"'>";
-            document.getElementById('tags').innerHTML = person.tags.map((tag) => `<li><a href="#" class="${tag}">#${tag}</a><li>`);
+            let virgule = person.tags.join(' ');
+            console.log(virgule);
+            const long = 1;
+            
+            document.getElementById('tags').innerHTML = person.tags.map((tag) => 
+                
+                    `<li><a href="#" class="${tag}">#${tag}</a><li>`);
+                
+
+            
             return person;
         }
     })
+    
 
 }
 

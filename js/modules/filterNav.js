@@ -7,18 +7,6 @@ import { photographerPage } from './photographerPage.js';
 let onclick;
 let showFiltered;
 
-// $(document).ready(function() {
-//   if (window.location.pathname == '/index.html') {
-//       $("#nav").click(function(){
-//         //do something
-//         console.log('clic on nav');
-//       })
-//   }else if(window.location.pathname == '/views/page.html'){
-//        $("#mytextfield").hover(function(){
-//          alert('message');
-//        })
-// }
-
 const filterNav = () => { 
   
   // On click nav
