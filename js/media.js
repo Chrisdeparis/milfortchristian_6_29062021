@@ -22,8 +22,17 @@ const media = () => {
     data.media.filter((media) => {
         if(media.photographerId == myparam){
             let path = user[0].name.split(' ')[0];
+            console.log(media.image);²&
+            // media.image.forEach(element => {
+            //     for(let i=0; i<6; i++) {
+            //         console.log(element[i]);
+            //     }
+            // });
             console.log();
-            console.log(media.image);
+            //recupérer 6 photos
+            for(let i=0; i<6; i++) {
+                
+            }
             document.getElementById('photos-section').innerHTML = '<div><img class="thumb-img" src="../img/Photos/'+path+'/'+media.image+'"/></div>';
             return media.image;
         }

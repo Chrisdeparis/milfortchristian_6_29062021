@@ -22,6 +22,7 @@ const photographer = () => {
             document.getElementById('name').innerHTML = person.name;
             document.getElementById('city').innerHTML = person.city;
             document.getElementById('tagline').innerHTML = person.tagline;
+            document.getElementById('price').innerHTML = person.price+'€ / jour';
             let pathPortrait = person.portrait;
             console.log(pathPortrait);
             document.getElementById("portrait").innerHTML = "<img src='../img/"+pathPortrait+"'>";
