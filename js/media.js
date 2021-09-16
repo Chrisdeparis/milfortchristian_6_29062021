@@ -27,7 +27,7 @@ const media = () => {
             console.log(media.image);            
             
             if(media.image) {
-                res += '<div><img class="thumb-img" src="../img/Photos/'+path+'/'+media.image+'"/></div>';
+                res += '<div><img class="thumb-img" src="../img/Photos/'+path+'/'+media.image+'"/><div class="thumb-info"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p>'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
 
             }
             
