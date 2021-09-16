@@ -29,14 +29,28 @@ const photographer = () => {
             let virgule = person.tags.join(' ');
             console.log(virgule);
             const long = 1;
+            // let roger = document.getElementById('tags)
+            // for(tag of person.tags){
+            // Florian TEISSIER16:07
+            // roger.inneHTML += "<li><a......."
+            // }
             
-            document.getElementById('tags').innerHTML = person.tags.map((tag) => 
-                
-                    `<li><a href="#" class="${tag}">#${tag}</a><li>`);
+            let res = document.getElementById('tags');
+
+            for(let tag of person.tags) {
+                console.log(tag);
+                res.innerHTML += `<li><a href="#" class="${tag}">#${tag}</a></li>`;
+            }
+            // document.getElementById('tags').innerHTML = person.tags.map((tag) => {
+                    
+            //         return `<li><a href="#" class="${tag}">#${tag}</a><li>`;
+            //     }
+                    
+            // );
                 
 
             
-            return person;
+            // return person;
         }
     })
     
