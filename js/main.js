@@ -5,7 +5,7 @@ import { photographerPage } from './modules/photographerPage.js'
 
 
 filterNav();
-photographerPage();
+
 
 
 

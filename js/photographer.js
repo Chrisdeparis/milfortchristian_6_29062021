@@ -24,16 +24,7 @@ const photographer = () => {
             document.getElementById('tagline').innerHTML = person.tagline;
             document.getElementById('price').innerHTML = person.price+'€ / jour';
             let pathPortrait = person.portrait;
-            console.log(pathPortrait);
             document.getElementById("portrait").innerHTML = "<img src='../img/"+pathPortrait+"'>";
-            let virgule = person.tags.join(' ');
-            console.log(virgule);
-            const long = 1;
-            // let roger = document.getElementById('tags)
-            // for(tag of person.tags){
-            // Florian TEISSIER16:07
-            // roger.inneHTML += "<li><a......."
-            // }
             
             let res = document.getElementById('tags');
 
@@ -41,16 +32,7 @@ const photographer = () => {
                 console.log(tag);
                 res.innerHTML += `<li><a href="#" class="${tag}">#${tag}</a></li>`;
             }
-            // document.getElementById('tags').innerHTML = person.tags.map((tag) => {
-                    
-            //         return `<li><a href="#" class="${tag}">#${tag}</a><li>`;
-            //     }
-                    
-            // );
-                
-
             
-            // return person;
         }
     })
     

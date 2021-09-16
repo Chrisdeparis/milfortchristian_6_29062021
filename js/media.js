@@ -9,6 +9,8 @@ const media = () => {
     let photographerId;
     let user;
     let pathuser;
+
+    // object of user
     user = data.photographers.filter((person) => {
         if(person.id == myparam) {
             let firstname = person.name.split(' ');
@@ -17,28 +19,18 @@ const media = () => {
             return pathuser;
         }
     })
-    console.log(user);
+    
     let res = ""; 
     data.media.filter((media) => {
         if(media.photographerId == myparam){
             let path = user[0].name.split(' ')[0];
-            console.log(media.image);
-            // const pictures = [];
-            // pictures.push(media.image);
-            // console.log(pictures);
+            console.log(media.image);            
             
-            
-            
-            //recupérer 6 photos
-            // for(let i=0; i<6; i++){
-                if(media.image) {
-                    res += '<div><img class="thumb-img" src="../img/Photos/'+path+'/'+media.image+'"/></div>';
+            if(media.image) {
+                res += '<div><img class="thumb-img" src="../img/Photos/'+path+'/'+media.image+'"/></div>';
 
-                }
-
-            // }
+            }
             
-            // return media.image;
         }
     })
     document.getElementById('photos-section').innerHTML = res;
