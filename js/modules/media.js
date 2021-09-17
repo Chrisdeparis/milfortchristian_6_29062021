@@ -1,4 +1,4 @@
-import data from "./FishEyeData.js";
+import data from "../FishEyeData.js";
 
 const media = () => {
     const url_string = window.location.href;
@@ -22,6 +22,7 @@ const media = () => {
     
     let res = ""; 
     let totalLikes = 0;
+    let boxImage;
     data.media.filter((media) => {
         if(media.photographerId == myparam){
             let path = user[0].name.split(' ')[0];
@@ -31,13 +32,16 @@ const media = () => {
                 totalLikes += parseFloat(media.likes);
             }
             if(media.image) {
-                res += '<div><img class="thumb-img" src="../img/Photos/'+path+'/'+media.image+'"/><div class="thumb-info"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p>'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
-
+                res += '<div><img class="thumb-img" alt="'+media.title+'" src="../img/Photos/'+path+'/'+media.image+'"/><div class="thumb-info"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p>'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
+                boxImage = '/img/Photos/'+path+'/'+media.image+'';
             }
+            
+            console.log(boxImage);
             
         }
     })
-    console.log(totalLikes);
+    console.log(boxImage);
+    document.getElementById('boxImage').src = boxImage;
     document.getElementById('likes').innerHTML = totalLikes;
     document.getElementById('photos-section').innerHTML = res;
     

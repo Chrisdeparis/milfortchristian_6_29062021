@@ -1,6 +1,6 @@
 console.log("test photographer")
 
-import data from "./FishEyeData.js";
+import data from "../FishEyeData.js";
 
 // Lorsque l'utilisateur clique sur la vignette d'un photographe, il est amené à sa
 // page.
