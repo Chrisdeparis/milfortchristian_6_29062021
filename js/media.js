@@ -21,11 +21,15 @@ const media = () => {
     })
     
     let res = ""; 
+    let totalLikes = 0;
     data.media.filter((media) => {
         if(media.photographerId == myparam){
             let path = user[0].name.split(' ')[0];
             console.log(media.image);            
-            
+            console.log(typeof media.likes);
+            if(parseFloat(media.likes)){
+                totalLikes += parseFloat(media.likes);
+            }
             if(media.image) {
                 res += '<div><img class="thumb-img" src="../img/Photos/'+path+'/'+media.image+'"/><div class="thumb-info"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p>'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
 
@@ -33,6 +37,8 @@ const media = () => {
             
         }
     })
+    console.log(totalLikes);
+    document.getElementById('likes').innerHTML = totalLikes;
     document.getElementById('photos-section').innerHTML = res;
     
 
