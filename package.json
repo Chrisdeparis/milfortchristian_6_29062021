@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "babel-plugin-inline-dotenv": "^1.6.0",
-    "envy": "^2.0.0"
-  }
-}
