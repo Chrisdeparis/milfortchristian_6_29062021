@@ -26,6 +26,8 @@ const openLightBox = () => {
   });
   console.log(thumbImg);
   let pathImg;
+  let altTitle = "";
+
   for(let i= 0; i<thumbImg.length; i++){
     thumbImg[i].addEventListener('click', function(){
       console.log(thumbImg[i]);
@@ -38,13 +40,13 @@ const openLightBox = () => {
       // let listPictures = media();
      
       pathImg = thumbImg[i].src.slice(21);
-      
+      altTitle = thumbImg[i].alt;
       
       // 
       console.log(pathImg);
       modal.style.display = "block";
       document.getElementById("boxImage").src = pathImg;
-      // document.getElementById("title").innerHTML = altTitle;
+      document.getElementById("title").innerHTML = altTitle;
 
       // When the user clicks on <span> (x), close the modal
       span.onclick = function () {
@@ -57,7 +59,6 @@ const openLightBox = () => {
           modal.style.display = "none";
         }
       };
-      let altTitle = "";
 
       let pictureId = "";
       //when the user click on left chevron
@@ -76,7 +77,6 @@ const openLightBox = () => {
     // console.log(pathImg);
     // document.getElementById("boxImage").id = pictureId;
     // 
-    // document.getElementById('boxImage').alt =  altTitle;
     // 
 
   }
