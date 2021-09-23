@@ -414,7 +414,7 @@ a {
     font-size: 2.4rem;
     color: #901C1C;
     margin-top: 14px;
-    margin-left: 100px;
+    margin-left: 50px;
   }
   /* The Close Button */
   .close {
@@ -1047,6 +1047,7 @@ a {
     border-radius: 5px;
     outline: none;
     margin: 5px 0;
+    font-size: 1.5rem;
   }
   .modal-content-contact .contact-form form textarea {
     height: 170px;
@@ -1054,6 +1055,7 @@ a {
     border-radius: 5px;
     outline: none;
     margin-bottom: 30px;
+    font-size: 1.5rem;
   }
   .modal-content-contact .contact-form form div.btn-form {
     background: #901C1C;

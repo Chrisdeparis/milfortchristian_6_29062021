@@ -366,7 +366,7 @@ export default
     {
       "id": 2525345343,
       "photographerId": 243,
-      "title": "Wednesday Potrait",
+      "title": "Wednesday Portrait",
       "image": "Portrait_Wednesday.jpg",
       "tags": ["portait"],
       "likes": 34,

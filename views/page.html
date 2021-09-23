@@ -64,7 +64,7 @@
           <span class="close-contact"><img src="/img/times-solid-white.svg" alt=""/></span>
         </div>
         
-        <p class="name">Mimi Keel</p>
+        <p class="name" id="contactName"></p>
         <div class="contact-form">
           <form>
             <label for="">Prénom</label><br/>
@@ -85,7 +85,7 @@
     <div id="openLightBox" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
-        <div class="lightBox">
+        <div class="lightBox" id="lightbox">
           <div class="top">
             <span class="close">
               <img src="/img/times-solid.svg" alt="" />
@@ -105,10 +105,12 @@
               src="/img/chevron-right-solid.svg"
               alt=""
               srcset=""
+              
             />
           </div>
           <div class="bottom">
             <p class="lightBox" id="title"></p>
+            
           </div>
         </div>
       </div>
@@ -121,7 +123,7 @@
         </div>
         <p id="price" class="cta-price"></p>
       </div>
-      <div id="photos-section">
+      <div id="photos-section" class="gallery-img">
       <!--   <div>     
           <img class="thumb-img" src="" alt="Lilac breasted roller, closeup view" />
           <div class="thumb-info">

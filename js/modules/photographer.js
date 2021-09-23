@@ -32,6 +32,7 @@ const photographer = () => {
                 console.log(tag);
                 res.innerHTML += `<li><a href="#" class="${tag}">#${tag}</a></li>`;
             }
+            return person;
             
         }
     })
@@ -40,3 +41,4 @@ const photographer = () => {
 }
 
 photographer();
+export { photographer };
