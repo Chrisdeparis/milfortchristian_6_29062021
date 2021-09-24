@@ -24,10 +24,10 @@ const openLightBox = () => {
       return pathuser;
     }
   });
-  //liste des pictures
   
 
-  //gallery algo
+
+  //gallery 
   let galleryImages = document.querySelectorAll(".gallery-img");
 
   if (galleryImages) {
@@ -38,21 +38,29 @@ const openLightBox = () => {
 
         // Get the modal
         const modal = document.getElementById("openLightBox");
-        const lightbox = document.getElementById("lightbox");
+        
         // Get the <span> element that closes the modal
         const span = document.getElementsByClassName("close")[0];
+        //path for src route
         let path = user[0].name.split(" ")[0];
-        // let boxImage = [];
+
         // afficher la modale
         modal.style.display = "block";
+        let html = document.getElementById('html');
+        html.classList.add('scroll');
+        
+        
         document.getElementById("boxImage").src = imageClicked.src;
         document.getElementById("title").innerHTML = imageClicked.alt;
+
         //recuperer data-p
         let actual = imageClicked.getAttribute('data-p');
         console.log(actual);
         // // When the user clicks on <span> (x), close the modal
         span.onclick = function () {
           modal.style.display = "none";
+          let html = document.getElementById('html');
+          html.classList.remove('scroll');
         };
         
         //when the user click on left chevron previous element
@@ -82,7 +90,7 @@ const openLightBox = () => {
               }
             }            
             document.getElementById("boxImage").src = '/img/Photos/'+path+'/'+image2[actual]+'';
-            document.getElementById("boxImage").alt = 'test';
+            // document.getElementById("boxImage").alt = 'test';
           }
           
           mySlide("prev");
@@ -95,10 +103,7 @@ const openLightBox = () => {
         chevronRight.onclick = function (event) {
           let image2 = JSON.parse(document.querySelector('#photoList').getAttribute('data-list'));
           let i = 0,
-          images = thumbImg;
-          // console.log(images);
-          console.log(image2);
-          
+          images = thumbImg;          
           let limit = images.length -1;
           
           function mySlide(param) {
@@ -116,7 +121,7 @@ const openLightBox = () => {
               }
             }            
             document.getElementById("boxImage").src = '/img/Photos/'+path+'/'+image2[actual]+'';
-            document.getElementById("boxImage").alt = 'test';
+            // document.getElementById("boxImage").alt = 'test';
           }
           
           mySlide("next");

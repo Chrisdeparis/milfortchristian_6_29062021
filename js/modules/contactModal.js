@@ -26,19 +26,25 @@ const openContactModal = () => {
   
     // Get the <span> element that closes the modal
     const span = document.getElementsByClassName("close-contact")[0];
-  
+
+    
     // When the user clicks on the button, open the modal
     btn.onclick = function () {
       console.log("clic contact btn");
       console.log(user[0].name);
       modal.style.display = "block";
       document.getElementById('contactName').innerHTML = user[0].name;
+      let html = document.getElementById('html');
+      html.classList.add('scroll');
     };
   
     // When the user clicks on <span> (x), close the modal
     console.log(span);
     span.onclick = function () {
       modal.style.display = "none";
+      //remove scroll class
+      let html = document.getElementById('html');
+      html.classList.remove('scroll');
     };
   
     // When the user clicks anywhere outside of the modal, close it

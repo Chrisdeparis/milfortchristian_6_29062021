@@ -1139,6 +1139,11 @@ html {
   font-size: 62.5%;
 }
 
+.scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
   margin: 0 auto;

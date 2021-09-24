@@ -12,6 +12,10 @@ const media = () => {
     let user;
     let pathuser;
 
+    //liste des pictures
+    let html = document.getElementById('html');
+    html.classList.remove('scroll');
+
     // object of user
     user = data.photographers.filter((person) => {
         if(person.id == myparam) {
