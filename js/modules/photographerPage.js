@@ -5,13 +5,13 @@ import { getPhotographers } from "./getPhotographers.js";
 // page.
 // get photographer id from
 const photographerPage = () => {
-    console.table(data.photographers);
+    
     let person;
     
     data.photographers.filter((person) => {
-        console.log(person.id == "243");
+        
         if(person.id == "243") {
-            console.log(person);
+            
             return person;
         }
     })
