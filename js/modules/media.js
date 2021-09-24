@@ -1,6 +1,7 @@
 import data from "../FishEyeData.js";
 // import { myListPictures } from './media';
 
+
 const media = () => {
     const url_string = window.location.href;
     console.log(url_string);
@@ -23,6 +24,7 @@ const media = () => {
     
     let res = ""; 
     let totalLikes = 0;
+    let position = 0;
     const listPictures = [];
     data.media.filter((media) => {
         if(media.photographerId == myparam){
@@ -35,11 +37,12 @@ const media = () => {
                 
                 console.log(listPictures.push(media.image));
                 
-                res += '<div><img id="'+media.id+'" class="thumb-img" alt="'+media.title+'" src="/img/Photos/'+path+'/'+media.image+'"/><div class="thumb-info"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p>'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
-                
+                res += '<div><img data-p="'+position+'" id="'+media.id+'" class="thumb-img" alt="'+media.title+'" src="/img/Photos/'+path+'/'+media.image+'"/><div class="thumb-info"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p>'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
+                position++;
             }      
         }
-    })    
+    })   
+    document.querySelector('#photoList').setAttribute('data-list', JSON.stringify(listPictures));
     console.log(listPictures);
     
     // export listPictures;

@@ -12,7 +12,7 @@ const openLightBox = () => {
   console.log(url_string);
   let url = new URL(url_string);
   const myparam = url.searchParams.get("id");
-  const thumbImg = document.querySelectorAll(".thumb-img");
+  const thumbImg = document.getElementsByClassName("thumb-img");
   let user;
 
   // object of user
@@ -25,121 +25,109 @@ const openLightBox = () => {
     }
   });
   //liste des pictures
-  console.log(thumbImg);
-  let pathImg;
-  let altTitle;
+  
 
   //gallery algo
   let galleryImages = document.querySelectorAll(".gallery-img");
-  let getLatestOpenedImg;
-  let windowWidth = window.innerWidth;
 
   if (galleryImages) {
     galleryImages.forEach(function (image) {
-      image.addEventListener('click', function (e) {
+      image.addEventListener("click", function (e) {
         //determine the image clicked
         let imageClicked = e.target.closest("div img");
-        
-        
-        
+
         // Get the modal
         const modal = document.getElementById("openLightBox");
-        const lightbox =  document.getElementById('lightbox')
+        const lightbox = document.getElementById("lightbox");
         // Get the <span> element that closes the modal
         const span = document.getElementsByClassName("close")[0];
         let path = user[0].name.split(" ")[0];
-        let boxImage = [];
+        // let boxImage = [];
         // afficher la modale
         modal.style.display = "block";
         document.getElementById("boxImage").src = imageClicked.src;
         document.getElementById("title").innerHTML = imageClicked.alt;
+        //recuperer data-p
+        let actual = imageClicked.getAttribute('data-p');
+        console.log(actual);
         // // When the user clicks on <span> (x), close the modal
         span.onclick = function () {
           modal.style.display = "none";
         };
-        // When the user clicks anywhere outside of the modal, close it
-        // window.onclick = function (event) {
-        //   if (event.target == lightbox) {
-        //     modal.style.display = "none";
-        //   }
-        // };
+        
+        //when the user click on left chevron previous element
+        const chevronLeft = document.getElementById("chevronLeft");
+
+        chevronLeft.onclick = function (event) {
+          let image2 = JSON.parse(document.querySelector('#photoList').getAttribute('data-list'));
+          let i = 0,
+          images = thumbImg;
+          // console.log(images);
+          console.log(image2);
+          
+          let limit = images.length -1;
+          
+          function mySlide(param) {
+            if (param === "prev") {
+              if(actual == 0) {
+                actual = limit;
+              } else {
+                actual--;
+              }  
+            } else {
+              if(actual == limit) {
+                actual = 0;
+              } else {
+                actual++;
+              }
+            }            
+            document.getElementById("boxImage").src = '/img/Photos/'+path+'/'+image2[actual]+'';
+            document.getElementById("boxImage").alt = 'test';
+          }
+          
+          mySlide("prev");
+          
+        };
+
+        //when the user click on right chevron next element
+        const chevronRight = document.getElementById("chevronRight");
+
+        chevronRight.onclick = function (event) {
+          let image2 = JSON.parse(document.querySelector('#photoList').getAttribute('data-list'));
+          let i = 0,
+          images = thumbImg;
+          // console.log(images);
+          console.log(image2);
+          
+          let limit = images.length -1;
+          
+          function mySlide(param) {
+            if (param === "next") {
+              if(actual == 0) {
+                actual = limit;
+              } else {
+                actual--;
+              }  
+            } else {
+              if(actual == limit) {
+                actual = 0;
+              } else {
+                actual++;
+              }
+            }            
+            document.getElementById("boxImage").src = '/img/Photos/'+path+'/'+image2[actual]+'';
+            document.getElementById("boxImage").alt = 'test';
+          }
+          
+          mySlide("next");
+          
+        };
+
       });
     });
   }
 
-  // for (let i = 0; i < thumbImg.length; i++) {
-  //   thumbImg[i].addEventListener("click", function () {
-  //     console.log(thumbImg[i]);
-  //     // Get the modal
-  //     const modal = document.getElementById("openLightBox");
-  //     // Get the <span> element that closes the modal
-  //     const span = document.getElementsByClassName("close")[0];
-  //     let path = user[0].name.split(" ")[0];
-  //     let boxImage = [];
-
-  //     pathImg = thumbImg[i].src.slice(21);
-  //     altTitle = thumbImg[i].alt;
-
-  //     console.log(pathImg);
-  //     modal.style.display = "block";
-  //     document.getElementById("boxImage").src = pathImg;
-  //     document.getElementById("title").innerHTML = altTitle;
-
-  //     // When the user clicks on <span> (x), close the modal
-  //     span.onclick = function () {
-  //       modal.style.display = "none";
-  //     };
-  //     // When the user clicks anywhere outside of the modal, close it
-  //     window.onclick = function (event) {
-  //       if (event.target == modal) {
-  //         modal.style.display = "none";
-  //       }
-  //     };
-
-  //     //list des medias de l'user
-  //     console.log(thumbImg);
-  //     let len = thumbImg.length;
-
-  //     let current = thumbImg[i];
-  //     let previous = thumbImg[i == 0 ? thumbImg.length - 1 : i - 1];
-  //     let next = thumbImg[i == thumbImg.length - 1 ? 0 : i + 1];
-  //     console.log(current);
-
-  //     console.log(next);
-
-  //     //when the user click on left chevron
-  //     const chevronLeft = document.getElementById("chevronLeft");
-
-  //     chevronLeft.onclick = function (event) {
-  //       console.log("previous image");
-
-  //       // console.log(previous);
-  //       // let prevPathImg = previous.src.slice(21);
-  //       // document.getElementById("boxImage").src = prevPathImg;
-  //       // altTitle = previous.alt;
-  //       // document.getElementById("title").innerHTML = altTitle;
-  //     };
-  //     // when the user click on right chevron
-  //     const chevronRight = document.getElementById("chevronRight");
-  //     chevronRight.onclick = function (event) {
-  //       console.log(thumbImg);
-  //       let list = (thumbImg);
-  //       console.log("next image");
-  //       //position de l'image current position
-  //       console.log(next);
-
-  //       // let pos = thumbImg.length - 8;
-  //       // console.log(next);
-  //       // console.log(next.src.slice(21));
-  //       let nextPathImg = next.src.slice(21);
-  //       document.getElementById("boxImage").src = nextPathImg;
-
-  //       // altTitle = next.alt;
-  //       // document.getElementById("title").innerHTML = altTitle;
-  //     };
-
-  //   });
-  // }
+  
 };
 
 openLightBox();
