@@ -1047,7 +1047,7 @@ a {
     border-radius: 5px;
     outline: none;
     margin: 5px 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .modal-content-contact .contact-form form textarea {
     height: 170px;
@@ -1055,7 +1055,7 @@ a {
     border-radius: 5px;
     outline: none;
     margin-bottom: 30px;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .modal-content-contact .contact-form form div.btn-form {
     background: #901C1C;

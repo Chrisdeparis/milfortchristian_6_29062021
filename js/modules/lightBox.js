@@ -46,6 +46,7 @@ const openLightBox = () => {
 
         // afficher la modale
         modal.style.display = "block";
+        //retirer le scroll en trop
         let html = document.getElementById('html');
         html.classList.add('scroll');
         
@@ -68,10 +69,13 @@ const openLightBox = () => {
 
         chevronLeft.onclick = function (event) {
           let image2 = JSON.parse(document.querySelector('#photoList').getAttribute('data-list'));
-          let i = 0,
-          images = thumbImg;
+          let altList = JSON.parse(document.querySelector('#photoList').getAttribute('alt-list'));
+          
+          
+          
+          let images = thumbImg;
           // console.log(images);
-          console.log(image2);
+          console.log(altList);
           
           let limit = images.length -1;
           
@@ -90,7 +94,8 @@ const openLightBox = () => {
               }
             }            
             document.getElementById("boxImage").src = '/img/Photos/'+path+'/'+image2[actual]+'';
-            // document.getElementById("boxImage").alt = 'test';
+            document.getElementById("title").innerHTML = altList[actual];
+            
           }
           
           mySlide("prev");
@@ -121,7 +126,7 @@ const openLightBox = () => {
               }
             }            
             document.getElementById("boxImage").src = '/img/Photos/'+path+'/'+image2[actual]+'';
-            // document.getElementById("boxImage").alt = 'test';
+            document.getElementById("title").innerHTML = altList[actual];
           }
           
           mySlide("next");

@@ -13,8 +13,7 @@ const media = () => {
     let pathuser;
 
     //liste des pictures
-    let html = document.getElementById('html');
-    html.classList.remove('scroll');
+    
 
     // object of user
     user = data.photographers.filter((person) => {
@@ -30,6 +29,7 @@ const media = () => {
     let totalLikes = 0;
     let position = 0;
     const listPictures = [];
+    const listAlts = [];
     data.media.filter((media) => {
         if(media.photographerId == myparam){
             let path = user[0].name.split(' ')[0];
@@ -40,14 +40,17 @@ const media = () => {
             if(media.image) {
                 
                 console.log(listPictures.push(media.image));
-                
+                console.log(listAlts.push(media.title));
                 res += '<div><img data-p="'+position+'" id="'+media.id+'" class="thumb-img" alt="'+media.title+'" src="/img/Photos/'+path+'/'+media.image+'"/><div class="thumb-info"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p>'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
                 position++;
             }      
         }
     })   
     document.querySelector('#photoList').setAttribute('data-list', JSON.stringify(listPictures));
+    document.querySelector('#photoList').setAttribute('alt-list', JSON.stringify(listAlts));
+
     console.log(listPictures);
+    console.log(listAlts);
     
     // export listPictures;
     // export let listPictures;
@@ -55,7 +58,7 @@ const media = () => {
     
     document.getElementById('likes').innerHTML = totalLikes;
     document.getElementById('photos-section').innerHTML = res;
-    return listPictures;
+    return listAlts;
     
     
 
