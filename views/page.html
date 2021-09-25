@@ -19,37 +19,34 @@
           </a>
         </div>
         <div class="photographer">
-            <div class="info">
-                <h1 id="name" class="name"></h1>
-                <p id="city" class="city"></p>
-                <p id="tagline" class="tagline"></p>
-                <ul id="tags" class="tags">
-                  
-              </ul>
+          <div class="info">
+            <h1 id="name" class="name"></h1>
+            <p id="city" class="city"></p>
+            <p id="tagline" class="tagline"></p>
+            <ul id="tags" class="tags"></ul>
+          </div>
+          <div>
+            <div class="contact" alt="Contact Me">
+              <p>Contactez-moi</p>
             </div>
-            <div>
-                <div class="contact" alt="Contact Me">
-                    <p>Contactez-moi</p>
-                </div>
+          </div>
+          <div class="user">
+            <div class="circle thumb">
+              <div class="crop" id="portrait"></div>
             </div>
-            <div class="user">
-                <div class="circle thumb">
-                    <div class="crop" id="portrait">
-                    
-                    </div>
-                    
-                </div>
-            </div>
+          </div>
         </div>
       </header>
-      </div>
-    
+    </div>
+
     <div class="sort-by">
       <p>Trier par</p>
       <div class="dropdown-open">
-        
         <ul>
-          <li>Popularité <img class="chevron" src="../img/chevron-up-solid.svg" alt=""/></li>
+          <li>
+            Popularité
+            <img class="chevron" src="../img/chevron-up-solid.svg" alt="" />
+          </li>
           <li>Date</li>
           <li>Titre</li>
         </ul>
@@ -61,24 +58,25 @@
       <div class="modal-content-contact">
         <div>
           <p class="title">Contactez-moi</p>
-          <span class="close-contact"><img src="/img/times-solid-white.svg" alt=""/></span>
+          <span class="close-contact"
+            ><img src="/img/times-solid-white.svg" alt=""
+          /></span>
         </div>
-        
+
         <p class="name" id="contactName"></p>
         <div class="contact-form">
           <form>
-            <label for="">Prénom</label><br/>
-            <input type="text"/><br/>
-            <label for="">Nom</label><br/>
-            <input type="text"/><br/>
-            <label for="">Email</label><br/>
-            <input type="text"/><br/>
-            <label for="">Votre message</label><br/>
+            <label for="">Prénom</label><br />
+            <input type="text" /><br />
+            <label for="">Nom</label><br />
+            <input type="text" /><br />
+            <label for="">Email</label><br />
+            <input type="text" /><br />
+            <label for="">Votre message</label><br />
             <textarea name="" id="" cols="30" rows="10"></textarea>
             <div class="btn-form">Envoyer</div>
           </form>
         </div>
-        
       </div>
     </div>
     <!-- The Modal OpenLightBox -->
@@ -92,25 +90,23 @@
             </span>
           </div>
           <div class="mid">
-            <img class="chevron-left" src="/img/chevron-left-solid.svg" id="chevronLeft" alt="" />
             <img
-              class="big-img"
-              id="boxImage"
-              src=""
+              class="chevron-left"
+              src="/img/chevron-left-solid.svg"
+              id="chevronLeft"
               alt=""
             />
+            <img class="big-img" id="boxImage" src="" alt="" />
             <img
               class="chevron-right"
               id="chevronRight"
               src="/img/chevron-right-solid.svg"
               alt=""
               srcset=""
-              
             />
           </div>
           <div class="bottom">
             <p class="lightBox" id="title"></p>
-            
           </div>
         </div>
       </div>
@@ -119,20 +115,19 @@
       <div class="sticky-cta">
         <div>
           <p id="likes" class="cta-likes">297 081</p>
-          <img class="cta-heart" src="../img/heart-solid-black.svg" alt=""/>
+          <img class="cta-heart" src="../img/heart-solid-black.svg" alt="" />
         </div>
         <p id="price" class="cta-price"></p>
       </div>
-      <div id="photos-section" class="gallery-img">
-      
-      </div> 
+      <div id="photos-section" class="gallery-img"></div>
     </div>
-    
+
     <div id="photoList" hidden></div>
     <script type="module" src="../js/modules/photographer.js"></script>
     <script type="module" src="../js/modules/media.js"></script>
     <script type="module" src="../js/modules/lightBox.js"></script>
-    <script type="module" src="../js/modules/contactModal.js"></script>
+    <script type="module" src="../js/modules/likes.js"></script>
 
+    <script type="module" src="../js/modules/contactModal.js"></script>
   </body>
 </html>

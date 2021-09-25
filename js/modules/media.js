@@ -41,6 +41,15 @@ const media = () => {
                 listAlts.push(media.title);
                 res += '<div><img data-p="'+position+'" id="'+media.id+'" class="thumb-img" alt="'+media.title+'" src="/img/Photos/'+path+'/'+media.image+'"/><div class="thumb-info"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p>'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
                 position++;
+            }
+            if(media.video) {
+                //ajout des videos
+                listPictures.push(media.video);
+                listAlts.push(media.title);
+                console.log(listPictures);
+                console.log(listAlts);
+                res += '<div><video data-p="'+position+'" id="'+media.id+'" class="thumb-img" alt="'+media.title+'" src="/img/Photos/'+path+'/'+media.video+'"></video><div class="thumb-info"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p>'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
+                position++;
             }      
         }
     })   

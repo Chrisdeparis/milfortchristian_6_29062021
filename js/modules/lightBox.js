@@ -1,5 +1,6 @@
 import { media } from "./media.js";
 import data from "../FishEyeData.js";
+import { likes } from './likes.js';
 
 // Lorsque l'utilisateur clique sur un média, celui-ci doit s’ouvrir dans une
 // lightbox :
@@ -21,9 +22,11 @@ const openLightBox = () => {
 
   //gallery
   let galleryImages = document.querySelectorAll(".gallery-img");
-
+  
+  likes();
   if (galleryImages) {
     galleryImages.forEach(function (image) {
+      console.log(image);
       image.addEventListener("click", function (e) {
         //determine the image clicked
         let imageClicked = e.target.closest("div img");
@@ -42,7 +45,7 @@ const openLightBox = () => {
         let html = document.getElementById("html");
         html.classList.add("scroll");
 
-        document.getElementById("boxImage").src = imageClicked.src;
+        // document.getElementById("boxImage").src = imageClicked.src;
         document.getElementById("title").innerHTML = imageClicked.alt;
 
         //recuperer data-p
