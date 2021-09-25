@@ -339,7 +339,7 @@ a {
     display: grid;
     grid-template-columns: 1fr;
   }
-  div#photos-section div img.thumb-img {
+  div#photos-section div .thumb-img {
     width: 100px;
     height: 100px;
   }
@@ -400,6 +400,13 @@ a {
     cursor: pointer;
   }
   .modal-content div.lightBox div.mid img.big-img {
+    width: 289px;
+    height: 248px;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .modal-content div.lightBox div.mid video.big-video {
     width: 289px;
     height: 248px;
     border-radius: 5px;
@@ -867,7 +874,7 @@ a {
   div.main div#photos-section div {
     justify-content: center;
   }
-  div.main div#photos-section div img.thumb-img {
+  div.main div#photos-section div .thumb-img {
     width: 350px;
     height: 300px;
     border-radius: 5px;
@@ -899,7 +906,7 @@ a {
     font-family: 'Roboto', sans-serif;
     line-height: 18.75px;
     background: #fff;
-    margin-right: 10px;
+    margin-right: 20px;
   }
   div.main div#photos-section div div.thumb-info div img.heart {
     width: 20px;
@@ -947,6 +954,11 @@ a {
     cursor: pointer;
   }
   .modal-content div.lightBox div.mid img.big-img {
+    width: 1050px;
+    height: 900px;
+    border-radius: 5px;
+  }
+  .modal-content div.lightBox div.mid video.big-video {
     width: 1050px;
     height: 900px;
     border-radius: 5px;

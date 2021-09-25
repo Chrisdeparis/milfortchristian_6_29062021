@@ -363,7 +363,7 @@
         
         justify-content: center;
         
-        img.thumb-img{
+        .thumb-img{
           width: 350px;
           height: 300px;
           border-radius:5px;
@@ -395,7 +395,7 @@
                 font-family: 'Roboto', sans-serif;
                 line-height: 18.75px;
                 background:$white;
-                margin-right: 10px;
+                margin-right: 20px;
               }
             }
             img.heart{
@@ -452,6 +452,11 @@
           cursor:pointer;
         }
         img.big-img {
+          width: 1050px;
+          height: 900px;
+          border-radius: 5px;
+        }
+        video.big-video {
           width: 1050px;
           height: 900px;
           border-radius: 5px;

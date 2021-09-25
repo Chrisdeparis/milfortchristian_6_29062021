@@ -373,7 +373,7 @@
     display: grid;
     grid-template-columns: 1fr;
     div {
-      img.thumb-img {
+      .thumb-img {
         width: 100px;
         height: 100px;
       }
@@ -444,6 +444,13 @@
           cursor: pointer;
         }
         img.big-img {
+          width: 289px;
+          height: 248px;
+          border-radius: 5px;
+          object-fit: cover;
+          object-position: center;
+        }
+        video.big-video {
           width: 289px;
           height: 248px;
           border-radius: 5px;
