@@ -65,16 +65,16 @@
 
         <p class="name" id="contactName"></p>
         <div class="contact-form">
-          <form>
+          <form id="form">
             <label for="">Prénom</label><br />
-            <input type="text" /><br />
+            <input type="text" name="firstname"/><br />
             <label for="">Nom</label><br />
-            <input type="text" /><br />
+            <input type="text" name="lastname"/><br />
             <label for="">Email</label><br />
-            <input type="text" /><br />
+            <input type="text" name="email"/><br />
             <label for="">Votre message</label><br />
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-            <div class="btn-form">Envoyer</div>
+            <textarea name="" id="message" cols="30" rows="10" name="message"></textarea>
+            <div class="btn-form" type="submit" id="submitBtn">Envoyer</div>
           </form>
         </div>
       </div>
@@ -124,10 +124,11 @@
     </div>
 
     <div id="photoList" hidden></div>
+    <script type="module" src="../js/modules/likes.js"></script>
     <script type="module" src="../js/modules/photographer.js"></script>
     <script type="module" src="../js/modules/media.js"></script>
     <script type="module" src="../js/modules/lightBox.js"></script>
-    <script type="module" src="../js/modules/likes.js"></script>
+    
     <script type="module" src="../js/modules/contactModal.js"></script>
   </body>
 </html>

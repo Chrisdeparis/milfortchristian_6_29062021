@@ -27,9 +27,10 @@ const openLightBox = () => {
   if (galleryImages) {
     galleryImages.forEach(function (image) {
       console.log(image);
+      
       image.addEventListener("click", function (e) {
         //determine the image clicked
-        let imageClicked = e.target.closest("div img");
+        let imageClicked = e.target.closest("div img.thumb-img");
         let videoClicked = e.target.closest("div video");
 
         // Get the modal

@@ -49,5 +49,20 @@ const openContactModal = () => {
       modal.style.display = "none";
     }
   };
-};
+  let firstname ='';
+let lastname ="";
+let email ="";
+let message="";
+}
 openContactModal();
+
+let btnForm = document.getElementById('submitBtn');
+
+btnForm.addEventListener('click', function(){
+  let firstname = document.getElementById('form').firstname.value;
+  let lastname = document.getElementById('form').lastname.value;
+  let email = document.getElementById('form').email.value;
+  let message = document.getElementById('message').value;
+  console.log(firstname+' '+lastname+' '+email+' '+message);
+  
+})
