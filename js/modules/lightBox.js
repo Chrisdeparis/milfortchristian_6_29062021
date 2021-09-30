@@ -25,13 +25,15 @@ const openLightBox = () => {
 
   likes();
   if (galleryImages) {
-    galleryImages.forEach(function (image) {
-      console.log(image);
+    galleryImages.forEach(function (image) {      
       
       image.addEventListener("click", function (e) {
         //determine the image clicked
-        let imageClicked = e.target.closest("div img.thumb-img");
+        let imageClicked = e.target.closest("div .thumb-img");
+        console.log(imageClicked);
         let videoClicked = e.target.closest("div video");
+        let heartClicked = document.getElementsByClassName('.heart');
+        console.log(heartClicked);
 
         // Get the modal
         const modal = document.getElementById("openLightBox");
@@ -41,11 +43,23 @@ const openLightBox = () => {
         //path for src route
         let path = user[0].name.split(" ")[0];
 
+        if(heartClicked) {
+          
+          console.log('clic sur heart');
+          let heartClicked = e.target.closest('.heart');
+          console.log('heart Clicked');
+          let totalLikes = document.getElementById('totalLikes').innerHTML;
+          totalLikes += 1;
+          
+        }
+
         // afficher la modale
         modal.style.display = "block";
         //retirer le scroll en trop
         let html = document.getElementById("html");
         html.classList.add("scroll");
+
+        
 
         if (imageClicked) {
           document.getElementById("boxVideo").style.display = "none";
@@ -265,6 +279,7 @@ const openLightBox = () => {
           html.classList.remove("scroll");
         };
       });
+      
     });
   }
 };

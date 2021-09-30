@@ -235,7 +235,7 @@
       top: 8px;
     }
   }
-  div.main {
+  main {
     div#app {
       background: $white;
       display: grid;
@@ -623,7 +623,7 @@
 }
 
 @media only screen and (min-width: 767px) and (max-width:1200px) {
-  div.main div#photos-section, div.main div#app {
+  main div#photos-section, main div#app {
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;

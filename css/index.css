@@ -218,16 +218,16 @@ a {
     font-size: 1.1rem;
     color: #901C1C;
   }
-  div.main {
+  main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin-bottom: 40px;
   }
-  div.main div.user {
+  main div.user {
     text-align: center;
   }
-  div.main div.user div.circle {
+  main div.user div.circle {
     display: block;
     text-align: center;
     align-content: center;
@@ -235,7 +235,7 @@ a {
     border-radius: 50%;
     cursor: pointer;
   }
-  div.main div.user div.circle .crop {
+  main div.user div.circle .crop {
     height: 131px;
     width: 131px;
     background: transparent;
@@ -244,41 +244,41 @@ a {
     overflow: hidden;
     box-shadow: 0 0 0 3px #e8e6e8;
   }
-  div.main div.user div.circle div {
+  main div.user div.circle div {
     margin-top: 40px;
   }
-  div.main div.user div.circle img {
+  main div.user div.circle img {
     position: relative;
     bottom: 0px;
   }
-  div.main div.user img {
+  main div.user img {
     width: 131px;
     height: 131px;
     object-fit: cover;
   }
-  div.main div.user .name {
+  main div.user .name {
     color: #D3573C;
     font-size: 3.6rem;
     margin-bottom: 5px;
   }
-  div.main div.user .city {
+  main div.user .city {
     color: #901C1C;
     margin-bottom: 5px;
     font-size: 1.3rem;
   }
-  div.main div.user .tagline {
+  main div.user .tagline {
     font-size: 1rem;
     margin-bottom: 5px;
   }
-  div.main div.user .price {
+  main div.user .price {
     color: #525252;
     font-size: 0.9rem;
     margin-bottom: 5px;
   }
-  div.main div.user ul.tags {
+  main div.user ul.tags {
     display: inline-flex;
   }
-  div.main div.user ul.tags li {
+  main div.user ul.tags li {
     margin: 0 5px;
     font-size: 1.2rem;
     border: 1px solid #C4C4C4;
@@ -287,7 +287,7 @@ a {
     color: #901C1C;
     font-weight: bold;
   }
-  div.main div.user ul.tags li a {
+  main div.user ul.tags li a {
     color: #901C1C;
   }
   div.photographer div.info .name {
@@ -352,7 +352,7 @@ a {
     grid-template-areas: "logo title" "nav .";
     grid-template-columns: 1fr 1fr;
   }
-  body div.main {
+  body main {
     display: block;
   }
   body .banner header div.top-line nav ul li {
@@ -754,17 +754,17 @@ a {
     position: relative;
     top: 8px;
   }
-  div.main div#app {
+  main div#app {
     background: #fff;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin-bottom: 40px;
   }
-  div.main div#app div.user {
+  main div#app div.user {
     text-align: center;
   }
-  div.main div#app div.user div.circle {
+  main div#app div.user div.circle {
     display: block;
     text-align: center;
     align-content: center;
@@ -772,7 +772,7 @@ a {
     border-radius: 50%;
     cursor: pointer;
   }
-  div.main div#app div.user div.circle .crop {
+  main div#app div.user div.circle .crop {
     height: 131px;
     width: 131px;
     background: transparent;
@@ -781,42 +781,42 @@ a {
     overflow: hidden;
     box-shadow: 0 0 0 3px #e8e6e8;
   }
-  div.main div#app div.user div.circle div {
+  main div#app div.user div.circle div {
     margin-top: 40px;
   }
-  div.main div#app div.user div.circle img {
+  main div#app div.user div.circle img {
     position: relative;
     bottom: 0px;
   }
-  div.main div#app div.user img {
+  main div#app div.user img {
     width: 131px;
     height: 131px;
     object-fit: cover;
   }
-  div.main div#app div.user .name {
+  main div#app div.user .name {
     color: #D3573C;
     font-size: 4.5em;
     margin-bottom: 5px;
     font-family: 'DM Sans', sans-serif;
   }
-  div.main div#app div.user .city {
+  main div#app div.user .city {
     color: #901C1C;
     margin-bottom: 5px;
     font-size: 2rem;
   }
-  div.main div#app div.user .tagline {
+  main div#app div.user .tagline {
     font-size: 1.7rem;
     margin-bottom: 5px;
   }
-  div.main div#app div.user .price {
+  main div#app div.user .price {
     color: #525252;
     font-size: 1.4rem;
     margin-bottom: 5px;
   }
-  div.main div#app div.user ul.tags {
+  main div#app div.user ul.tags {
     display: inline-flex;
   }
-  div.main div#app div.user ul.tags li {
+  main div#app div.user ul.tags li {
     margin: 0 5px;
     font-size: 1.6rem;
     border: 1px solid #C4C4C4;
@@ -824,10 +824,10 @@ a {
     padding: 2px 4px;
     font-weight: bold;
   }
-  div.main div#app div.user ul.tags li a {
+  main div#app div.user ul.tags li a {
     color: #901C1C;
   }
-  div.main div.sticky-cta {
+  main div.sticky-cta {
     position: fixed;
     width: 376px;
     height: 69px;
@@ -842,10 +842,10 @@ a {
     padding: 0px 20px;
     cursor: pointer;
   }
-  div.main div.sticky-cta div {
+  main div.sticky-cta div {
     display: flex;
   }
-  div.main div.sticky-cta p.cta-likes {
+  main div.sticky-cta p.cta-likes {
     width: 87px;
     height: 31px;
     font-size: 2.4rem;
@@ -853,17 +853,17 @@ a {
     align-items: center;
     display: flex;
   }
-  div.main div.sticky-cta img.cta-heart {
+  main div.sticky-cta img.cta-heart {
     width: 20px;
     position: relative;
     bottom: 2px;
     margin-left: 5px;
   }
-  div.main div.sticky-cta p.cta-price {
+  main div.sticky-cta p.cta-price {
     width: 133px;
     font-size: 2.4rem;
   }
-  div.main div#photos-section {
+  main div#photos-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -871,17 +871,17 @@ a {
     column-gap: 114px;
     row-gap: 50px;
   }
-  div.main div#photos-section div {
+  main div#photos-section div {
     justify-content: center;
   }
-  div.main div#photos-section div .thumb-img {
+  main div#photos-section div .thumb-img {
     width: 350px;
     height: 300px;
     border-radius: 5px;
     object-fit: cover;
     cursor: pointer;
   }
-  div.main div#photos-section div div.thumb-info {
+  main div#photos-section div div.thumb-info {
     display: flex;
     width: 350px;
     font-size: 2.4rem;
@@ -890,13 +890,13 @@ a {
     text-align: left;
     align-items: center;
   }
-  div.main div#photos-section div div.thumb-info p {
+  main div#photos-section div div.thumb-info p {
     color: #901C1C;
   }
-  div.main div#photos-section div div.thumb-info div {
+  main div#photos-section div div.thumb-info div {
     display: -webkit-box;
   }
-  div.main div#photos-section div div.thumb-info div div.likes p {
+  main div#photos-section div div.thumb-info div div.likes p {
     display: flex;
     width: 22px;
     height: 31px;
@@ -908,7 +908,7 @@ a {
     background: #fff;
     margin-right: 20px;
   }
-  div.main div#photos-section div div.thumb-info div img.heart {
+  main div#photos-section div div.thumb-info div img.heart {
     width: 20px;
     position: relative;
     top: 6px;
@@ -1102,7 +1102,7 @@ a {
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1200px) {
-  div.main div#photos-section, div.main div#app {
+  main div#photos-section, main div#app {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;

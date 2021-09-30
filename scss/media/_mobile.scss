@@ -242,7 +242,7 @@
       color: $primary;
     }
   }
-  div.main {
+  main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -390,7 +390,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  body div.main {
+  body main {
     display: block;
   }
   body .banner header div.top-line nav ul li {
