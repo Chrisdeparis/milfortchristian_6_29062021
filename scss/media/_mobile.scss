@@ -93,7 +93,7 @@
     }
   }
 
-  .main {
+  main {
     .sticky-cta {
       display: none;
       div {
@@ -373,10 +373,7 @@
     display: grid;
     grid-template-columns: 1fr;
     div {
-      .thumb-img {
-        width: 100px;
-        height: 100px;
-      }
+    
     }
   }
   body.div.banner {
