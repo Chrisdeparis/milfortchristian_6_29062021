@@ -30,10 +30,10 @@ const openLightBox = () => {
       image.addEventListener("click", function (e) {
         //determine the image clicked
         let imageClicked = e.target.closest("div .thumb-img");
-        console.log(imageClicked);
+        //(imageClicked);
         let videoClicked = e.target.closest("div video");
         let heartClicked = document.getElementsByClassName('.heart');
-        console.log(heartClicked);
+        //(heartClicked);
 
         // Get the modal
         const modal = document.getElementById("openLightBox");
@@ -45,11 +45,11 @@ const openLightBox = () => {
 
         if(heartClicked) {
           
-          console.log('clic sur heart');
-          let heartClicked = e.target.closest('.heart');
-          console.log('heart Clicked');
-          let totalLikes = document.getElementById('totalLikes').innerHTML;
-          totalLikes += 1;
+          // //('clic sur heart');
+          // let heartClicked = e.target.closest('.heart');
+          // //('heart Clicked');
+          // let totalLikes = document.getElementById('totalLikes').innerHTML;
+          // totalLikes += 1;
           
         }
 
@@ -221,7 +221,7 @@ const openLightBox = () => {
                   actual++;
                 }
               }
-              console.log(medias);
+              //(medias);
               document.getElementById("boxImage").src =
                 "/img/Photos/" + path + "/" + medias[actual] + "";
               document.getElementById("title").innerHTML = altList[actual];
