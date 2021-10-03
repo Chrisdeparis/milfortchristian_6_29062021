@@ -73,14 +73,7 @@ const media = () => {
             //(listDates);
             //(listPictures);
             
-            let sortTitleBtn = document.getElementById('alphabet');
-            let sortDateBtn = document.getElementById('date');
-            sortDateBtn.addEventListener('click', () => {
-                //('par date chrono');
-            })
-            sortTitleBtn.addEventListener('click', () => {
-                //('par titre A-Z');
-            });
+            
             
             // sort by alphabetical Title
             // let sortedAlphabetical = listPictures.sort();
@@ -105,17 +98,24 @@ const media = () => {
         let value = element.getAttribute('data-likes');
         console.table(value);
         let findPictures = document.querySelectorAll('.thumb-img');
-        console.log(findPictures);
+        
+        // change nodelist in array
         const mediasP = Array.from(findPictures);
-        console.log(mediasP);
-        mediasP.sort((a, b) => {
-            
+        //tri par popularité decroissante
+        wrapper.mediasP.sort((a, b) => {
+            console.log(b.dataset.likes - a.dataset.likes);
             return b.dataset.likes - a.dataset.likes;
         })
-        .appendChild( wrapper );
-        
-        
+        .append(wrapper);
     })
+    let sortDateBtn = document.getElementById('date');
+    sortDateBtn.addEventListener('click', () => {
+        //('par date chrono');
+    })
+    let sortTitleBtn = document.getElementById('alphabet');
+    sortTitleBtn.addEventListener('click', () => {
+        //('par titre A-Z');
+    });
     //setAttribute data-list alt-list like-list
     
     document.querySelector('#photoList').setAttribute('data-list', JSON.stringify(listPictures));
