@@ -30,10 +30,10 @@ const openLightBox = () => {
       image.addEventListener("click", function (e) {
         //determine the image clicked
         let imageClicked = e.target.closest("div .thumb-img");
-        //(imageClicked);
+        console.log(imageClicked);
         let videoClicked = e.target.closest("div video");
         let heartClicked = document.getElementsByClassName('.heart');
-        //(heartClicked);
+        console.log(heartClicked);
 
         // Get the modal
         const modal = document.getElementById("openLightBox");
@@ -45,11 +45,11 @@ const openLightBox = () => {
 
         if(heartClicked) {
           
-          // //('clic sur heart');
-          // let heartClicked = e.target.closest('.heart');
-          // //('heart Clicked');
-          // let totalLikes = document.getElementById('totalLikes').innerHTML;
-          // totalLikes += 1;
+          console.log('clic sur heart');
+          let heartClicked = e.target.closest('.heart');
+          console.log('heart Clicked');
+          let totalLikes = document.getElementById('totalLikes').innerHTML;
+          totalLikes += 1;
           
         }
 
@@ -68,6 +68,7 @@ const openLightBox = () => {
 
           //recuperer data-p
           let actual = imageClicked.getAttribute("data-p");
+          console.log(actual);
 
           //when the user click on left chevron previous element
           const chevronLeft = document.getElementById("chevronLeft");
@@ -131,9 +132,11 @@ const openLightBox = () => {
             let medias = JSON.parse(
               document.querySelector("#photoList").getAttribute("data-list")
             );
+            console.log(medias);
             let altList = JSON.parse(
               document.querySelector("#photoList").getAttribute("alt-list")
             );
+            console.log(altList);
 
             let i = 0,
               images = thumbImg;
@@ -221,7 +224,7 @@ const openLightBox = () => {
                   actual++;
                 }
               }
-              //(medias);
+              console.log(medias);
               document.getElementById("boxImage").src =
                 "/img/Photos/" + path + "/" + medias[actual] + "";
               document.getElementById("title").innerHTML = altList[actual];
@@ -240,10 +243,11 @@ const openLightBox = () => {
             let medias = JSON.parse(
               document.querySelector("#photoList").getAttribute("data-list")
             );
+            console.log(medias);
             let altList = JSON.parse(
               document.querySelector("#photoList").getAttribute("alt-list")
             );
-
+            console.log(altList);
             let i = 0,
               images = thumbImg;
             let limit = images.length - 1;

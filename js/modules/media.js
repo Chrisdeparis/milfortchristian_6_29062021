@@ -30,10 +30,16 @@ const media = () => {
     const listAlts = [];
     const listLikes = [];
     const listDates = [];
+    let dataP =[];
     
     data.media.filter((media) => {
         
         if(media.photographerId == myparam){
+            console.log(media);
+            
+            //ajouter les medias dans un array
+            dataP.push(media);
+            console.log(dataP);
             
             let path = user[0].name.split(' ')[0];
             
@@ -46,7 +52,7 @@ const media = () => {
                 listAlts.push(media.title);
                 listLikes.push(media.likes);
                 //(listLikes);
-                res += '<div><img data-p="'+position+'" like-n="'+media.likes+'" id="'+media.id+'" class="thumb-img" alt="'+media.title+'" src="/img/Photos/'+path+'/'+media.image+'"/><div class="thumb-info" value="1"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p class="likesPicture">'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
+                res += '<div><img data-p="'+position+'" data-likes="'+media.likes+'" data-pid="'+media.photographerId+'" data-media="'+media.id+'" class="thumb-img" alt="'+media.title+'" src="/img/Photos/'+path+'/'+media.image+'"/><div class="thumb-info" value="1"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p class="likesPicture">'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
                 position++;
                
             }
@@ -57,7 +63,7 @@ const media = () => {
                 listLikes.push(media.likes);
                 //(listPictures);
                 //(listLikes);
-                res += '<div><video data-p="'+position+'" like-n="'+media.likes+'" id="'+media.id+'" class="thumb-img" alt="'+media.title+'" src="/img/Photos/'+path+'/'+media.video+'"></video><div class="thumb-info" value="2"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p class="likesPicture">'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
+                res += '<div><video data-p="'+position+'" data-likes="'+media.likes+'" data-pid="'+media.photographerId+'" data-media="'+media.id+'" class="thumb-img" alt="'+media.title+'" src="/img/Photos/'+path+'/'+media.video+'"></video><div class="thumb-info" value="2"><p>'+media.title+'</p><div class="thumb-likes"><div class="likes"><p class="likesPicture">'+media.likes+'</p></div><img class="heart" src="../img/heart-solid.svg" alt="likes"/></div></div></div>';
                 position++;
                 
             }     
@@ -66,7 +72,7 @@ const media = () => {
             }
             //(listDates);
             //(listPictures);
-            let sortPopBtn = document.getElementById('popularity');
+            
             let sortTitleBtn = document.getElementById('alphabet');
             let sortDateBtn = document.getElementById('date');
             sortDateBtn.addEventListener('click', () => {
@@ -75,29 +81,46 @@ const media = () => {
             sortTitleBtn.addEventListener('click', () => {
                 //('par titre A-Z');
             });
-            sortPopBtn.addEventListener('click', () => {
-                //('affiche les images par popularité');
-                //sort by likes descending order > Popularity
-                
-                let sortedLike = listLikes.sort(function(a, b){return b-a});
-                
-                document.querySelector('#photoList').setAttribute('data-list', JSON.stringify(sortedLike));
-            })
+            
             // sort by alphabetical Title
-            let sortedAlphabetical = listPictures.sort();
+            // let sortedAlphabetical = listPictures.sort();
             //(sortedAlphabetical);
             // sort by date chrono
             //(listDates);
-            let sortedDate = listDates.slice().sort((a, b) => a.localeCompare(b));
+            // let sortedDate = listDates.slice().sort((a, b) => a.localeCompare(b));
             //(sortedDate);
             
         }
+        
+        
 
     })   
+    let sortPopBtn = document.getElementById('popularity');
+    sortPopBtn.addEventListener('click', () => {
+        //('affiche les images par popularité');
+        //sort by likes descending order > Popularity
+        let wrapper = document.getElementById('photos-section');
+        //get attribute data-likes
+        let element = document.querySelector('#photoList')
+        let value = element.getAttribute('data-likes');
+        console.table(value);
+        let findPictures = document.querySelectorAll('.thumb-img');
+        console.log(findPictures);
+        const mediasP = Array.from(findPictures);
+        console.log(mediasP);
+        mediasP.sort((a, b) => {
+            
+            return b.dataset.likes - a.dataset.likes;
+        })
+        .appendChild( wrapper );
+        
+        
+    })
     //setAttribute data-list alt-list like-list
+    
     document.querySelector('#photoList').setAttribute('data-list', JSON.stringify(listPictures));
     document.querySelector('#photoList').setAttribute('alt-list', JSON.stringify(listAlts));
-    // document.querySelector('#photoList').setAttribute('like-list', JSON.stringify(listLikes));
+    document.querySelector('#photoList').setAttribute('data-likes', JSON.stringify(listLikes));
     
 
     

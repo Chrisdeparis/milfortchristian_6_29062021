@@ -1,6 +1,9 @@
 
 
 @media only screen and (min-width: 768px) {
+  div[data-likes]:before {
+    content: attr(data-likes);
+  }
   section#slot {
     // height: 100vh;
     // overflow: hidden;
