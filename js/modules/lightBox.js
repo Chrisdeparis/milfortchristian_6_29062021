@@ -33,7 +33,8 @@ const openLightBox = () => {
         console.log(imageClicked);
         let videoClicked = e.target.closest("div video");
         let heartClicked = document.getElementsByClassName('.heart');
-        console.log(heartClicked);
+        let likesNb = imageClicked.getAttribute('data-likes');
+        console.log(likesNb);
 
         // Get the modal
         const modal = document.getElementById("openLightBox");
@@ -43,15 +44,7 @@ const openLightBox = () => {
         //path for src route
         let path = user[0].name.split(" ")[0];
 
-        if(heartClicked) {
-          
-          console.log('clic sur heart');
-          let heartClicked = e.target.closest('.heart');
-          console.log('heart Clicked');
-          let totalLikes = document.getElementById('totalLikes').innerHTML;
-          totalLikes += 1;
-          
-        }
+        
 
         // afficher la modale
         modal.style.display = "block";

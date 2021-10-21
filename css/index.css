@@ -554,6 +554,9 @@ a {
   div[data-likes]:before {
     content: attr(data-likes);
   }
+  .show {
+    display: block;
+  }
   div.banner header {
     display: flex;
     flex-direction: column;

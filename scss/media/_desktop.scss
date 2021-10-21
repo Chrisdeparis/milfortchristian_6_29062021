@@ -4,6 +4,7 @@
   div[data-likes]:before {
     content: attr(data-likes);
   }
+  .show {display:block;}
   section#slot {
     // height: 100vh;
     // overflow: hidden;
